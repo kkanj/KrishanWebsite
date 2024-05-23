@@ -6,15 +6,19 @@ export default {
   ],
   theme: {
     fontSize: {
-      menuText: ['128px', '128px'],
-      nameText: ['64px', '64px'],
+      categoryText: ['18px', '18px'],
+      menuText: ['18px', '18px'],
+      nameText: ['100px', '100px'],
     },
     extend: {
       colors: {
-        'background': '#FFFFFF',
+        'background': '#ffffff',
         'menu-text': '#000000',
-        'menu-category-text': '#B4B3B3',
+        'm-gray': '#B4B3B3',
         'name-text': '#707579',
+        'l-gray': '#E4E4E4',
+        
+        
       }
     },
   },
