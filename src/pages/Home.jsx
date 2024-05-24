@@ -7,20 +7,17 @@ import NavigationBar from "../components/NavigationBar.jsx";
 
 const Home = () => {
     return (
-        <div className = "pl-[25px] py-[10px]">
-            <div className = "flex flex-col">
-                <div className = "flex">
-                    <NavigationBar/>
-                    <div className = "flex flex-row ml-[150px]">
-                        <h1 className = "text-nameText text-m-gray py-7">
-                            Hi, I'm{" "}
-                            <span className = "text-name-text">
-                                Krishan.
-                            </span>
-                        </h1>
-                    </div>
+        <div>
+            <div className = "flex">
+                <NavigationBar/>
+                <div className = "flex flex-row ml-[150px]">
+                    <h1 className = "text-nameText text-med-gray py-7">
+                        Hi, I'm{" "}
+                        <span className = "text-name-text">
+                            Krishan.
+                        </span>
+                    </h1>
                 </div>
-                <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"/>
             </div>
         </div>
     );

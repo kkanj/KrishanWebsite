@@ -14,10 +14,10 @@ export default {
       colors: {
         'background': '#ffffff',
         'menu-text': '#000000',
-        'm-gray': '#B4B3B3',
+        'med-gray': '#B4B3B3',
         'name-text': '#707579',
-        'l-gray': '#E4E4E4',
-        
+        'light-gray': '#E4E4E4',
+        'line-gray': '#DBDBDB',
         
       }
     },
