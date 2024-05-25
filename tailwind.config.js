@@ -14,6 +14,7 @@ export default {
       colors: {
         'background': '#ffffff',
         'menu-text': '#000000',
+        'menu-sub-text': '#b8b8b8',
         'med-gray': '#B4B3B3',
         'name-text': '#707579',
         'light-gray': '#E4E4E4',
