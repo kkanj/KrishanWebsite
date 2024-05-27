@@ -1,4 +1,4 @@
-import logo from './images/kck.svg';
+import logo from './images/!k.svg';
 
 export {
     logo
