@@ -9,7 +9,7 @@
       }
 
       .cls-2 {
-        fill: #6d6e71;
+        fill: hsl(180, 1%, 65%);
       }
 
       .cls-2, .cls-3 {
@@ -17,19 +17,10 @@
       }
 
       .cls-3 {
-        fill: #e6e7e8;
+        fill: hsl(240, 1%, 86%);
       }
     </style>
-    <linearGradient id="Orange_Yellow" data-name="Orange, Yellow" x1="0" y1="1582.055" x2="278.57" y2="1582.055" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff33b"/>
-      <stop offset=".04" stop-color="#fee62d"/>
-      <stop offset=".117" stop-color="#fdd51b"/>
-      <stop offset=".196" stop-color="#fdca0f"/>
-      <stop offset=".281" stop-color="#fdc70c"/>
-      <stop offset=".669" stop-color="#f3903f"/>
-      <stop offset=".888" stop-color="#ed683c"/>
-      <stop offset="1" stop-color="#e93e3a"/>
-    </linearGradient>
+    
   </defs>
   <g>
     <path class="cls-3" d="M1278.979,982.217v207.333c0,2.093-1.001,5.164-2.252,6.847l-132.99,180.376c-11.397,15.469-20.724,12.398-20.724-6.825v-356.293c0-25.592,20.929-46.544,46.521-46.544h94.362c8.303,0,15.082,6.802,15.082,15.105Z"/>

@@ -9,7 +9,7 @@ const NavigationBar = () => {
     <div className = "pl-[25px] py-[10px] border-r border-line-gray fixed top-0 bottom-0 px-[100px]">
         <div>
             <NavLink to="/">
-                <img src = {logo} alt = "logo" className={`${styles.Logo} -ml-[12px] mb-[5px]`}/>
+                <img src = {logo} alt = "logo" className={`${styles.Logo} mb-[20px]`}/>
             </NavLink>
             <div className = {styles.MenuPlacement}>
         
