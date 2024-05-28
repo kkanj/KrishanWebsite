@@ -2,16 +2,16 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
-      letterSpacing: {
-        tightest: '-.075em',
-        tighter: '-.05em',
-        tight: '-.025em',
-        normal: '0',
-        wide: '.025em',
-        wider: '.05em',
-        widest: '.1em',
-        widest: '.22em',
-      },
+        letterSpacing: {
+            tightest: "-.075em",
+            tighter: "-.05em",
+            tight: "-.025em",
+            normal: "0",
+            wide: ".025em",
+            wider: ".05em",
+            widest: ".1em",
+            widest: ".22em",
+        },
         fontSize: {
             categoryText: ["15px", "14px"],
             menuSubText: ["15px", "14px"],
@@ -40,7 +40,6 @@ export default {
                 light: 300,
                 heavy: 800,
                 black: 900,
-                
             },
         },
         variants: {},
