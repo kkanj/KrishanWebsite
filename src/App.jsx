@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { AboutMe, Home, Projects, Contact } from "./pages";
+import { AboutMe, Home, Projects, Contact, Project0 } from "./pages";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -13,6 +13,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/project0" element={<Project0 />} />
         </Routes>
 
       </BrowserRouter>

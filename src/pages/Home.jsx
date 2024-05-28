@@ -7,12 +7,12 @@ import NavigationBar from "../components/NavigationBar.jsx";
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             <div>
                 <NavigationBar />
                 <div className="flex flex-row ml-[150px]">
                     <h1 className="text-nameText text-med-gray py-7">
-                        Hi, I'm <span className="text-name-text">Krishan.</span>
+                        Hi, I'm <span className="text-name-text font-sfpro">Krishan.</span>
                     </h1>
                 </div>
             </div>

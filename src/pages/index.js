@@ -3,6 +3,7 @@ import Home from './Home';
 import Contact from './Contact';
 import Projects from './Projects';
 import NavigationBar from '../components/NavigationBar';
+import Project0 from './Project0';
 
 
 export {
@@ -10,5 +11,6 @@ export {
     Home, 
     Projects, 
     Contact,
-    NavigationBar
+    NavigationBar,
+    Project0
 }
