@@ -8,7 +8,7 @@ import NavigationBar from "../components/NavigationBar.jsx";
 const Home = () => {
     return (
         <div>
-            <div className = "flex">
+            <div>
                 <NavigationBar/>
                 <div className = "flex flex-row ml-[150px]">
                     <h1 className = "text-nameText text-med-gray py-7">

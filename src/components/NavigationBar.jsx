@@ -6,7 +6,7 @@ import {logo} from "../assets/index.js";
 
 const NavigationBar = () => {
   return (
-    <div className = "pl-[25px] py-[10px] border-r border-line-gray fixed top-0 bottom-0 px-[100px]">
+    <div className = "pl-[25px] py-[25px] border-r border-line-gray fixed top-0 bottom-0 px-[100px]">
         <div>
             <NavLink to="/">
                 <img src = {logo} alt = "logo" className={`${styles.Logo} mb-[20px]`}/>
