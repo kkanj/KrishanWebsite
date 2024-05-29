@@ -6,7 +6,7 @@ import { logo, mail, linkedin, googlemeet } from "../assets/index.js";
 
 const NavigationBar = () => {
     return (
-        <div className="absolute h-full border-r border-line-gray w-[240px]">
+        <div className="absolute h-full border-r border-line-gray w-[240px] mr-[60px]">
             <div className={styles.MenuDivision}>
                 {/* Menu */}
                 <NavLink to="/">

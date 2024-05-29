@@ -16,7 +16,8 @@ export default {
             categoryText: ["15px", "14px"],
             menuSubText: ["15px", "14px"],
             menuText: ["20px", "20px"],
-            nameText: ["100px", "100px"],
+            nameText: ["30px", "30px"],
+            paragraphText: ["50px", "50px"],
         },
         extend: {
             colors: {
@@ -25,9 +26,16 @@ export default {
                 "category-text": "#a4a4a4",
                 "menu-sub-text": "#b8b8b8",
                 "med-gray": "#B4B3B3",
-                "name-text": "#707579",
+                "dark-gray": "#575757",
+                "name-text": "#757575",
                 "light-gray": "#E4E4E4",
                 "line-gray": "#eeeeee",
+                "gradient-gray-1": "#878787",
+                "gradient-gray-2": "#6c6c6c",
+                "gradient-gray-3": "#3e3e3e",
+                "gradient-1": "#20b1ff",
+                "gradient-2": "#b39cff",
+                "gradient-3": "#ff7fe1",
             },
             fontFamily: {
                 sfpro: ["SFPRO", "fallback"],
