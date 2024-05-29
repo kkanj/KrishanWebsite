@@ -13,9 +13,9 @@ const NavigationBar = () => {
                     <img src={logo} alt="logo" className={styles.Logo} />
                 </NavLink>
                 <div className={styles.MenuPlacement}>
-                    <NavLink to="/AboutMe">
-                        <div className={styles.MenuItem}>About Me.</div>
-                    </NavLink>
+                <div className={styles.MenuItem}>
+                    <NavLink to="/AboutMe">About Me.</NavLink>
+                </div>
                     <NavLink to="/Projects">
                         <div className={styles.MenuItem}>Projects.</div>
                     </NavLink>
