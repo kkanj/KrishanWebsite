@@ -1,8 +1,14 @@
 import { react } from "react";
 import "./App.css";
-import { AboutMe, Home, Projects, Contact, Project0 } from "./pages";
+import {
+    AboutMe,
+    Home,
+    Projects,
+    Contact,
+    Project0,
+    Placeholder,
+} from "./pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 
 function App() {
     return (
@@ -15,6 +21,7 @@ function App() {
                         <Route path="/aboutme" element={<AboutMe />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/project0" element={<Project0 />} />
+                        <Route path="/placeholder" element={<Placeholder />} />
                     </Routes>
                 </BrowserRouter>
             </div>

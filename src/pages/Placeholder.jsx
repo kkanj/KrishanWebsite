@@ -2,7 +2,7 @@ import React from 'react';
 
 const Placeholder = () => {
   return (
-    <div>SOMETHING</div>
+    <div>SOMETHING WILL BE HERE</div>
   )
   
 }

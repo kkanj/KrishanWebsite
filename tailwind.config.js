@@ -31,7 +31,7 @@ export default {
                 "light-gray": "#E4E4E4",
                 "line-gray": "#eeeeee",
                 "gradient-gray-1": "#878787",
-                "gradient-gray-2": "#6c6c6c",
+                "gradient-gray-2": "#646464",
                 "gradient-gray-3": "#3e3e3e",
                 "gradient-1": "#20b1ff",
                 "gradient-2": "#b39cff",

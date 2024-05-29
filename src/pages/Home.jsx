@@ -21,8 +21,9 @@ const Home = () => {
                     <div className={styles.ParagraphGradient}>
                         I am a full-stack developer and student at UC Berkeley,
                         passionate about creating applications that are useful,
-                        meaningful, and impactful. I strive to use {"\n"} my skills to 
-                        innovate, create, and solve real world problems. Lets work together!
+                        meaningful, and impactful. I strive to use my
+                        skills to innovate, create, and solve real world
+                        problems. Lets work together!
                     </div>
                 </div>
             </div>

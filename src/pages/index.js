@@ -1,16 +1,17 @@
-import AboutMe from './AboutMe';
-import Home from './Home';
-import Contact from './Contact';
-import Projects from './Projects';
-import NavigationBar from '../components/NavigationBar';
-import Project0 from './Project0';
-
+import AboutMe from "./AboutMe";
+import Home from "./Home";
+import Contact from "./Contact";
+import Projects from "./Projects";
+import NavigationBar from "../components/NavigationBar";
+import Project0 from "./Project0";
+import Placeholder from "./Placeholder";
 
 export {
-    AboutMe, 
-    Home, 
-    Projects, 
+    AboutMe,
+    Home,
+    Projects,
     Contact,
     NavigationBar,
-    Project0
-}
+    Project0,
+    Placeholder,
+};
