@@ -12,7 +12,7 @@ const Home = () => {
         <div className="">
             <div>
                 <NavigationBar />
-                <div className="pl-[310px] pt-[40px] text-nameText text-med-gray font-sfpro font-light">
+                <div className="pl-[310px] pt-[40px] text-size3 text-med-gray font-sfpro font-light">
                     <span className=" py-7">Hello, I'm </span>
                     <span className=" text-name-text font-normal">
                         Krishan!{" "}

@@ -13,11 +13,12 @@ export default {
             widest: ".22em",
         },
         fontSize: {
-            categoryText: ["15px", "14px"],
-            menuSubText: ["15px", "14px"],
-            menuText: ["20px", "20px"],
-            nameText: ["30px", "30px"],
-            paragraphText: ["50px", "50px"],
+            size1: ["16px", "28px"],
+            size2: ["20px", "34px"],
+            size3: ["32px", "51px"],
+            size4: ["41px", "64px"],
+            size5: ["52px", "80px"],
+            size6: ["64px", "98px"],
         },
         extend: {
             colors: {
@@ -36,6 +37,7 @@ export default {
                 "gradient-1": "#20b1ff",
                 "gradient-2": "#b39cff",
                 "gradient-3": "#ff7fe1",
+                "hover": "#909090",
             },
             fontFamily: {
                 sfpro: ["SFPRO", "fallback"],

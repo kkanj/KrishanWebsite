@@ -15,7 +15,7 @@ function Typewriter() {
                     1500,
                 ]}
                 wrapper="span"
-                speed={55}
+                speed={75}
                 style={{ display: "inline-block" }}
                 repeat={Infinity}
             />
