@@ -12,6 +12,7 @@ const styles = {
     ParagraphGradient:
         "leading-[55px] bg-clip-text text-transparent font-sfpro font-semibold text-size4 text-left pr-[30px] py-[30px] bg-gradient-to-r from-gradient-gray-1 via-gradient-gray-2 to-gradient-gray-3",
     ColorGradient: "bg-clip-text text-transparent bg-gradient-to-r from-gradient-1 via-gradient-2 to-gradient-3",
+    TechStackMarquee: "w-[45px] h-[45px]"
 };
 
 export default styles;

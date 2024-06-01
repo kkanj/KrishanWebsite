@@ -2,10 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import styles from "../styling/Home.module.js";
-import { logo } from "../assets/index.js";
 import NavigationBar from "../components/NavigationBar.jsx";
 import Typewriter from "../components/Typewriter.jsx";
-import { TypeAnimation } from "react-type-animation";
+import MarqueeText from "../components/Marquee.jsx";
 
 const Home = () => {
     return (
@@ -21,10 +20,12 @@ const Home = () => {
                     <div className={styles.ParagraphGradient}>
                         I am a full-stack developer and student at UC Berkeley,
                         passionate about creating applications that are useful,
-                        meaningful, and impactful. I strive to use my
-                        skills to innovate, create, and solve real world
-                        problems. Lets work together!
+                        meaningful, and impactful. I strive to use my skills to
+                        innovate, create, and solve real world problems. Lets
+                        work together!
                     </div>
+
+                    <MarqueeText className="pr-[100px]" />
                 </div>
             </div>
         </div>
