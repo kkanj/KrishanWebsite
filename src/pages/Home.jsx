@@ -6,6 +6,7 @@ import NavigationBar from "../components/NavigationBar.jsx";
 import Typewriter from "../components/Typewriter.jsx";
 import MarqueeText from "../components/Marquee.jsx";
 
+
 const Home = () => {
     return (
         <div className="">
@@ -17,6 +18,7 @@ const Home = () => {
                         Krishan!{" "}
                     </span>
                     <Typewriter />
+                    <MarqueeText />
                     <div className={styles.ParagraphGradient}>
                         I am a full-stack developer and student at UC Berkeley,
                         passionate about creating applications that are useful,
@@ -24,8 +26,6 @@ const Home = () => {
                         innovate, create, and solve real world problems. Lets
                         work together!
                     </div>
-
-                    <MarqueeText className="pr-[100px]" />
                 </div>
             </div>
         </div>

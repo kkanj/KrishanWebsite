@@ -10,9 +10,9 @@ const styles = {
         "border-b border-line-gray w-full pb-[30px] py-[30px] p-[30px] flex flex-col text-left space-y-[12px]",
     Icon: "w-[14px] text-left mr-[4px] inline-block pb-[3px]",
     ParagraphGradient:
-        "leading-[55px] bg-clip-text text-transparent font-sfpro font-semibold text-size4 text-left pr-[30px] py-[30px] bg-gradient-to-r from-gradient-gray-1 via-gradient-gray-2 to-gradient-gray-3",
+        "leading-[55px] bg-clip-text text-transparent font-sfpro font-semibold text-size4 text-left pr-[30px] bg-gradient-to-r from-gradient-gray-1 via-gradient-gray-2 to-gradient-gray-3",
     ColorGradient: "bg-clip-text text-transparent bg-gradient-to-r from-gradient-1 via-gradient-2 to-gradient-3",
-    TechStackMarquee: "w-[45px] h-[45px]"
+    TechStackMarquee: "w-[25px] h-[25px]"
 };
 
 export default styles;

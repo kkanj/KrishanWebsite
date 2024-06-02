@@ -14,7 +14,7 @@ import {
 import styles from "../styling/Home.module.js";
 
 const MarqueeText = () => (
-    <div className="pr-[75px]">
+    <div className="ml-[-70px]">
         <Marquee speed={100}>
             <div className={`flex flex-row space-x-[60px]`}>
                 <img className={styles.TechStackMarquee} src={csharp} alt="C#" />
