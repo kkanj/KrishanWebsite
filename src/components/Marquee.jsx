@@ -1,51 +1,35 @@
 import Marquee from "react-fast-marquee";
 import React from "react";
-import {
-    csharp,
-    css,
-    html,
-    java,
-    javascript,
-    python,
-    reactImg,
-    sql,
-    tailwind,
-} from "../assets/index.js";
+import Csharp from "../assets/images/csharp.svg?react";
+import Css from "../assets/images/css.svg?react";
+import Html from "../assets/images/html.svg?react";
+import Java from "../assets/images/java.svg?react";
+import Javascript from "../assets/images/javascript.svg?react";
+import Python from "../assets/images/python.svg?react";
+import ReactImg from "../assets/images/react.svg?react";
+import Sql from "../assets/images/sql.svg?react";
+import Tailwind from "../assets/images/tailwind.svg?react";
+import Vue from "../assets/images/vue.svg?react";
+
 import styles from "../styling/Home.module.js";
 
+
+
 const MarqueeText = () => (
-    <div className="ml-[-70px]">
-        <Marquee speed={100}>
+    <div className="ml-[-30px]">
+        <Marquee speed={80} gradient gradientColor="white" gradientWidth={90} autoFill>
             <div className={`flex flex-row space-x-[60px]`}>
-                <img className={styles.TechStackMarquee} src={csharp} alt="C#" />
-                <img className={styles.TechStackMarquee} src={css} alt="CSS" />
-                <img className={styles.TechStackMarquee} src={html} alt="HTML" />
-                <img className={styles.TechStackMarquee} src={java} alt="Java" />
-                <img className={styles.TechStackMarquee} src={javascript} alt="JavaScript" />
-                <img className={styles.TechStackMarquee} src={python} alt="Python" />
-                <img className={styles.TechStackMarquee} src={reactImg} alt="React" />
-                <img className={styles.TechStackMarquee} src={sql} alt="SQL" />
-                <img className={styles.TechStackMarquee} src={tailwind} alt="Tailwind" />
-                {/* Duplicate */}
-                <img className={styles.TechStackMarquee} src={csharp} alt="C#" />
-                <img className={styles.TechStackMarquee} src={css} alt="CSS" />
-                <img className={styles.TechStackMarquee} src={html} alt="HTML" />
-                <img className={styles.TechStackMarquee} src={java} alt="Java" />
-                <img className={styles.TechStackMarquee} src={javascript} alt="JavaScript" />
-                <img className={styles.TechStackMarquee} src={python} alt="Python" />
-                <img className={styles.TechStackMarquee} src={reactImg} alt="React" />
-                <img className={styles.TechStackMarquee} src={sql} alt="SQL" />
-                <img className={styles.TechStackMarquee} src={tailwind} alt="Tailwind" />
-                {/* Duplicate */}
-                <img className={styles.TechStackMarquee} src={csharp} alt="C#" />
-                <img className={styles.TechStackMarquee} src={css} alt="CSS" />
-                <img className={styles.TechStackMarquee} src={html} alt="HTML" />
-                <img className={styles.TechStackMarquee} src={java} alt="Java" />
-                <img className={styles.TechStackMarquee} src={javascript} alt="JavaScript" />
-                <img className={styles.TechStackMarquee} src={python} alt="Python" />
-                <img className={styles.TechStackMarquee} src={reactImg} alt="React" />
-                <img className={styles.TechStackMarquee} src={sql} alt="SQL" />
-                <img className={styles.TechStackMarquee} src={tailwind} alt="Tailwind" />
+                <Csharp className={styles.TechStackMarquee} />
+                <Css className={styles.TechStackMarquee} />
+                <Html className={styles.TechStackMarquee} />
+                <Java className={styles.TechStackMarquee} />
+                <Javascript className={styles.TechStackMarquee} />
+                <Python className={styles.TechStackMarquee} />
+                <ReactImg className={styles.TechStackMarquee} />
+                <Sql className={styles.TechStackMarquee} />
+                <Tailwind className={styles.TechStackMarquee} />
+                <Vue className={styles.TechStackMarquee} />
+
                 <div /> {/* Add's space */}
             </div>
         </Marquee>

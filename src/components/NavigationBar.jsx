@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import styles from "../styling/Home.module.js";
 import { logo, mail, linkedin, googlemeet } from "../assets/index.js";
-
+import MarqueeText from "../components/Marquee.jsx";
 
 const NavigationBar = () => {
     return (
@@ -105,6 +105,9 @@ const NavigationBar = () => {
                             Meet
                         </span>
                     </a>
+                </div>
+                <div className="absolute bottom-3 w-[209px]">
+                    <MarqueeText/>
                 </div>
             </div>
         </div>

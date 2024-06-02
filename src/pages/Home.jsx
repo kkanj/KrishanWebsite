@@ -18,7 +18,7 @@ const Home = () => {
                         Krishan!{" "}
                     </span>
                     <Typewriter />
-                    <MarqueeText />
+                    
                     <div className={styles.ParagraphGradient}>
                         I am a full-stack developer and student at UC Berkeley,
                         passionate about creating applications that are useful,
@@ -26,6 +26,7 @@ const Home = () => {
                         innovate, create, and solve real world problems. Lets
                         work together!
                     </div>
+                    
                 </div>
             </div>
         </div>
