@@ -10,7 +10,7 @@ export default {
             wide: ".025em",
             wider: ".05em",
             widest: ".1em",
-            widest: ".22em",
+            widest2: ".25em",
         },
         fontSize: {
             size1: ["16px", "28px"],
@@ -28,7 +28,7 @@ export default {
                 "menu-sub-text": "#b8b8b8",
                 "med-gray": "#B4B3B3",
                 "dark-gray": "#575757",
-                "name-text": "#757575",
+                "name-text": "#424242",
                 "light-gray": "#E4E4E4",
                 "line-gray": "#eeeeee",
                 "gradient-gray-1": "#878787",

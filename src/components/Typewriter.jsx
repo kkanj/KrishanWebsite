@@ -4,20 +4,17 @@ import styles from "../styling/Home.module";
 
 function Typewriter() {
     return (
-        <span className={`${styles.ColorGradient} font-sfpro font-medium`}>
+        <span>
             <TypeAnimation
                 sequence={[
-                    "I'm a student at The University of California, Berkeley.",
-                    1500,
-                    "I'm studying Computer Science & Data Science.",
-                    1500,
-                    "Check out my projects below!",
-                    1500,
+                    400,
+                    "full-stack developer.",
+                    
                 ]}
                 wrapper="span"
-                speed={75}
+                speed={35}
                 style={{ display: "inline-block" }}
-                repeat={Infinity}
+                repeat={1}
             />
         </span>
     );

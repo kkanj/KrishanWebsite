@@ -1,6 +1,7 @@
 import { react } from "react";
 import "./App.css";
 import {
+    Splash,
     AboutMe,
     Home,
     Projects,
@@ -16,7 +17,8 @@ function App() {
             <div className="bg-background h-screen w-screen">
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/" element={<Splash />} />
+                        <Route path="/home" element={<Home />} />
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/aboutme" element={<AboutMe />} />
                         <Route path="/contact" element={<Contact />} />

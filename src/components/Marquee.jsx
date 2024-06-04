@@ -13,11 +13,15 @@ import Vue from "../assets/images/vue.svg?react";
 
 import styles from "../styling/Home.module.js";
 
-
-
 const MarqueeText = () => (
     <div className="ml-[-30px]">
-        <Marquee speed={80} gradient gradientColor="white" gradientWidth={90} autoFill>
+        <Marquee
+            speed={40}
+            gradient
+            gradientColor="white"
+            gradientWidth={90}
+            autoFill
+        >
             <div className={`flex flex-row space-x-[60px]`}>
                 <Csharp className={styles.TechStackMarquee} />
                 <Css className={styles.TechStackMarquee} />
@@ -29,7 +33,6 @@ const MarqueeText = () => (
                 <Sql className={styles.TechStackMarquee} />
                 <Tailwind className={styles.TechStackMarquee} />
                 <Vue className={styles.TechStackMarquee} />
-
                 <div /> {/* Add's space */}
             </div>
         </Marquee>
