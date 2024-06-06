@@ -1,33 +1,40 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import styles from "../styling/Home.module.js";
-import { logo, mail, linkedin, googlemeet } from "../assets/index.js";
+import {
+    logo,
+    mail,
+    linkedin,
+    googlemeet,
+    MenuBurger,
+} from "../assets/index.js";
 import MarqueeText from "../components/Marquee.jsx";
 
 const NavigationBar = () => {
     return (
         <div className="absolute h-full border-r border-line-gray w-[240px] mr-[60px]">
             <div className={styles.MenuDivision}>
-                {/* Menu */}
-                <NavLink to="/">
-                    <img src={logo} alt="logo" className={styles.Logo} />
-                </NavLink>
                 <div className={styles.MenuPlacement}>
+                    <div className="flex flex-row">
+                        <Link to="/" >
+                            <img src={logo} alt="logo" className={`${styles.Logo}`} />
+                        </Link>
+                        <MenuBurger className="w-[35px] h-[35px] ml-[109px] mt-[3px] fill-med-gray"/>
+                    </div>
                     <div>
-                        <NavLink to="/AboutMe" className={styles.MenuItem}>
+                        <Link to="/AboutMe" className={`${styles.MenuItem}`}>
                             About Me.
-                        </NavLink>
+                        </Link>
                     </div>
                     <div>
-                        <NavLink to="/Projects" className={styles.MenuItem}>
+                        <Link to="/Projects" className={styles.MenuItem}>
                             Projects.
-                        </NavLink>
+                        </Link>
                     </div>
                     <div>
-                        <NavLink to="/Placeholder" className={styles.MenuItem}>
+                        <Link to="/Placeholder" className={styles.MenuItem}>
                             Placeholder.
-                        </NavLink>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -36,38 +43,38 @@ const NavigationBar = () => {
                 {/* Projects */}
                 <div className={styles.MenuSubHeader}>CATEGORY 1</div>
                 <div>
-                    <NavLink to="/Project0" className={styles.MenuSubItem}>
+                    <Link to="/Project0" className={styles.MenuSubItem}>
                         Project 0
-                    </NavLink>
+                    </Link>
                 </div>
                 <div>
-                    <NavLink to="/Project0" className={styles.MenuSubItem}>
+                    <Link to="/Project0" className={styles.MenuSubItem}>
                         Project 0
-                    </NavLink>
+                    </Link>
                 </div>
                 <div>
-                    <NavLink to="/Project0" className={styles.MenuSubItem}>
+                    <Link to="/Project0" className={styles.MenuSubItem}>
                         Project 0
-                    </NavLink>
+                    </Link>
                 </div>
 
                 <div className={`${styles.MenuSubHeader} pt-[40px]`}>
                     CATEGORY 2
                 </div>
                 <div>
-                    <NavLink to="/Project0" className={styles.MenuSubItem}>
+                    <Link to="/Project0" className={styles.MenuSubItem}>
                         Project 0
-                    </NavLink>
+                    </Link>
                 </div>
                 <div>
-                    <NavLink to="/Project0" className={styles.MenuSubItem}>
+                    <Link to="/Project0" className={styles.MenuSubItem}>
                         Project 0
-                    </NavLink>
+                    </Link>
                 </div>
                 <div>
-                    <NavLink to="/Project0" className={styles.MenuSubItem}>
+                    <Link to="/Project0" className={styles.MenuSubItem}>
                         Project 0
-                    </NavLink>
+                    </Link>
                 </div>
             </div>
             <div className="pb-[40px] py-[30px] p-[30px] text-left space-y-[12px]">
@@ -107,7 +114,7 @@ const NavigationBar = () => {
                     </a>
                 </div>
                 <div className="absolute bottom-3 w-[209px]">
-                    <MarqueeText/>
+                    <MarqueeText />
                 </div>
             </div>
         </div>

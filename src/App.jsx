@@ -9,24 +9,31 @@ import {
     Project0,
     Placeholder,
 } from "./pages";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavigationBar from "./components/NavigationBar.jsx";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    useLocation,
+} from "react-router-dom";
+
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+    const location = useLocation();
     return (
-        <div className="App">
-            <div className="bg-background h-screen w-screen">
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Splash />} />
-                        <Route path="/home" element={<Home />} />
-                        <Route path="/projects" element={<Projects />} />
-                        <Route path="/aboutme" element={<AboutMe />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/project0" element={<Project0 />} />
-                        <Route path="/placeholder" element={<Placeholder />} />
-                    </Routes>
-                </BrowserRouter>
-            </div>
+        <div className="bg-background h-screen w-screen">
+            <AnimatePresence mode="wait" initial={false}>
+                <Routes location={location} key={location.pathname}>
+                    <Route path="/" element={<Splash />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/aboutme" element={<AboutMe />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/project0" element={<Project0 />} />
+                    <Route path="/placeholder" element={<Placeholder />} />
+                </Routes>
+            </AnimatePresence>
         </div>
     );
 }

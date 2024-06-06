@@ -3,16 +3,22 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import styles from "../styling/Home.module.js";
 import NavigationBar from "../components/NavigationBar.jsx";
-import Typewriter from "../components/Typewriter.jsx";
-import MarqueeText from "../components/Marquee.jsx";
+
+import { motion } from "framer-motion";
 
 const Home = () => {
     return (
-        <div className="">
-            <div>
-                <NavigationBar />
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
+            <div className="">
+                <div>
+                    <NavigationBar />
+                </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

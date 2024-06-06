@@ -5,19 +5,24 @@ import styles from "../styling/Home.module.js";
 import NavigationBar from "../components/NavigationBar.jsx";
 import Typewriter from "../components/Typewriter.jsx";
 import MarqueeText from "../components/Marquee.jsx";
+import { motion } from "framer-motion";
 
 const Splash = () => {
     return (
-        <div className="flex h-screen">
-            <NavLink to="/Home" className="m-auto text-center">
-                <div className={styles.Name}>
-                    Krishan Kanji
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
+            <div className="flex h-screen">
+                <Link to="/Home" className="m-auto text-center">
+                    <div className={styles.Name}>Krishan Kanji</div>
+                    <div className={`${styles.FSD} `}>
+                        <Typewriter />
                     </div>
-                <div className={`${styles.FSD} `}>
-                    <Typewriter />
-                </div>
-            </NavLink>
-        </div>
+                </Link>
+            </div>
+        </motion.div>
     );
 };
 

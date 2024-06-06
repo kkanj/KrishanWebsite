@@ -3,7 +3,7 @@ const styles = {
     MenuItem: "text-size2 text-menu-text font-sfpro hover:text-hover",
     MenuSubHeader:
         "text-size1 text-category-text font-sfpro font-semibold tracking-widest",
-    Logo: "w-[35px] text-left pb-[10px]",
+    Logo: "w-[35px] h-[50px] inline-block",
     MenuSubItem:
         "text-size1 text-menu-text font-sfpro font-light tracking-wide hover:text-hover",
     MenuDivision:

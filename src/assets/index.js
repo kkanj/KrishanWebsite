@@ -13,6 +13,7 @@ import python from "./images/python.svg";
 import reactImg from "./images/react.svg";
 import sql from "./images/sql.svg";
 import tailwind from "./images/tailwind.svg";
+import MenuBurger from "./images/menuBurger.svg?react";
 
 export {
     logo,
@@ -30,4 +31,5 @@ export {
     reactImg,
     sql,
     tailwind,
+    MenuBurger,
 };

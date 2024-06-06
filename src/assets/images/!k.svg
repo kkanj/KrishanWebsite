@@ -5,7 +5,7 @@
       .cls-1 {
         fill: none;
         stroke: url(#Orange_Yellow);
-        stroke-miterlimit: 10;
+        stroke-miterlimit: 0;
       }
 
       .cls-2 {
