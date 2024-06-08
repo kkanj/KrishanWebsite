@@ -13,8 +13,10 @@ const styles = {
         "leading-[55px] bg-clip-text text-transparent font-sfpro font-semibold text-size4 text-left pr-[30px] bg-gradient-to-r from-gradient-gray-1 via-gradient-gray-2 to-gradient-gray-3",
     ColorGradient: "bg-clip-text text-transparent bg-gradient-to-r from-gradient-1 via-gradient-2 to-gradient-3",
     TechStackMarquee: "w-[25px] h-[25px]",
-    Name: "text-size5 text-name-text font-sfpro font-bold tracking-widest2",
-    FSD: "text-size2 text-dark-gray font-sfpro font-light tracking-widest2",
+    Name: "text-size3 sm:text-size4 lg:text-size5 text-name-text font-sfpro font-bold tracking-widest2",
+    FSD: "text-size1 sm:text-size2 lg:text-size2 text-dark-gray font-sfpro font-light tracking-widest2",
+    CardText: "text-size3 text-name-text font-sfpro font-light tracking-tight",
+    Card: "rounded-[21px] bg-card-bg w-full h-full drop-shadow-lg flex items-center justify-center",
 };
 
 export default styles;

@@ -9,20 +9,14 @@ import { motion } from "framer-motion";
 
 const Splash = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-        >
-            <div className="flex h-screen">
-                <Link to="/Home" className="m-auto text-center">
-                    <div className={styles.Name}>Krishan Kanji</div>
-                    <div className={`${styles.FSD} `}>
-                        <Typewriter />
-                    </div>
-                </Link>
-            </div>
-        </motion.div>
+        <div className="flex h-screen">
+            <Link to="/Home" className="m-auto text-center">
+                <div className={styles.Name}>Krishan Kanji</div>
+                <div className={`${styles.FSD} `}>
+                    <Typewriter />
+                </div>
+            </Link>
+        </div>
     );
 };
 
