@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Home = () => {
     return (
         <div>
-            <div className="grid grid-cols-3 gap-10 p-10 md:grid-cols-2 lg:grid-cols-3 h-screen">
+            <div className="grid grid-cols-3 gap-11 p-10 md:grid-cols-2 lg:grid-cols-3 h-screen">
                 <Link to="/AboutMe" className={`row-span-2 ${styles.Card}`}>
                     <div className={`${styles.CardText} text-center`}>
                         about.
@@ -33,7 +33,7 @@ const Home = () => {
                 </Link>
                 <Link to="/Placeholder" className={`col-span-2 ${styles.Card}`}>
                     <div className={`${styles.CardText} text-center`}>
-                        ideas...
+                        experience.
                     </div>
                 </Link>
             </div>

@@ -16,7 +16,7 @@ const styles = {
     Name: "text-size3 sm:text-size4 lg:text-size5 text-name-text font-sfpro font-bold tracking-widest2",
     FSD: "text-size1 sm:text-size2 lg:text-size2 text-dark-gray font-sfpro font-light tracking-widest2",
     CardText: "text-size3 text-name-text font-sfpro font-light tracking-tight",
-    Card: "rounded-[21px] bg-card-bg w-full h-full drop-shadow-lg flex items-center justify-center",
+    Card: "rounded-[21px] bg-card-bg w-full h-full drop-shadow-lg flex items-center justify-center transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-xl",
 };
 
 export default styles;

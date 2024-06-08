@@ -38,7 +38,7 @@ export default {
                 "gradient-2": "#b39cff",
                 "gradient-3": "#ff7fe1",
                 "hover": "#909090",
-                "card-bg": "#fbfbfb",
+                "card-bg": "#fbfbfbff",
             },
             fontFamily: {
                 sfpro: ["SFPRO", "fallback"],
