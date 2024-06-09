@@ -8,7 +8,7 @@ function Typewriter() {
             <TypeAnimation
                 sequence={[
                     400,
-                    "full-stack developer.",
+                    "full-stack developer",
                     
                 ]}
                 wrapper="span"
