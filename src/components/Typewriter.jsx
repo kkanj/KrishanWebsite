@@ -12,7 +12,7 @@ function Typewriter() {
                     
                 ]}
                 wrapper="span"
-                speed={35}
+                speed={40}
                 style={{ display: "inline-block" }}
                 repeat={1}
             />
