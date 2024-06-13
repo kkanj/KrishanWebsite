@@ -11,12 +11,15 @@ const styles = {
     Icon: "w-[14px] text-left mr-[4px] inline-block pb-[3px]",
     ParagraphGradient:
         "leading-[55px] bg-clip-text text-transparent font-sfpro font-semibold text-size4 text-left pr-[30px] bg-gradient-to-r from-gradient-gray-1 via-gradient-gray-2 to-gradient-gray-3",
-    ColorGradient: "bg-clip-text text-transparent bg-gradient-to-r from-gradient-1 via-gradient-2 to-gradient-3",
+    ColorGradient:
+        "bg-clip-text text-transparent bg-gradient-to-r from-gradient-1 via-gradient-2 to-gradient-3",
     TechStackMarquee: "w-[25px] h-[25px]",
     Name: "text-size3 sm:text-size4 lg:text-size5 text-name-text font-sfpro font-bold tracking-widest2 select-none",
     FSD: "text-size1 sm:text-size2 lg:text-size2 text-dark-gray font-sfpro font-light tracking-widest2 select-none",
-    CardText: "text-size3 text-name-text font-sfpro font-light tracking-tight select-none",
-    Card: "rounded-[21px] bg-card-bg w-full h-full border border-carad-bg drop-shadow-lg flex items-center justify-center hover:shadow-xl",
+    CardText:
+        "text-size3 text-name-text font-sfpro font-light tracking-tight select-none",
+    Card: "rounded-[21px] bg-card-bg w-full h-full border border-gray-100 drop-shadow-lg flex items-center justify-center hover:shadow-lg ",
+    Header: "text-size5 text-header font-sfpro font-semibold tracking-wide",
 };
 
 export default styles;

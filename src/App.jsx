@@ -28,7 +28,7 @@ function App() {
                     <Route path="/" element={<Splash />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/projects" element={<Projects />} />
-                    <Route path="/aboutme" element={<AboutMe />} />
+                    <Route path="/about" element={<AboutMe />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/project0" element={<Project0 />} />
                     <Route path="/placeholder" element={<Placeholder />} />

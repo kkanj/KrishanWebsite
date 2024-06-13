@@ -6,7 +6,6 @@ import { motion, cubicBezier } from "framer-motion";
 
 const MotionLink = motion(Link);
 
-
 const Home = () => {
     return (
         <div>
@@ -17,11 +16,11 @@ const Home = () => {
                     animate="visible"
                     exit="hidden"
                     transition={{
-                        staggerChildren: 0.15,
+                        staggerChildren: 0.13,
                     }}
                 >
                     <MotionLink
-                        to="/AboutMe"
+                        to="/about"
                         className={`row-span-2 ${styles.Card}`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
@@ -36,7 +35,7 @@ const Home = () => {
                     </MotionLink>
 
                     <MotionLink
-                        to="/Projects"
+                        to="/projects"
                         className={`col-span-2 ${styles.Card}`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
@@ -67,7 +66,7 @@ const Home = () => {
                         </div>
                     </motion.div>
                     <MotionLink
-                        to="/Contact"
+                        to="/contact"
                         className={`row-span-2 ${styles.Card}`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
@@ -81,7 +80,7 @@ const Home = () => {
                         </div>
                     </MotionLink>
                     <MotionLink
-                        to="/Placeholder"
+                        to="/placeholder"
                         className={`col-span-2 ${styles.Card}`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
