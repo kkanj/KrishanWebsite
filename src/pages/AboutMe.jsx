@@ -62,11 +62,11 @@ const about = () => {
                     transition={{
                         scale: {
                             type: "spring",
-                            bounce: 0.72,
+                            bounce: 0.65,
                         },
                         backgroundColor: {
-                            duration: 0.1, // Duration of the color transition
-                            ease: "linear", // This can be adjusted to other easing options
+                            duration: 0.2, // Duration of the color transition
+                            ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
                         },
                     }}
@@ -83,11 +83,11 @@ const about = () => {
                     transition={{
                         scale: {
                             type: "spring",
-                            bounce: 0.72,
+                            bounce: 0.65,
                         },
                         backgroundColor: {
-                            duration: 0.1, // Duration of the color transition
-                            ease: "linear", // This can be adjusted to other easing options
+                            duration: 0.2, // Duration of the color transition
+                            ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
                         },
                     }}
@@ -104,11 +104,11 @@ const about = () => {
                     transition={{
                         scale: {
                             type: "spring",
-                            bounce: 0.72,
+                            bounce: 0.65,
                         },
                         backgroundColor: {
-                            duration: 0.1, // Duration of the color transition
-                            ease: "linear", // This can be adjusted to other easing options
+                            duration: 0.2, // Duration of the color transition
+                            ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
                         },
                     }}
@@ -125,11 +125,11 @@ const about = () => {
                     transition={{
                         scale: {
                             type: "spring",
-                            bounce: 0.72,
+                            bounce: 0.65,
                         },
                         backgroundColor: {
-                            duration: 0.1, // Duration of the color transition
-                            ease: "linear", // This can be adjusted to other easing options
+                            duration: 0.2, // Duration of the color transition
+                            ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
                         },
                     }}
@@ -146,11 +146,11 @@ const about = () => {
                     transition={{
                         scale: {
                             type: "spring",
-                            bounce: 0.72,
+                            bounce: 0.65,
                         },
                         backgroundColor: {
-                            duration: 0.1, // Duration of the color transition
-                            ease: "linear", // This can be adjusted to other easing options
+                            duration: 0.2, // Duration of the color transition
+                            ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
                         },
                     }}
@@ -167,11 +167,11 @@ const about = () => {
                     transition={{
                         scale: {
                             type: "spring",
-                            bounce: 0.72,
+                            bounce: 0.65,
                         },
                         backgroundColor: {
-                            duration: 0.1, // Duration of the color transition
-                            ease: "linear", // This can be adjusted to other easing options
+                            duration: 0.2, // Duration of the color transition
+                            ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
                         },
                     }}
@@ -182,7 +182,7 @@ const about = () => {
                     className={`col-span-2 ${styles.Card}`}
                     variants={animations.scale}
                     whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", bounce: 0.72 }}
+                    transition={{ type: "spring", bounce: 0.65 }}
                 >
                     yo fam
                 </motion.div>
