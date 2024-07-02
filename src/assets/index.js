@@ -1,7 +1,7 @@
 import logo from "./images/!k.svg";
-import mail from "./images/mail.svg";
+import Mail from "./images/mail.svg?react";
 import googlemeet from "./images/googlemeet.svg";
-import linkedin from "./images/linkedin.svg";
+import Linkedin from "./images/linkedin.svg?react";
 import Marquee from "react-fast-marquee";
 import React from "react";
 import csharp from "./images/csharp.svg";
@@ -14,12 +14,16 @@ import reactImg from "./images/react.svg";
 import sql from "./images/sql.svg";
 import tailwind from "./images/tailwind.svg";
 import MenuBurger from "./images/menuBurger.svg?react";
+import BerkeleyLogo from "./images/berkeleyLogo.svg?react"
+import Resume from "./images/resume.svg?react"
+import Github from "./images/github.svg?react"
+import Certificate from "./images/certificate.svg?react"
 
 export {
     logo,
-    mail,
+    Mail,
     googlemeet,
-    linkedin,
+    Linkedin,
     Marquee,
     React,
     csharp,
@@ -32,4 +36,8 @@ export {
     sql,
     tailwind,
     MenuBurger,
+    BerkeleyLogo,
+    Resume,
+    Github,
+    Certificate,
 };

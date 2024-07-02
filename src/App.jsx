@@ -9,7 +9,6 @@ import {
     Project0,
     Placeholder,
 } from "./pages";
-import NavigationBar from "./components/NavigationBar.jsx";
 import {
     BrowserRouter as Router,
     Routes,

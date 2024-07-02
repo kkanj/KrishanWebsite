@@ -2,7 +2,6 @@ import { cubicBezier } from "framer-motion";
 
 const popIn = cubicBezier(0.75, -0.01, 1, 0.81);
 
-
 const scale = {
     hidden: {
         scale: 0,
@@ -27,7 +26,7 @@ const fade = {
         opacity: 0,
         transition: {
             ease: "easeOut",
-            duration: 0.3,
+            duration: 0.5,
             type: "tween",
         },
     },
@@ -35,7 +34,7 @@ const fade = {
         opacity: 1,
         transition: {
             ease: "easeIn",
-            duration: 0.3,
+            duration: 0.5,
             type: "tween",
         },
     },
@@ -54,4 +53,23 @@ const scaleName = {
     },
 };
 
-export default { scale, scaleName, fade };
+const slide = {
+    hidden: {
+        x: -window.innerWidth,
+        opacity: 0,
+        transition: {
+            ease: cubicBezier(0.87, 0, 0.13, 1),
+            duration: 0.4,
+        },
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            ease: cubicBezier(0.87, 0, 0.13, 1),
+            duration: 0.4,
+        },
+    },
+};
+
+export default { scale, scaleName, fade, slide };
