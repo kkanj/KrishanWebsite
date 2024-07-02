@@ -178,14 +178,7 @@ const about = () => {
                 >
                     <Certificate className="w-[45%] h-auto" />
                 </motion.div>
-                <motion.div
-                    className={`col-span-2 ${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", bounce: 0.65 }}
-                >
-                    yo fam
-                </motion.div>
+                
             </motion.div>
         </motion.div>
     );
