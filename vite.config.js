@@ -9,6 +9,6 @@ export default defineConfig({
     react(),
     ssr(),
   ],
-  base: './',
+  base: '/',
   
 })
