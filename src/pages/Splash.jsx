@@ -23,7 +23,7 @@ const Splash = () => {
                 }}
             >
                 <Link to="/Home" className="m-auto text-center">
-                    <div className={styles.Name}>YO BRO</div>
+                    <div className={styles.Name}>Krishan Kanji</div>
                     <div className={`${styles.FSD} `}>
                         <Typewriter />
                     </div>
