@@ -11,3 +11,4 @@ RewriteRule ^(.*)$ /index.html [L]
 
 # Set the MIME type for JavaScript files
 AddType application/javascript .js
+AddType application/javascript .mjs
