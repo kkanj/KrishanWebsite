@@ -18,7 +18,7 @@ const styles = {
     FSD: "text-size1 sm:text-size2 lg:text-size2 text-dark-gray font-sfpro font-light tracking-widest2 select-none",
     CardText:
         "text-size3 text-name-text font-sfpro font-light tracking-tight select-none",
-    Card: "rounded-[21px] bg-card-bg w-full h-full border border-gray-100 drop-shadow-lg flex items-center justify-center hover:shadow-lg ",
+    Card: "rounded-[21px] bg-card-bg w-full h-full drop-shadow-lg flex items-center justify-center hover:shadow-lg ",
     Header: "text-size5 text-header font-sfpro font-semibold tracking-wide",
 };
 

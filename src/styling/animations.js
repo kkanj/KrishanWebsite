@@ -4,6 +4,7 @@ const popIn = cubicBezier(0.75, -0.01, 1, 0.81);
 
 const scale = {
     hidden: {
+        color: "#555555",
         scale: 0,
         transition: {
             ease: popIn,
@@ -12,6 +13,7 @@ const scale = {
     },
     visible: {
         scale: 1,
+        color: "#555555",
         transition: {
             ease: popIn,
             duration: 0.5,
@@ -26,7 +28,7 @@ const fade = {
         opacity: 0,
         transition: {
             ease: "easeOut",
-            duration: 0.5,
+            duration: 0.4,
             type: "tween",
         },
     },
@@ -34,8 +36,9 @@ const fade = {
         opacity: 1,
         transition: {
             ease: "easeIn",
-            duration: 0.5,
+            duration: 0.4,
             type: "tween",
+            delay: 0.2
         },
     },
 };
@@ -55,19 +58,19 @@ const scaleName = {
 
 const slide = {
     hidden: {
-        x: -window.innerWidth,
-        opacity: 0,
+        x: -window.innerWidth / 2,
+        opacity: 1,
         transition: {
-            ease: cubicBezier(0.87, 0, 0.13, 1),
-            duration: 0.4,
+            ease: cubicBezier(0.64, 0, 0.78, 0),
+            duration: 0.45,
         },
     },
     visible: {
         x: 0,
         opacity: 1,
         transition: {
-            ease: cubicBezier(0.87, 0, 0.13, 1),
-            duration: 0.4,
+            ease: cubicBezier(0.22, 1, 0.36, 1),
+            duration: 0.45,
         },
     },
 };

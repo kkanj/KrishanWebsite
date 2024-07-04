@@ -16,7 +16,7 @@ const Home = () => {
                     animate="visible"
                     exit="hidden"
                     transition={{
-                        staggerChildren: 0.13,
+                        staggerChildren: 0.12,
                     }}
                 >
                     <MotionLink

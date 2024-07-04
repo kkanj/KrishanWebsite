@@ -18,6 +18,7 @@ import BerkeleyLogo from "./images/berkeleyLogo.svg?react"
 import Resume from "./images/resume.svg?react"
 import Github from "./images/github.svg?react"
 import Certificate from "./images/certificate.svg?react"
+import Smile from "./images/smile.svg?react"
 
 export {
     logo,
@@ -40,4 +41,5 @@ export {
     Resume,
     Github,
     Certificate,
+    Smile,
 };
