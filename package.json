@@ -19,7 +19,8 @@
     "react-router-dom": "^6.23.1",
     "react-type-animation": "^3.2.0",
     "sort-by": "^0.0.2",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "vite-plugin-ssr": "^0.4.142"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
