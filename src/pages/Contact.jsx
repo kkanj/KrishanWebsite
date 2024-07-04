@@ -21,6 +21,7 @@ const MotionA = motion.a;
 const contact = () => {
     return (
         <motion.div
+            style={{ overflow: "hidden", height: "100vh" }}
             className="h-screen w-full flex"
             initial="hidden"
             animate="visible"
@@ -31,7 +32,7 @@ const contact = () => {
         >
             <motion.div
                 className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
-                variants={animations.slide}
+                variants={animations.slideVertical}
             >
                 <motion.div
                     className="text-white font-sfpro h-screen flex flex-col justify-center mx-16 space-y-2"
@@ -56,57 +57,7 @@ const contact = () => {
                     </div>
                 </motion.div>
             </motion.div>
-            <motion.div className="flex-grow w-1/2 grid grid-cols-3 gap-10 p-40">
-                <MotionLink
-                    to="https://cdss.berkeley.edu/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`col-span-2 ${styles.Card} `}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.04,
-                        backgroundColor: "#003262", // Target background color on hover
-                        color: "#FFD100", // Target text color on hover
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <BerkeleyLogo className="w-[75%] h-auto" />
-                </MotionLink>
-                <MotionLink
-                    to="https://www.linkedin.com/in/krishankanji/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#D2E6F4", // Target background color on hover
-                        color: "#0077B5",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Linkedin className="w-[45%] h-auto" />
-                </MotionLink>
+            <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
                 <motion.div
                     className={`${styles.Card}`}
                     variants={animations.scale}
@@ -180,28 +131,6 @@ const contact = () => {
                 >
                     <Github className="w-[45%] h-auto" />
                 </MotionLink>
-                <motion.div
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#E89F9F", // Target background color on hover
-                        color: "#8E0D0D",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Certificate className="w-[45%] h-auto" />
-                </motion.div>
                 <MotionLink
                     to="/contact"
                     rel="noopener noreferrer"

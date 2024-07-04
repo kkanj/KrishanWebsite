@@ -31,7 +31,7 @@ const about = () => {
         >
             <motion.div
                 className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
-                variants={animations.slide}
+                variants={animations.slideHorizontal}
             >
                 <motion.div
                     className="text-white font-sfpro h-screen flex flex-col justify-center mx-16 space-y-2"

@@ -56,7 +56,7 @@ const scaleName = {
     },
 };
 
-const slide = {
+const slideHorizontal = {
     hidden: {
         x: -window.innerWidth / 2,
         opacity: 1,
@@ -75,4 +75,23 @@ const slide = {
     },
 };
 
-export default { scale, scaleName, fade, slide };
+const slideVertical = {
+    hidden: {
+        y: window.innerHeight,
+        opacity: 1,
+        transition: {
+            ease: cubicBezier(0.64, 0, 0.78, 0),
+            duration: 0.45,
+        },
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            ease: cubicBezier(0.22, 1, 0.36, 1),
+            duration: 0.45,
+        },
+    },
+};
+
+export default { scale, scaleName, fade, slideHorizontal, slideVertical };
