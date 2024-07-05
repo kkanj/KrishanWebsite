@@ -22,7 +22,7 @@ const Splash = () => {
                     bounce: 0.72,
                 }}
             >
-                <Link to="/Home" className="m-auto text-center">
+                <Link to="/home" className="m-auto text-center">
                     <div className={styles.Name}>Krishan Kanji</div>
                     <div className={`${styles.FSD} `}>
                         <Typewriter />

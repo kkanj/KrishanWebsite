@@ -58,7 +58,7 @@ const scaleName = {
 
 const slideHorizontal = {
     hidden: {
-        x: -window.innerWidth / 2,
+        x: -window.innerWidth,
         opacity: 1,
         transition: {
             ease: cubicBezier(0.64, 0, 0.78, 0),
