@@ -30,6 +30,9 @@ const contact = () => {
                 staggerChildren: 0.06,
             }}
         >
+            <motion.div variants={animations.fade} className="z-20">
+                <NavMenu />
+            </motion.div>
             <motion.div
                 className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
                 variants={animations.slideVertical}

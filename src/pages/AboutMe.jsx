@@ -5,6 +5,7 @@ import animations from "../styling/animations.js";
 import { motion, cubicBezier, AnimatePresence } from "framer-motion";
 import { AboutCards } from "../components/AboutCards.jsx";
 import berkeley from "../assets/images/berkeleyCard3.jpg";
+import { NavMenu } from "../components/NavMenu.jsx";
 import {
     BerkeleyLogo,
     Certificate,
@@ -29,6 +30,10 @@ const about = () => {
                 staggerChildren: 0.06,
             }}
         >
+            <motion.div variants={animations.fade} className="z-20">
+                <NavMenu />
+            </motion.div>
+
             <motion.div
                 className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
                 variants={animations.slideHorizontal}
