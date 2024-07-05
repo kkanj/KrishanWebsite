@@ -14,6 +14,7 @@ import {
     Mail,
     Smile,
 } from "../assets/index.js";
+import { NavMenu } from "../components/NavMenu.jsx";
 
 const MotionLink = motion(Link);
 const MotionA = motion.a;
