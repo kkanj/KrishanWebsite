@@ -107,13 +107,15 @@ const about = () => {
                 >
                     <Linkedin className="w-[45%] h-auto" />
                 </MotionLink>
-                <motion.div
+                <MotionLink
+                    to="/contact"
+                    rel="noopener noreferrer"
                     className={`${styles.Card}`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#F2C0D2", // Target background color on hover
-                        color: "#7A3850",
+                        backgroundColor: "#B0CCAC", // Target background color on hover
+                        color: "#3B6E55",
                     }}
                     transition={{
                         scale: {
@@ -127,8 +129,8 @@ const about = () => {
                         },
                     }}
                 >
-                    <Smile className="w-[45%] h-auto" />
-                </motion.div>
+                    <Mail className="w-[45%] h-auto" />
+                </MotionLink>
 
                 <MotionA
                     href="/files/KrishanKanji-Resume.pdf" // Ensure this URL is accessible and points to the PDF file you want to preview
@@ -202,15 +204,13 @@ const about = () => {
                 >
                     <Certificate className="w-[45%] h-auto" />
                 </motion.div>
-                <MotionLink
-                    to="/contact"
-                    rel="noopener noreferrer"
+                <motion.div
                     className={`${styles.Card}`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#B0CCAC", // Target background color on hover
-                        color: "#3B6E55",
+                        backgroundColor: "#F2C0D2", // Target background color on hover
+                        color: "#7A3850",
                     }}
                     transition={{
                         scale: {
@@ -224,8 +224,8 @@ const about = () => {
                         },
                     }}
                 >
-                    <Mail className="w-[45%] h-auto" />
-                </MotionLink>
+                    <Smile className="w-[45%] h-auto" />
+                </motion.div>
             </motion.div>
         </motion.div>
     );
