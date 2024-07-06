@@ -1,11 +1,21 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../styling/Home.module.js";
 import Typewriter from "../components/Typewriter.jsx";
 import { motion } from "framer-motion";
 import animations from "../styling/animations.js";
 
 const Splash = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            navigate("/home");
+        }, 2500);
+
+        return () => clearTimeout(timer); // Cleanup the timer
+    }, [navigate]);
+
     return (
         <motion.div
             className="flex h-screen"
@@ -22,12 +32,12 @@ const Splash = () => {
                     bounce: 0.72,
                 }}
             >
-                <Link to="/home" className="m-auto text-center">
+                <div className="m-auto text-center">
                     <div className={styles.Name}>Krishan Kanji</div>
                     <div className={`${styles.FSD} `}>
                         <Typewriter />
                     </div>
-                </Link>
+                </div>
             </motion.div>
         </motion.div>
     );

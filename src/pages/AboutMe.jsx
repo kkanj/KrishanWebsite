@@ -30,7 +30,7 @@ const about = () => {
                 staggerChildren: 0.06,
             }}
         >
-            <motion.div variants={animations.fade} className="z-20">
+            <motion.div variants={animations.fade} className="">
                 <NavMenu />
             </motion.div>
 

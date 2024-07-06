@@ -1,40 +1,95 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { MotionConfig, motion } from "framer-motion";
 
 export const NavMenu = () => {
     return (
-        <div className="absolute inset-x-0 top-0 mt-10 flex justify-center ">
-            <div className="bg-[#727986] shadow-lg rounded-full py-2 px-7 flex justify-center space-x-4 w-auto mx-auto text-size2 font-sfpro font-semibold">
-                <div className="space-x-7">
-                    <Link to="/home" className="text-white hover:text-[#99eeff]">
-                        Home
-                    </Link>
-                    <Link
-                        to="/about"
-                        className="text-white hover:text-[#99eeff]"
-                    >
-                        About
-                    </Link>
-                    <Link
-                        to="/projects"
-                        className="text-white hover:text-[#99eeff]"
-                    >
-                        Projects
-                    </Link>
-                    <Link
-                        to="/contact"
-                        className="text-white hover:text-[#99eeff]"
-                    >
-                        Contact
-                    </Link>
-                    <Link
-                        to="/placeholder"
-                        className="text-white hover:text-[#99eeff]"
-                    >
-                        Experience
-                    </Link>
-                </div>
-            </div>
+        <div>
+            <AnimatedHamburgerButton />
         </div>
     );
+};
+
+export const AnimatedHamburgerButton = () => {
+    const [active, setActive] = useState(false);
+    return (
+        <div className="absolute flex items-center inset-0 place-content-center pointer-events-auto">
+            <MotionConfig
+                transition={{
+                    duration: 0.5,
+                    ease: "easeInOut",
+                }}
+            >
+                <motion.button
+                    initial={false}
+                    animate={active ? "open" : "closed"}
+                    onClick={() => setActive((pv) => !pv)}
+                    className="relative h-20 w-20 rounded-full bg-[#727986] transition-colors hover:bg-[#626D73] focus:outline-none cursor-pointer"
+                >
+                    <motion.span
+                        variants={VARIANTS.top}
+                        className="absolute h-1 w-10 bg-white "
+                        style={{
+                            y: "-50%",
+                            left: "50%",
+                            x: "-50%",
+                            top: "35%",
+                        }}
+                    />
+                    <motion.span
+                        variants={VARIANTS.middle}
+                        className="absolute h-1 w-10 bg-white"
+                        style={{
+                            left: "50%",
+                            x: "-50%",
+                            top: "50%",
+                            y: "-50%",
+                        }}
+                    />
+                    <motion.span
+                        variants={VARIANTS.bottom}
+                        className="absolute h-1 w-10 bg-white"
+                        style={{
+                            x: "-50%",
+                            y: "50%",
+                            bottom: "35%",
+                            left: "calc(50%)",
+                        }}
+                    />
+                </motion.button>
+            </MotionConfig>
+        </div>
+    );
+};
+
+const VARIANTS = {
+    top: {
+        open: {
+            rotate: ["0deg", "0deg", "45deg"],
+            top: ["35%", "50%", "50%"],
+        },
+        closed: {
+            rotate: ["45deg", "0deg", "0deg"],
+            top: ["50%", "50%", "35%"],
+        },
+    },
+    middle: {
+        open: {
+            rotate: ["0deg", "0deg", "-45deg"],
+        },
+        closed: {
+            rotate: ["-45deg", "0deg", "0deg"],
+        },
+    },
+    bottom: {
+        open: {
+            rotate: ["0deg", "0deg", "45deg"],
+            bottom: ["35%", "50%", "50%"],
+            left: "50%",
+        },
+        closed: {
+            rotate: ["45deg", "0deg", "0deg"],
+            bottom: ["50%", "50%", "35%"],
+            left: "calc(50%)",
+        },
+    },
 };
