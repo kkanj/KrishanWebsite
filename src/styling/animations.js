@@ -23,6 +23,28 @@ const scale = {
     },
 };
 
+const scaleMenu = {
+    hidden: {
+        color: "#555555",
+        scale: 0,
+        transition: {
+            ease: popIn,
+            duration: 0.15,
+        },
+    },
+    visible: {
+        scale: 1,
+        color: "#555555",
+        transition: {
+            delay: 0.4,
+            ease: popIn,
+            duration: 0.5,
+            type: "spring",
+            bounce: 0.3,
+        },
+    },
+};
+
 const fade = {
     hidden: {
         opacity: 0,
@@ -94,4 +116,4 @@ const slideVertical = {
     },
 };
 
-export default { scale, scaleName, fade, slideHorizontal, slideVertical };
+export default { scale, scaleName, fade, slideHorizontal, slideVertical, scaleMenu };

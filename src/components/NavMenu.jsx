@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
+import animations from "../styling/animations.js";
 
 export const NavMenu = () => {
-    return (
-        <div>
-            <AnimatedHamburgerButton />
-        </div>
-    );
-};
-
-export const AnimatedHamburgerButton = () => {
     const [active, setActive] = useState(false);
     return (
-        <div className="absolute flex items-center inset-0 place-content-center pointer-events-auto">
+        <motion.div
+            className="absolute flex items-center inset-0 place-content-center pointer-events-auto"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={animations.scaleMenu}
+        >
             <MotionConfig
                 transition={{
-                    duration: 0.5,
+                    duration: 0.25,
                     ease: "easeInOut",
                 }}
             >
@@ -57,7 +56,7 @@ export const AnimatedHamburgerButton = () => {
                     />
                 </motion.button>
             </MotionConfig>
-        </div>
+        </motion.div>
     );
 };
 

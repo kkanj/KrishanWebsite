@@ -30,7 +30,7 @@ const about = () => {
                 staggerChildren: 0.06,
             }}
         >
-            <motion.div variants={animations.fade} className="">
+            <motion.div className="h-screen w-screen absolute overflow-hidden">
                 <NavMenu />
             </motion.div>
 
