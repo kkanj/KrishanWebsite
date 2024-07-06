@@ -19,6 +19,9 @@ export default {
             size4: ["41px", "64px"],
             size5: ["52px", "80px"],
             size6: ["64px", "98px"],
+            size7: ["80px", "120px"],
+            size8: ["96px", "140px"],
+            size9: ["112px", "160px"],
         },
         extend: {
             colors: {

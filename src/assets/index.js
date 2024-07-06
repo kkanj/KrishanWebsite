@@ -19,6 +19,7 @@ import Resume from "./images/resume.svg?react"
 import Github from "./images/github.svg?react"
 import Certificate from "./images/certificate.svg?react"
 import Smile from "./images/smile.svg?react"
+import Send from "./images/send.svg?react"
 
 export {
     logo,
@@ -42,4 +43,5 @@ export {
     Github,
     Certificate,
     Smile,
+    Send,
 };

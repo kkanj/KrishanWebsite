@@ -6,7 +6,7 @@ export const NavMenu = () => {
     const [active, setActive] = useState(false);
     return (
         <motion.div
-            className="absolute flex items-center inset-0 place-content-center pointer-events-auto"
+            className="absolute flex items-center inset-0 place-content-center pointer-events-auto "
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -22,11 +22,11 @@ export const NavMenu = () => {
                     initial={false}
                     animate={active ? "open" : "closed"}
                     onClick={() => setActive((pv) => !pv)}
-                    className="relative h-20 w-20 rounded-full bg-[#727986] transition-colors hover:bg-[#626D73] focus:outline-none cursor-pointer"
+                    className="relative h-16 w-16 rounded-full bg-[#727986] transition-colors hover:bg-[#626D73] focus:outline-none cursor-pointer"
                 >
                     <motion.span
                         variants={VARIANTS.top}
-                        className="absolute h-1 w-10 bg-white "
+                        className="absolute h-1 w-8 bg-white "
                         style={{
                             y: "-50%",
                             left: "50%",
@@ -36,7 +36,7 @@ export const NavMenu = () => {
                     />
                     <motion.span
                         variants={VARIANTS.middle}
-                        className="absolute h-1 w-10 bg-white"
+                        className="absolute h-1 w-8 bg-white"
                         style={{
                             left: "50%",
                             x: "-50%",
@@ -46,7 +46,7 @@ export const NavMenu = () => {
                     />
                     <motion.span
                         variants={VARIANTS.bottom}
-                        className="absolute h-1 w-10 bg-white"
+                        className="absolute h-1 w-8 bg-white"
                         style={{
                             x: "-50%",
                             y: "50%",

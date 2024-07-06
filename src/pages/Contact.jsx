@@ -1,9 +1,8 @@
-import { React, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import styles from "../styling/Home.module.js";
 import animations from "../styling/animations.js";
 import { motion, cubicBezier, AnimatePresence } from "framer-motion";
-import { AboutCards } from "../components/AboutCards.jsx";
 import berkeley from "../assets/images/berkeleyCard3.jpg";
 import {
     BerkeleyLogo,
@@ -15,11 +14,39 @@ import {
     Smile,
 } from "../assets/index.js";
 import { NavMenu } from "../components/NavMenu.jsx";
+import emailjs from "@emailjs/browser";
+import { Send } from "../assets/index.js";
 
 const MotionLink = motion(Link);
 const MotionA = motion.a;
 
 const contact = () => {
+    const form = useRef();
+    const [popupVisible, setPopupVisible] = useState(false); // Step 2: Popup visibility state
+    const [popupMessage, setPopupMessage] = useState(""); // Step 2: Popup message state
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm("service_1l65g4u", "template_918c0oj", form.current, {
+                publicKey: "rmqyu3aX4pa1ywH_5",
+            })
+            .then(
+                () => {
+                    console.log("SUCCESS!");
+                    setPopupMessage("Thank you, I'll get back to you soon"); // Step 3: Set success message
+                    setPopupVisible(true); // Step 3: Show popup
+                    setTimeout(() => setPopupVisible(false), 5000);
+                },
+                (error) => {
+                    console.log("FAILED...", error.text);
+                    setPopupMessage("Error: Please try again"); // Step 3: Set error message
+                    setPopupVisible(true); // Step 3: Show popup
+                    setTimeout(() => setPopupVisible(false), 5000);
+                }
+            );
+    };
+
     return (
         <motion.div
             className="h-screen w-full flex"
@@ -30,7 +57,14 @@ const contact = () => {
                 staggerChildren: 0.06,
             }}
         >
-            <motion.div className="h-screen w-screen absolute overflow-hidden">
+            {popupVisible && ( // Step 4: Conditional rendering based on popupVisible state
+                <div className="absolute top-0 left-0 right-1/2 bottom-0 flex justify-center items-center z-30 text-white">
+                    <div className="bg-[#545454] px-8 py-4 rounded-full">
+                        <p>{popupMessage}</p>
+                    </div>
+                </div>
+            )}
+            <motion.div className="h-screen w-screen absolute overflow-hidden z-0">
                 <NavMenu />
             </motion.div>
 
@@ -39,26 +73,55 @@ const contact = () => {
                 variants={animations.slideHorizontal}
             >
                 <motion.div
-                    className="text-white font-sfpro h-screen flex flex-col justify-center mx-16 space-y-2"
+                    className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-16 space-y-4 z-10"
                     variants={animations.fade}
                 >
-                    <div className="font-light text-size2 tracking-widest">
-                        Krishan Kanji
-                    </div>
-                    <div className="font-bold text-size4 uppercase tracking-widest -space-y-4">
-                        <div>Student</div>
-                        <div>Software Engineer</div>
-                        <div>Full Stack Developer</div>
-                    </div>
-                    <div className="text-size3 font-normal mr-[145px]">
-                        Hi, I’m Krishan Kanji, Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Quisque quis sagittis
-                        massa, ac pharetra urna. Proin iaculis, augue sed
-                        finibus dapibus, nisl quam egestas urna, vitae auctor
-                        justo metus vitae lectus. In gravida, velit a venenatis
-                        maximus, purus tortor placerat dui, ut ullamcorper arcu
-                        ligula.{" "}
-                    </div>
+                    <form
+                        ref={form}
+                        onSubmit={sendEmail}
+                        className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-20 space-y-4 py-10 z-10 font-medium tracking-wide text-size2"
+                    >
+                        <div className="pl-1 py-1 font-sfpro font-semibold tracking-wider text-size9 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
+                            Contact Me
+                        </div>
+                        <div className="text-white text-size4 pl-1 font-sfpro font-semibold tracking-wider py-1">
+                            Let's Connect!
+                        </div>
+                        <input
+                            type="text"
+                            name="user_first_name"
+                            placeholder="First Name"
+                            className={`${styles.ContactInputBox} h-11 `}
+                        />
+                        <input
+                            type="text"
+                            name="user_last_name"
+                            placeholder="Last Name"
+                            className={`${styles.ContactInputBox} h-11`}
+                        />{" "}
+                        {/* Note: Changed name attribute to user_last_name for clarity */}
+                        <input
+                            type="email"
+                            name="user_email"
+                            placeholder="Email"
+                            className={`${styles.ContactInputBox} h-11`}
+                        />
+                        <textarea
+                            name="message"
+                            placeholder="Write something..."
+                            className={`${styles.ContactInputBox} rounded-[22px] h-72 py-3`}
+                        ></textarea>
+                        <button
+                            type="submit"
+                            className={`bg-[#727986] rounded-full focus:outline-none h-11 text-white hover:bg-[#8d96a6] transition-colors flex items-center justify-center`}
+                        >
+                            <Send
+                                className="w-6 h-auto mr-2 tracking-wider"
+                                style={{ stroke: "#ffffff" }}
+                            />{" "}
+                            Send Message
+                        </button>
+                    </form>
                 </motion.div>
             </motion.div>
             <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
