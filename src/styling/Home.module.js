@@ -20,7 +20,7 @@ const styles = {
         "text-size3 text-name-text font-sfpro font-light tracking-tight select-none",
     Card: "rounded-[21px] bg-card-bg w-full h-full drop-shadow-lg flex items-center justify-center hover:shadow-lg ",
     Header: "text-size5 text-header font-sfpro font-semibold tracking-wide",
-    ContactInputBox: "rounded-full bg-[#D9D9D9] focus:outline-dotted pl-4",
+    ContactInputBox: "bg-[#D9D9D9] focus:outline-dotted pl-4",
 };
 
 export default styles;

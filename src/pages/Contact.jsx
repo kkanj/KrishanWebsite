@@ -91,25 +91,25 @@ const contact = () => {
                             type="text"
                             name="user_first_name"
                             placeholder="First Name"
-                            className={`${styles.ContactInputBox} h-11 `}
+                            className={`${styles.ContactInputBox} h-11 rounded-full `}
                         />
                         <input
                             type="text"
                             name="user_last_name"
                             placeholder="Last Name"
-                            className={`${styles.ContactInputBox} h-11`}
+                            className={`${styles.ContactInputBox} h-11 rounded-full`}
                         />{" "}
                         {/* Note: Changed name attribute to user_last_name for clarity */}
                         <input
                             type="email"
                             name="user_email"
                             placeholder="Email"
-                            className={`${styles.ContactInputBox} h-11`}
+                            className={`${styles.ContactInputBox} h-11 rounded-full`}
                         />
                         <textarea
                             name="message"
                             placeholder="Write something..."
-                            className={`${styles.ContactInputBox} rounded-[22px] h-72 py-3`}
+                            className={`${styles.ContactInputBox} rounded-3xl h-72 py-3`}
                         ></textarea>
                         <button
                             type="submit"
