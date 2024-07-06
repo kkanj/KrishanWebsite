@@ -22,7 +22,6 @@ const MotionA = motion.a;
 const contact = () => {
     return (
         <motion.div
-            style={{ overflow: "hidden", height: "100vh" }}
             className="h-screen w-full flex"
             initial="hidden"
             animate="visible"
@@ -31,12 +30,13 @@ const contact = () => {
                 staggerChildren: 0.06,
             }}
         >
-            <div className="z-20">
+            <motion.div className="h-screen w-screen absolute overflow-hidden">
                 <NavMenu />
-            </div>
+            </motion.div>
+
             <motion.div
                 className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
-                variants={animations.slideVertical}
+                variants={animations.slideHorizontal}
             >
                 <motion.div
                     className="text-white font-sfpro h-screen flex flex-col justify-center mx-16 space-y-2"
