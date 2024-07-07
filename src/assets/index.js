@@ -1,6 +1,6 @@
 import logo from "./images/!k.svg";
 import Mail from "./images/mail.svg?react";
-import googlemeet from "./images/googlemeet.svg";
+import GoogleMeet from "./images/GoogleMeet.svg?react";
 import Linkedin from "./images/linkedin.svg?react";
 import Marquee from "react-fast-marquee";
 import React from "react";
@@ -20,11 +20,15 @@ import Github from "./images/github.svg?react"
 import Certificate from "./images/certificate.svg?react"
 import Smile from "./images/smile.svg?react"
 import Send from "./images/send.svg?react"
+import GoogleMeetGray from "./images/googleMeetGray.svg?react"
+import Map from "./images/map.svg?react"
+import Person from "./images/person.svg?react"
+import Home from "./images/home.svg?react"
 
 export {
     logo,
     Mail,
-    googlemeet,
+    GoogleMeet,
     Linkedin,
     Marquee,
     React,
@@ -44,4 +48,8 @@ export {
     Certificate,
     Smile,
     Send,
+    GoogleMeetGray,
+    Map,
+    Person,
+    Home,
 };

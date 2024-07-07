@@ -51,7 +51,7 @@ const about = () => {
                         <div>Full Stack Developer</div>
                     </div>
                     <div className="text-size3 font-normal mr-[145px]">
-                        Hi, I’m Krishan Kanji, Lorem ipsum dolor sit amet,
+                        Hi, I'm Krishan Kanji, Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit. Quisque quis sagittis
                         massa, ac pharetra urna. Proin iaculis, augue sed
                         finibus dapibus, nisl quam egestas urna, vitae auctor
@@ -145,8 +145,8 @@ const about = () => {
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#FFDCB0", // Target background color on hover
-                        color: "#B86500",
+                        backgroundColor: "#FFDAB9", // Target background color on hover
+                        color: "#BA5E0B",
                     }}
                     transition={{
                         scale: {

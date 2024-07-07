@@ -12,6 +12,10 @@ import {
     Resume,
     Mail,
     Smile,
+    GoogleMeetGray,
+    Map,
+    Person,
+    GoogleMeet,
 } from "../assets/index.js";
 import { NavMenu } from "../components/NavMenu.jsx";
 import emailjs from "@emailjs/browser";
@@ -21,6 +25,7 @@ const MotionLink = motion(Link);
 const MotionA = motion.a;
 
 const contact = () => {
+    const [isHovered, setIsHovered] = useState(false);
     const form = useRef();
     const [popupVisible, setPopupVisible] = useState(false); // Step 2: Popup visibility state
     const [popupMessage, setPopupMessage] = useState(""); // Step 2: Popup message state
@@ -59,7 +64,7 @@ const contact = () => {
         >
             {popupVisible && ( // Step 4: Conditional rendering based on popupVisible state
                 <div className="absolute top-0 left-0 right-1/2 bottom-0 flex justify-center items-center z-30 text-white">
-                    <div className="bg-[#545454] px-8 py-4 rounded-full">
+                    <div className="bg-[#545454] px-8 py-4 rounded-2xl">
                         <p>{popupMessage}</p>
                     </div>
                 </div>
@@ -81,7 +86,7 @@ const contact = () => {
                         onSubmit={sendEmail}
                         className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-20 space-y-4 py-10 z-10 font-medium tracking-wide text-size2"
                     >
-                        <div className="pl-1 py-1 font-sfpro font-semibold tracking-wider text-size9 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
+                        <div className="pl-1 py-1 font-sfpro font-semibold tracking-wider text-size9 bg-clip-text text-transparent bg-gradient-to-r from-[#727986] to-[#B6CDD7]">
                             Contact Me
                         </div>
                         <div className="text-white text-size4 pl-1 font-sfpro font-semibold tracking-wider py-1">
@@ -91,29 +96,29 @@ const contact = () => {
                             type="text"
                             name="user_first_name"
                             placeholder="First Name"
-                            className={`${styles.ContactInputBox} h-11 rounded-full `}
+                            className={`${styles.ContactInputBox} h-11 rounded-2xl `}
                         />
                         <input
                             type="text"
                             name="user_last_name"
                             placeholder="Last Name"
-                            className={`${styles.ContactInputBox} h-11 rounded-full`}
+                            className={`${styles.ContactInputBox} h-11 rounded-2xl`}
                         />{" "}
                         {/* Note: Changed name attribute to user_last_name for clarity */}
                         <input
                             type="email"
                             name="user_email"
                             placeholder="Email"
-                            className={`${styles.ContactInputBox} h-11 rounded-full`}
+                            className={`${styles.ContactInputBox} h-11 rounded-2xl`}
                         />
                         <textarea
                             name="message"
                             placeholder="Write something..."
-                            className={`${styles.ContactInputBox} rounded-3xl h-72 py-3`}
+                            className={`${styles.ContactInputBox} rounded-2xl h-72 py-3`}
                         ></textarea>
                         <button
                             type="submit"
-                            className={`bg-[#727986] rounded-full focus:outline-none h-11 text-white hover:bg-[#8d96a6] transition-colors flex items-center justify-center`}
+                            className={`bg-[#727986] rounded-2xl focus:outline-none h-11 text-white hover:bg-[#8d96a6] transition-colors flex items-center justify-center`}
                         >
                             <Send
                                 className="w-6 h-auto mr-2 tracking-wider"
@@ -125,7 +130,9 @@ const contact = () => {
                 </motion.div>
             </motion.div>
             <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
-                <motion.div
+                <MotionLink
+                    to="/contact"
+                    rel="noopener noreferrer"
                     className={`${styles.Card}`}
                     variants={animations.scale}
                     whileHover={{
@@ -145,19 +152,23 @@ const contact = () => {
                         },
                     }}
                 >
-                    <Smile className="w-[45%] h-auto" />
-                </motion.div>
+                    <Mail className="w-[45%] h-auto" />
+                </MotionLink>
 
                 <MotionA
-                    href="/files/KrishanKanji-Resume.pdf" // Ensure this URL is accessible and points to the PDF file you want to preview
-                    target="_blank" // Opens the PDF in a new tab
-                    rel="noopener noreferrer"
-                    className={`${styles.Card}`}
+                    
+                    onClick={() => {
+                        Calendly.initPopupWidget({
+                            url: "https://calendly.com/krishankanji2003",
+                        });
+                        return false;
+                    }}
+                    
+                    className={`${styles.Card} cursor-pointer`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#FFDCB0", // Target background color on hover
-                        color: "#B86500",
+                        backgroundColor: "#DBF4F1", // Target background color on hover
                     }}
                     transition={{
                         scale: {
@@ -170,12 +181,18 @@ const contact = () => {
                             type: "tween", // Specify tween for the color transition
                         },
                     }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                 >
-                    <Resume className="w-[45%] h-auto" />
+                    {isHovered ? (
+                        <GoogleMeet className="w-[45%] h-auto " />
+                    ) : (
+                        <GoogleMeetGray className="w-[45%] h-auto " />
+                    )}
                 </MotionA>
+
                 <MotionLink
-                    to="https://github.com/kkanj"
-                    target="_blank"
+                    to="/about"
                     rel="noopener noreferrer"
                     className={`${styles.Card}`}
                     variants={animations.scale}
@@ -196,7 +213,7 @@ const contact = () => {
                         },
                     }}
                 >
-                    <Github className="w-[45%] h-auto" />
+                    <Person className="w-[45%] h-auto" />
                 </MotionLink>
                 <MotionLink
                     to="/contact"
@@ -220,7 +237,7 @@ const contact = () => {
                         },
                     }}
                 >
-                    <Mail className="w-[45%] h-auto" />
+                    <Map className="w-[45%] h-auto" />
                 </MotionLink>
             </motion.div>
         </motion.div>
