@@ -39,15 +39,16 @@ const contact = () => {
             .then(
                 () => {
                     console.log("SUCCESS!");
-                    setPopupMessage("Thank you, I'll get back to you soon"); // Step 3: Set success message
-                    setPopupVisible(true); // Step 3: Show popup
-                    setTimeout(() => setPopupVisible(false), 5000);
+                    setPopupMessage("Thank you, I'll get back to you soon");
+                    setPopupVisible(true);
+                    form.current.reset();
+                    setTimeout(() => setPopupVisible(false), 3000);
                 },
                 (error) => {
                     console.log("FAILED...", error.text);
-                    setPopupMessage("Error: Please try again"); // Step 3: Set error message
-                    setPopupVisible(true); // Step 3: Show popup
-                    setTimeout(() => setPopupVisible(false), 5000);
+                    setPopupMessage("Error: Please try again");
+                    setPopupVisible(true);
+                    setTimeout(() => setPopupVisible(false), 3000);
                 }
             );
     };
@@ -156,14 +157,12 @@ const contact = () => {
                 </MotionLink>
 
                 <MotionA
-                    
                     onClick={() => {
                         Calendly.initPopupWidget({
                             url: "https://calendly.com/krishankanji2003",
                         });
                         return false;
                     }}
-                    
                     className={`${styles.Card} cursor-pointer`}
                     variants={animations.scale}
                     whileHover={{
@@ -185,9 +184,17 @@ const contact = () => {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     {isHovered ? (
-                        <img src={googlemeet} className="w-[45%] h-auto" alt="Google Meet" />
+                        <img
+                            src={googlemeet}
+                            className="w-[45%] h-auto"
+                            alt="Google Meet"
+                        />
                     ) : (
-                        <img src={GoogleMeetGray} className="w-[45%] h-auto" alt="Google Meet Gray" />
+                        <img
+                            src={GoogleMeetGray}
+                            className="w-[45%] h-auto"
+                            alt="Google Meet Gray"
+                        />
                     )}
                 </MotionA>
 
