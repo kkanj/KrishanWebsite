@@ -25,7 +25,7 @@ export default {
         },
         extend: {
             colors: {
-                background: "#ffffff",
+                "background": "#ffffff",
                 "menu-text": "#000000",
                 "category-text": "#b0b0b0",
                 "menu-sub-text": "#b8b8b8",
@@ -40,8 +40,7 @@ export default {
                 "gradient-1": "#20b1ff",
                 "gradient-2": "#b39cff",
                 "gradient-3": "#ff7fe1",
-                hover: "#909090",
-                "card-bg": "#fbfbfbff",
+                "card-bg": "#fafafa",
                 "header": "#4f4f4f",
             },
             fontFamily: {

@@ -163,7 +163,7 @@ const contact = () => {
                         });
                         return false;
                     }}
-                    className={`${styles.Card} cursor-pointer`}
+                    className={`${styles.Card} cursor-pointer hover:outline-[#32ab9c]`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,

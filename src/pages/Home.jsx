@@ -11,7 +11,7 @@ const Home = () => {
         <div>
             <div>
                 <motion.div
-                    className="grid grid-cols-3 gap-11 p-10 md:grid-cols-2 lg:grid-cols-3 h-screen"
+                    className="grid grid-cols-3 gap-11 p-10 md:grid-cols-2 lg:grid-cols-3 h-screen "
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
@@ -21,7 +21,7 @@ const Home = () => {
                 >
                     <MotionLink
                         to="/about"
-                        className={`row-span-2 ${styles.Card}`}
+                        className={`row-span-2 ${styles.Card} hover:outline-none `}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
                         transition={{
@@ -36,7 +36,7 @@ const Home = () => {
 
                     <MotionLink
                         to="/projects"
-                        className={`col-span-2 ${styles.Card}`}
+                        className={`col-span-2 ${styles.Card} hover:outline-none`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
                         transition={{
@@ -49,7 +49,7 @@ const Home = () => {
                         </div>
                     </MotionLink>
                     <motion.div
-                        className={`${styles.Card}`}
+                        className={`${styles.Card} hover:outline-none`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.97 }}
@@ -67,7 +67,7 @@ const Home = () => {
                     </motion.div>
                     <MotionLink
                         to="/contact"
-                        className={`row-span-2 ${styles.Card}`}
+                        className={`row-span-2 ${styles.Card} hover:outline-none`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
                         transition={{
@@ -81,7 +81,7 @@ const Home = () => {
                     </MotionLink>
                     <MotionLink
                         to="/placeholder"
-                        className={`col-span-2 ${styles.Card}`}
+                        className={`col-span-2 ${styles.Card} hover:outline-none`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.02 }}
                         transition={{
