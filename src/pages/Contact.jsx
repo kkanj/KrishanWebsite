@@ -185,9 +185,9 @@ const contact = () => {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     {isHovered ? (
-                        <GoogleMeet className="w-[45%] h-auto " />
+                        <img src={GoogleMeet} className="w-[45%] h-auto" alt="Google Meet" />
                     ) : (
-                        <GoogleMeetGray className="w-[45%] h-auto " />
+                        <img src={GoogleMeetGray} className="w-[45%] h-auto" alt="Google Meet Gray" />
                     )}
                 </MotionA>
 
