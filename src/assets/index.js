@@ -1,6 +1,6 @@
 import logo from "./images/!k.svg";
 import Mail from "./images/mail.svg?react";
-import GoogleMeet from "./images/GoogleMeet.svg";
+import googlemeet from "./images/googlemeet.svg";
 import Linkedin from "./images/linkedin.svg?react";
 import Marquee from "react-fast-marquee";
 import React from "react";
@@ -28,7 +28,7 @@ import Home from "./images/home.svg?react"
 export {
     logo,
     Mail,
-    GoogleMeet,
+    googlemeet,
     Linkedin,
     Marquee,
     React,

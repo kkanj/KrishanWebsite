@@ -15,7 +15,7 @@ import {
     GoogleMeetGray,
     Map,
     Person,
-    GoogleMeet,
+    googlemeet,
 } from "../assets/index.js";
 import { NavMenu } from "../components/NavMenu.jsx";
 import emailjs from "@emailjs/browser";
@@ -185,7 +185,7 @@ const contact = () => {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     {isHovered ? (
-                        <img src={GoogleMeet} className="w-[45%] h-auto" alt="Google Meet" />
+                        <img src={googlemeet} className="w-[45%] h-auto" alt="Google Meet" />
                     ) : (
                         <img src={GoogleMeetGray} className="w-[45%] h-auto" alt="Google Meet Gray" />
                     )}
