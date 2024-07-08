@@ -55,7 +55,7 @@ const contact = () => {
 
     return (
         <motion.div
-            className="h-screen w-full flex"
+            className="h-screen w-full flex overflow-hidden"
             initial="hidden"
             animate="visible"
             exit="hidden"
