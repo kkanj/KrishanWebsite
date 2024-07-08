@@ -76,7 +76,7 @@ const contact = () => {
 
             <motion.div
                 className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
-                variants={animations.slideHorizontal}
+                variants={animations.slideVertical}
             >
                 <motion.div
                     className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-16 space-y-4 z-10"
