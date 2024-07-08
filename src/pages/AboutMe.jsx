@@ -61,7 +61,7 @@ const about = () => {
                     </div>
                 </motion.div>
             </motion.div>
-            <motion.div className="flex-grow w-1/2 grid grid-cols-3 gap-10 p-40">
+            <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
                 <MotionLink
                     to="https://cdss.berkeley.edu/"
                     target="_blank"
