@@ -187,50 +187,7 @@ const about = () => {
                 >
                     <Github className="w-[45%] h-auto" />
                 </MotionLink>
-                <motion.div
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#E89F9F", // Target background color on hover
-                        color: "#8E0D0D",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Certificate className="w-[45%] h-auto" />
-                </motion.div>
-                <motion.div
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#F2C0D2", // Target background color on hover
-                        color: "#7A3850",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Smile className="w-[45%] h-auto" />
-                </motion.div>
+                
             </motion.div>
         </motion.div>
     );
