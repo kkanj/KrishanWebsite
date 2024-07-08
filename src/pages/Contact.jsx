@@ -169,7 +169,7 @@ const contact = () => {
                     whileHover={{
                         scale: 1.05,
                         backgroundColor: "#DBF4F1", // Target background color on hover
-                        color: " ",
+                        color: "#258075",
                         outline: "4px solid ",
                     }}
                     transition={{
