@@ -140,6 +140,7 @@ const contact = () => {
                         scale: 1.05,
                         backgroundColor: "#F2C0D2", // Target background color on hover
                         color: "#7A3850",
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {
@@ -163,11 +164,13 @@ const contact = () => {
                         });
                         return false;
                     }}
-                    className={`${styles.Card} cursor-pointer hover:outline-[#32ab9c]`}
+                    className={`${styles.Card} cursor-pointer`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
                         backgroundColor: "#DBF4F1", // Target background color on hover
+                        color: " ",
+                        outline: "4px solid ",
                     }}
                     transition={{
                         scale: {
@@ -207,6 +210,7 @@ const contact = () => {
                         scale: 1.05,
                         backgroundColor: "#BCB1D5", // Target background color on hover
                         color: "#331662",
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {
@@ -231,6 +235,7 @@ const contact = () => {
                         scale: 1.05,
                         backgroundColor: "#B0CCAC", // Target background color on hover
                         color: "#3B6E55",
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {

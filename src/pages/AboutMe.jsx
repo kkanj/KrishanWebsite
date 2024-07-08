@@ -72,6 +72,7 @@ const about = () => {
                         scale: 1.04,
                         backgroundColor: "#003262", // Target background color on hover
                         color: "#FFD100", // Target text color on hover
+                        outline: "4px solid", 
                     }}
                     transition={{
                         scale: {
@@ -83,9 +84,14 @@ const about = () => {
                             ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
                         },
+                        outline: {
+                            duration: 0.4, // Duration for the outline transition
+                            ease: "easeInOut", // Easing option for the outline transition
+                            type: "tween", // Specify tween for the outline transition
+                        },
                     }}
                 >
-                    <BerkeleyLogo className="w-[75%] h-auto" />
+                    <BerkeleyLogo className="w-[70%] h-auto" />
                 </MotionLink>
                 <MotionLink
                     to="https://www.linkedin.com/in/krishankanji/"
@@ -97,6 +103,7 @@ const about = () => {
                         scale: 1.05,
                         backgroundColor: "#D2E6F4", // Target background color on hover
                         color: "#0077B5",
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {
@@ -107,6 +114,11 @@ const about = () => {
                             duration: 0.2, // Duration of the color transition
                             ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
+                        },
+                        outline: {
+                            duration: 0.4, // Duration for the outline transition
+                            ease: "easeInOut", // Easing option for the outline transition
+                            type: "tween", // Specify tween for the outline transition
                         },
                     }}
                 >
@@ -121,6 +133,7 @@ const about = () => {
                         scale: 1.05,
                         backgroundColor: "#B0CCAC", // Target background color on hover
                         color: "#3B6E55",
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {
@@ -131,6 +144,11 @@ const about = () => {
                             duration: 0.2, // Duration of the color transition
                             ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
+                        },
+                        outline: {
+                            duration: 0.4, // Duration for the outline transition
+                            ease: "easeInOut", // Easing option for the outline transition
+                            type: "tween", // Specify tween for the outline transition
                         },
                     }}
                 >
@@ -147,6 +165,7 @@ const about = () => {
                         scale: 1.05,
                         backgroundColor: "#FFDAB9", // Target background color on hover
                         color: "#BA5E0B",
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {
@@ -157,6 +176,11 @@ const about = () => {
                             duration: 0.2, // Duration of the color transition
                             ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
+                        },
+                        outline: {
+                            duration: 0.4, // Duration for the outline transition
+                            ease: "easeInOut", // Easing option for the outline transition
+                            type: "tween", // Specify tween for the outline transition
                         },
                     }}
                 >
@@ -172,6 +196,7 @@ const about = () => {
                         scale: 1.05,
                         backgroundColor: "#BCB1D5", // Target background color on hover
                         color: "#331662",
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {
@@ -182,6 +207,11 @@ const about = () => {
                             duration: 0.2, // Duration of the color transition
                             ease: "easeInOut", // This can be adjusted to other easing options
                             type: "tween", // Specify tween for the color transition
+                        },
+                        outline: {
+                            duration: 0.4, // Duration for the outline transition
+                            ease: "easeInOut", // Easing option for the outline transition
+                            type: "tween", // Specify tween for the outline transition
                         },
                     }}
                 >
