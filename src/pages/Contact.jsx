@@ -131,9 +131,9 @@ const contact = () => {
                 </motion.div>
             </motion.div>
             <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
-                <MotionLink
-                    to="/contact"
-                    rel="noopener noreferrer"
+                <MotionA
+                    href="mailto:krishankanji@berkeley.edu?cc=krishankanji2003@gmail.com"
+                    target="_blank"
                     className={`${styles.Card}`}
                     variants={animations.scale}
                     whileHover={{
@@ -155,7 +155,7 @@ const contact = () => {
                     }}
                 >
                     <Mail className="w-[45%] h-auto" />
-                </MotionLink>
+                </MotionA>
 
                 <MotionA
                     onClick={() => {
