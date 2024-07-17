@@ -1,4 +1,4 @@
-import logo from "./images/!k.svg";
+import logo from "./images/kkCircle.svg";
 import Mail from "./images/mail.svg?react";
 import googlemeet from "./images/googlemeet.svg";
 import Linkedin from "./images/linkedin.svg?react";
