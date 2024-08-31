@@ -23,13 +23,19 @@ const Home = () => {
                         to="/about"
                         className={`row-span-2 ${styles.Card} hover:outline-none `}
                         variants={animations.scale}
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.025 }}
                         transition={{
-                            type: "spring",
-                            bounce: 0.72,
+                            type: "tween",
+                            duration: 0.1,
+                            ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
+                        }}
+                        style={{
+                            willChange: "transform",
+                            backfaceVisibility: "hidden",
+                            transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center`}>
+                        <div className={`${styles.CardText} text-center transform-gpu`}>
                             about
                         </div>
                     </MotionLink>
@@ -38,27 +44,39 @@ const Home = () => {
                         to="/projects"
                         className={`col-span-2 ${styles.Card} hover:outline-none`}
                         variants={animations.scale}
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.025 }}
                         transition={{
-                            type: "spring",
-                            bounce: 0.65,
+                            type: "tween",
+                            duration: 0.1,
+                            ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
+                        }}
+                        style={{
+                            willChange: "transform",
+                            backfaceVisibility: "hidden",
+                            transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center`}>
+                        <div className={`${styles.CardText} text-center transform-gpu`}>
                             projects
                         </div>
                     </MotionLink>
                     <motion.div
                         className={`${styles.Card} hover:outline-none`}
                         variants={animations.scale}
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.025 }}
                         whileTap={{ scale: 0.97 }}
                         transition={{
-                            type: "spring",
-                            bounce: 0.72,
+                            type: "tween",
+                            duration: 0.1,
+                            ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
+                        }}
+                        style={{
+                            willChange: "transform",
+                            backfaceVisibility: "hidden",
+                            transform: "translateZ(0)",
                         }}
                     >
-                        <div className="text-center">
+                        <div className="text-center transform-gpu ">
                             <div className={styles.Name}>Krishan Kanji</div>
                             <div className={`${styles.FSD}`}>
                                 full-stack developer
@@ -69,13 +87,19 @@ const Home = () => {
                         to="/contact"
                         className={`row-span-2 ${styles.Card} hover:outline-none`}
                         variants={animations.scale}
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.025 }}
                         transition={{
-                            type: "spring",
-                            bounce: 0.72,
+                            type: "tween",
+                            duration: 0.1,
+                            ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
+                        }}
+                        style={{
+                            willChange: "transform",
+                            backfaceVisibility: "hidden",
+                            transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center`}>
+                        <div className={`${styles.CardText} text-center transform-gpu`}>
                             contact
                         </div>
                     </MotionLink>
@@ -83,13 +107,19 @@ const Home = () => {
                         to="/placeholder"
                         className={`col-span-2 ${styles.Card} hover:outline-none`}
                         variants={animations.scale}
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.025 }}
                         transition={{
-                            type: "spring",
-                            bounce: 0.65,
+                            type: "tween",
+                            duration: 0.1,
+                            ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
+                        }}
+                        style={{
+                            willChange: "transform",
+                            backfaceVisibility: "hidden",
+                            transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center`}>
+                        <div className={`${styles.CardText} text-center transform-gpu`}>
                             experience
                         </div>
                     </MotionLink>

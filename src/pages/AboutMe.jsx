@@ -22,7 +22,7 @@ const MotionA = motion.a;
 const about = () => {
     return (
         <motion.div
-            className="h-screen w-full flex"
+            className="h-screen w-full flex transform-gpu"
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -30,12 +30,12 @@ const about = () => {
                 staggerChildren: 0.06,
             }}
         >
-            <motion.div className="h-screen w-screen absolute overflow-hidden">
+            <motion.div className="h-screen w-screen absolute overflow-hidden transform-gpu">
                 <NavMenu />
             </motion.div>
 
             <motion.div
-                className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
+                className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2 transform-gpu"
                 variants={animations.slideHorizontal}
             >
                 <motion.div

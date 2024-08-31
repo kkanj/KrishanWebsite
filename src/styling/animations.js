@@ -1,14 +1,15 @@
 import { cubicBezier } from "framer-motion";
 
-const popIn = cubicBezier(0.75, -0.01, 1, 0.81);
+const popIn = cubicBezier(0.34, 0.05, 0.54, 1.19);
+const popOut = cubicBezier(0.34, 0.05, 0.52, 0.99);
 
 const scale = {
     hidden: {
         color: "#555555",
         scale: 0,
         transition: {
-            ease: popIn,
-            duration: 0.15,
+            ease: popOut,
+            duration: 0.2,
         },
     },
     visible: {
@@ -16,9 +17,8 @@ const scale = {
         color: "#555555",
         transition: {
             ease: popIn,
-            duration: 0.5,
-            type: "spring",
-            bounce: 0.3,
+            duration: 0.35,
+            type: "tween",
         },
     },
 };
@@ -28,8 +28,8 @@ const scaleMenu = {
         color: "#555555",
         scale: 0,
         transition: {
-            ease: popIn,
-            duration: 0.15,
+            ease: popOut,
+            duration: 0.2,
         },
     },
     visible: {
@@ -38,9 +38,8 @@ const scaleMenu = {
         transition: {
             delay: 0.4,
             ease: popIn,
-            duration: 0.5,
-            type: "spring",
-            bounce: 0.3,
+            duration: 0.3,
+            type: "tween",
         },
     },
 };
@@ -60,20 +59,19 @@ const fade = {
             ease: "easeIn",
             duration: 0.4,
             type: "tween",
-            delay: 0.2
+            delay: 0.2,
         },
     },
 };
 
 const scaleName = {
-    hidden: { scale: 0, transition: { ease: popIn, duration: 0.1 } },
+    hidden: { scale: 0, transition: { ease: "linear", duration: 0.1 } },
     visible: {
         scale: 1,
         transition: {
-            ease: popIn,
+            ease: "linear",
             duration: 0.5,
-            type: "spring",
-            bounce: 0.5,
+            type: "tween",
         },
     },
 };
@@ -116,4 +114,11 @@ const slideVertical = {
     },
 };
 
-export default { scale, scaleName, fade, slideHorizontal, slideVertical, scaleMenu };
+export default {
+    scale,
+    scaleName,
+    fade,
+    slideHorizontal,
+    slideVertical,
+    scaleMenu,
+};

@@ -23,11 +23,10 @@ function App() {
     const location = useLocation();
     return (
         <div className="bg-background h-screen w-screen">
-            <AnimatePresence mode="wait" initial={false}>
+            <AnimatePresence mode="wait" initial={location.pathname == '/'}>
                 
                 <Routes location={location} key={location.pathname}>
-                    <Route path="/" element={<Splash />} />
-                    <Route path="/home" element={<Home />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/about" element={<AboutMe />} />
                     <Route path="/contact" element={<Contact />} />
