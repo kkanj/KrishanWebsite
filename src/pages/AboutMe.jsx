@@ -51,13 +51,16 @@ const about = () => {
                         <div>Full Stack Developer</div>
                     </div>
                     <div className="text-size3 font-normal mr-[145px]">
-                        Hi, I'm Krishan Kanji, Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Quisque quis sagittis
-                        massa, ac pharetra urna. Proin iaculis, augue sed
-                        finibus dapibus, nisl quam egestas urna, vitae auctor
-                        justo metus vitae lectus. In gravida, velit a venenatis
-                        maximus, purus tortor placerat dui, ut ullamcorper arcu
-                        ligula.{" "}
+                        Hi, I'm Krishan Kanji, a Computer Science and Data
+                        Science student at UC Berkeley with a passion for
+                        learning about the latest technologies, and building
+                        projects that make a difference. Recently, I've been
+                        diving into the world of artifical intelligence and
+                        neural networks, fascinated by their potential to
+                        transform data into meaningful insights. In my free
+                        time, you'll find me coding, working on side projects,
+                        or just exploring something new and exciting in the
+                        world of tech.{" "}
                     </div>
                 </motion.div>
             </motion.div>
@@ -72,7 +75,7 @@ const about = () => {
                         scale: 1.04,
                         backgroundColor: "#003262", // Target background color on hover
                         color: "#FFD100", // Target text color on hover
-                        outline: "4px solid", 
+                        outline: "4px solid",
                     }}
                     transition={{
                         scale: {
@@ -217,7 +220,6 @@ const about = () => {
                 >
                     <Github className="w-[45%] h-auto" />
                 </MotionLink>
-                
             </motion.div>
         </motion.div>
     );

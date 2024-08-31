@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import styles from "../styling/Home.module.js";
 import animations from "../styling/animations.js";
 import { motion, cubicBezier } from "framer-motion";
+import Typewriter from "../components/Typewriter.jsx";
 
 const MotionLink = motion(Link);
 
 const Home = () => {
+    const [showTypewriter, setShowTypewriter] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowTypewriter(true);
+        }, 200); // 1 second delay
+
+        return () => clearTimeout(timer); // Cleanup the timer
+    }, []);
+
     return (
         <div>
             <div>
@@ -35,7 +46,9 @@ const Home = () => {
                             transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center transform-gpu`}>
+                        <div
+                            className={`${styles.CardText} text-center transform-gpu`}
+                        >
                             about
                         </div>
                     </MotionLink>
@@ -56,7 +69,9 @@ const Home = () => {
                             transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center transform-gpu`}>
+                        <div
+                            className={`${styles.CardText} text-center transform-gpu`}
+                        >
                             projects
                         </div>
                     </MotionLink>
@@ -78,8 +93,11 @@ const Home = () => {
                     >
                         <div className="text-center transform-gpu ">
                             <div className={styles.Name}>Krishan Kanji</div>
-                            <div className={`${styles.FSD}`}>
-                                full-stack developer
+                            <div
+                                className={`${styles.FSD}`}
+                                style={{ minHeight: "2em" }}
+                            >
+                                {showTypewriter ? <Typewriter /> : null}
                             </div>
                         </div>
                     </motion.div>
@@ -99,7 +117,9 @@ const Home = () => {
                             transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center transform-gpu`}>
+                        <div
+                            className={`${styles.CardText} text-center transform-gpu`}
+                        >
                             contact
                         </div>
                     </MotionLink>
@@ -119,7 +139,9 @@ const Home = () => {
                             transform: "translateZ(0)",
                         }}
                     >
-                        <div className={`${styles.CardText} text-center transform-gpu`}>
+                        <div
+                            className={`${styles.CardText} text-center transform-gpu`}
+                        >
                             experience
                         </div>
                     </MotionLink>
