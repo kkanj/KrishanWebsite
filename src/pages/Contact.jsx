@@ -1,259 +1,129 @@
-import React, { useRef, useState } from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import styles from "../styling/Home.module.js";
-import animations from "../styling/animations.js";
-import { motion, cubicBezier, AnimatePresence } from "framer-motion";
-import berkeley from "../assets/images/berkeleyCard3.jpg";
-import {
-    BerkeleyLogo,
-    Certificate,
-    Github,
-    Linkedin,
-    Resume,
-    Mail,
-    Smile,
-    GoogleMeetGray,
-    Map,
-    Person,
-    googlemeet,
-} from "../assets/index.js";
-import { NavMenu } from "../components/NavMenu.jsx";
-import emailjs from "@emailjs/browser";
-import { Send } from "../assets/index.js";
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import cors from "cors";
 const MotionLink = motion(Link);
-const MotionA = motion.a;
 
-const contact = () => {
-    const [isHovered, setIsHovered] = useState(false);
-    const form = useRef();
-    const [popupVisible, setPopupVisible] = useState(false); // Step 2: Popup visibility state
-    const [popupMessage, setPopupMessage] = useState(""); // Step 2: Popup message state
-    const sendEmail = (e) => {
+const Contact = () => {
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const [popupVisible, setPopupVisible] = useState(false);
+    const [popupMessage, setPopupMessage] = useState("");
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        emailjs
-            .sendForm("service_1l65g4u", "template_918c0oj", form.current, {
-                publicKey: "rmqyu3aX4pa1ywH_5",
-            })
-            .then(
-                () => {
-                    console.log("SUCCESS!");
-                    setPopupMessage("Thank you, I'll get back to you soon");
-                    setPopupVisible(true);
-                    form.current.reset();
-                    setTimeout(() => setPopupVisible(false), 3000);
+        const response = await fetch(
+            "https://u5e1gszaa1.execute-api.us-east-2.amazonaws.com/default", // Replace with your API Gateway endpoint
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                (error) => {
-                    console.log("FAILED...", error.text);
-                    setPopupMessage("Error: Please try again");
-                    setPopupVisible(true);
-                    setTimeout(() => setPopupVisible(false), 3000);
-                }
-            );
+                body: JSON.stringify({
+                    to: [email],
+                    subject: subject,
+                    html: `<strong>${message}</strong>`,
+                }),
+            }
+        );
+
+        const result = await response.json();
+        if (response.ok) {
+            setPopupMessage("Thank you, I'll get back to you soon");
+            setPopupVisible(true);
+            setTimeout(() => setPopupVisible(false), 3000);
+            setEmail("");
+            setSubject("");
+            setMessage("");
+        } else {
+            setPopupMessage("Error: Please try again");
+            setPopupVisible(true);
+            setTimeout(() => setPopupVisible(false), 3000);
+        }
     };
 
     return (
         <motion.div
-            className="h-screen w-full flex overflow-hidden"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            transition={{
-                staggerChildren: 0.06,
-            }}
+            className="h-screen w-full flex flex-col items-center justify-center bg-gray-100 p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
         >
-            {popupVisible && ( // Step 4: Conditional rendering based on popupVisible state
-                <div className="absolute top-0 left-0 right-1/2 bottom-0 flex justify-center items-center z-30 text-white">
-                    <div className="bg-[#545454] px-8 py-4 rounded-2xl">
-                        <p>{popupMessage}</p>
-                    </div>
-                </div>
-            )}
-            <motion.div className="h-screen w-screen absolute overflow-hidden z-0">
-                <NavMenu />
-            </motion.div>
-
-            <motion.div
-                className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
-                variants={animations.slideVertical}
+            <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
+            <form
+                onSubmit={handleSubmit}
+                className="w-full max-w-md bg-white p-8 rounded-lg shadow-md"
             >
-                <motion.div
-                    className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-16 space-y-4 z-10"
-                    variants={animations.fade}
-                >
-                    <form
-                        ref={form}
-                        onSubmit={sendEmail}
-                        className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-20 space-y-4 py-10 z-10 font-medium tracking-wide text-size2"
+                <div className="mb-4">
+                    <label
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                        htmlFor="email"
                     >
-                        <div className="pl-1 py-1 font-sfpro font-semibold tracking-wider text-size9 bg-clip-text text-transparent bg-gradient-to-r from-[#727986] to-[#B6CDD7]">
-                            Contact Me
-                        </div>
-                        <div className="text-white text-size4 pl-1 font-sfpro font-semibold tracking-wider py-1">
-                            Let's Connect!
-                        </div>
-                        <input
-                            type="text"
-                            name="user_first_name"
-                            placeholder="First Name"
-                            className={`${styles.ContactInputBox} h-11 rounded-2xl `}
-                        />
-                        <input
-                            type="text"
-                            name="user_last_name"
-                            placeholder="Last Name"
-                            className={`${styles.ContactInputBox} h-11 rounded-2xl`}
-                        />{" "}
-                        {/* Note: Changed name attribute to user_last_name for clarity */}
-                        <input
-                            type="email"
-                            name="user_email"
-                            placeholder="Email"
-                            className={`${styles.ContactInputBox} h-11 rounded-2xl`}
-                        />
-                        <textarea
-                            name="message"
-                            placeholder="Write something..."
-                            className={`${styles.ContactInputBox} rounded-2xl h-72 py-3`}
-                        ></textarea>
-                        <button
-                            type="submit"
-                            className={`bg-[#727986] rounded-2xl focus:outline-none h-11 text-white hover:bg-[#8d96a6] transition-colors flex items-center justify-center`}
-                        >
-                            <Send
-                                className="w-6 h-auto mr-2 tracking-wider"
-                                style={{ stroke: "#ffffff" }}
-                            />{" "}
-                            Send Message
-                        </button>
-                    </form>
+                        Email
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                        htmlFor="subject"
+                    >
+                        Subject
+                    </label>
+                    <input
+                        type="text"
+                        id="subject"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                        htmlFor="message"
+                    >
+                        Message
+                    </label>
+                    <textarea
+                        id="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required
+                    />
+                </div>
+                <div className="flex items-center justify-between">
+                    <button
+                        type="submit"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    >
+                        Send
+                    </button>
+                </div>
+            </form>
+            {popupVisible && (
+                <motion.div
+                    className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white p-4 rounded-lg shadow-lg"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 50 }}
+                >
+                    {popupMessage}
                 </motion.div>
-            </motion.div>
-            <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
-                <MotionA
-                    href="mailto:krishankanji@berkeley.edu?cc=krishankanji2003@gmail.com"
-                    target="_blank"
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#F2C0D2", // Target background color on hover
-                        color: "#7A3850",
-                        outline: "4px solid",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Mail className="w-[45%] h-auto" />
-                </MotionA>
-
-                <MotionA
-                    onClick={() => {
-                        Calendly.initPopupWidget({
-                            url: "https://calendly.com/krishankanji2003",
-                        });
-                        return false;
-                    }}
-                    className={`${styles.Card} cursor-pointer`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#DBF4F1", // Target background color on hover
-                        color: "#258075",
-                        outline: "4px solid ",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
-                    {isHovered ? (
-                        <img
-                            src={googlemeet}
-                            className="w-[45%] h-auto"
-                            alt="Google Meet"
-                        />
-                    ) : (
-                        <img
-                            src={GoogleMeetGray}
-                            className="w-[45%] h-auto"
-                            alt="Google Meet Gray"
-                        />
-                    )}
-                </MotionA>
-
-                <MotionLink
-                    to="/about"
-                    rel="noopener noreferrer"
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#BCB1D5", // Target background color on hover
-                        color: "#331662",
-                        outline: "4px solid",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Person className="w-[45%] h-auto" />
-                </MotionLink>
-                <MotionLink
-                    to="/contact"
-                    rel="noopener noreferrer"
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#B0CCAC", // Target background color on hover
-                        color: "#3B6E55",
-                        outline: "4px solid",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Map className="w-[45%] h-auto" />
-                </MotionLink>
-            </motion.div>
+            )}
         </motion.div>
     );
 };
 
-export default contact;
+export default Contact;
