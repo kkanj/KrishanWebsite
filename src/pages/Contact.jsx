@@ -21,7 +21,7 @@ import { NavMenu } from "../components/NavMenu.jsx";
 import emailjs from "@emailjs/browser";
 import { Send } from "../assets/index.js";
 import SendButton from "../components/SendButton.jsx";
-import InputEmail from "../components/Inputs/InputEmail.jsx.jsx";
+import InputEmail from "../components/Inputs/InputEmail.jsx";
 import InputSubject from "../components/Inputs/InputSubject.jsx";
 import InputMessage from "../components/Inputs/ImputMessage.jsx";
 import InputLastName from "../components/Inputs/InputLastName.jsx";

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const InputEmail = () => {
+const InputEmail = ({ value, onChange }) => {
     return (
         <StyledWrapper>
             <div className="form-control">
-                <input type="email" required />
+                <input type="text" value={value} onChange={onChange} required />
                 <label>
                     <span style={{ transitionDelay: "0ms" }}>E</span>
                     <span style={{ transitionDelay: "50ms" }}>m</span>
