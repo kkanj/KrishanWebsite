@@ -21,6 +21,11 @@ import { NavMenu } from "../components/NavMenu.jsx";
 import emailjs from "@emailjs/browser";
 import { Send } from "../assets/index.js";
 import SendButton from "../components/SendButton.jsx";
+import InputEmail from "../components/Inputs/InputEmail.jsx.jsx";
+import InputSubject from "../components/Inputs/InputSubject.jsx";
+import InputMessage from "../components/Inputs/ImputMessage.jsx";
+import InputLastName from "../components/Inputs/InputLastName.jsx";
+import InputFirstName from "../components/Inputs/InputFirstName.jsx";
 
 const MotionLink = motion(Link);
 const MotionA = motion.a;
@@ -111,7 +116,7 @@ const contact = () => {
                     variants={animations.slideHorizontal}
                 >
                     <h1 className="text-4xl font-bold -mb-5 px-1">
-                        I’d Love to hear from you.{" "}
+                        I’d love to hear from you.{" "}
                     </h1>
                     <h1 className="text-size2 font-bold pb-3 px-1">
                         Leave a message below, and I’ll get back to you as soon
@@ -119,56 +124,58 @@ const contact = () => {
                     </h1>
                     <form
                         onSubmit={handleSubmit}
-                        className="w-full  bg-[#F9F9F9] p-8 rounded-2xl outline outline-3 outline-[#D9D9D9] shadow-md z-20"
+                        className="w-full bg-[#F9F9F9] p-8 rounded-2xl outline outline-3 outline-[#D9D9D9] shadow-md z-20"
                     >
-                        <div className="flex flex-row justify-between space-x-4 mb-5">
-                            <input
+                        <div className="mb-5">
+                            <InputFirstName
                                 type="text"
                                 placeholder="First Name"
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
-                                required
-                            />
-                            <input
-                                type="text"
-                                placeholder="Last Name"
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className=""
                                 required
                             />
                         </div>
                         <div className="mb-5">
-                            <input
+                            <InputLastName
+                                type="text"
+                                placeholder="Last Name"
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
+                                className=""
+                                required
+                            />
+                        </div>
+                        <div className="mb-5">
+                            <InputEmail
                                 type="email"
                                 id="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className=""
                                 required
                                 placeholder="Email"
                             />
                         </div>
                         <div className="mb-5">
-                            <input
+                            <InputSubject
                                 type="text"
                                 id="subject"
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className=""
                                 placeholder="Subject"
                                 required
                             />
                         </div>
-                        <div className="mb-6">
-                            <textarea
-                                id="message"
+                        <div className="mb-5">
+                            <InputMessage
+                                type="text"
+                                placeholder="Message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
-                                className="shadow appearance-none max-h-96 outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 h-48 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className=""
                                 required
-                                placeholder="Type your message here..."
                             />
                         </div>
                         <div className="flex items-center justify-center w-full">
