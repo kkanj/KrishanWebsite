@@ -78,7 +78,7 @@ const contact = () => {
 
     return (
         <motion.div
-            className="h-screen w-full flex overflow-hidden"
+            className="h-screen w-full flex overflow-hidden "
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -90,7 +90,22 @@ const contact = () => {
                 <NavMenu />
             </motion.div>
 
-            <motion.div className="h-screen w-1/2" variants={animations.fade}>
+            <motion.div
+                className="h-screen w-1/2 bg-gradient-to-r from-[#ffffff] to-[#e8e8e8]"
+                variants={animations.slideHorizontal}
+            >
+                {popupVisible && (
+                    <div className="fixed inset-y-0 left-0 flex items-center justify-center w-1/2 z-50">
+                        <motion.div
+                            className="flex items-center justify-center bg-green-500 text-white p-4 rounded-xl shadow-lg"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                        >
+                            {popupMessage}
+                        </motion.div>
+                    </div>
+                )}
                 <motion.div
                     className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-16 space-y-4 px-20"
                     variants={animations.slideHorizontal}
@@ -104,28 +119,24 @@ const contact = () => {
                     </h1>
                     <form
                         onSubmit={handleSubmit}
-                        className="w-full py-16 bg-[#F9F9F9] p-8 rounded-2xl outline outline-3 outline-[#D9D9D9] shadow-md z-20"
+                        className="w-full  bg-[#F9F9F9] p-8 rounded-2xl outline outline-3 outline-[#D9D9D9] shadow-md z-20"
                     >
-                        <div className="mb-5">
+                        <div className="flex flex-row justify-between space-x-4 mb-5">
                             <input
                                 type="text"
-                                id="subject"
+                                placeholder="First Name"
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
                                 required
-                                placeholder="First Name"
                             />
-                        </div>
-                        <div className="mb-5">
                             <input
                                 type="text"
-                                id="subject"
+                                placeholder="Last Name"
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
                                 required
-                                placeholder="Last Name"
                             />
                         </div>
                         <div className="mb-5">
@@ -134,7 +145,7 @@ const contact = () => {
                                 id="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
                                 required
                                 placeholder="Email"
                             />
@@ -145,17 +156,17 @@ const contact = () => {
                                 id="subject"
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
                                 placeholder="Subject"
                                 required
                             />
                         </div>
-                        <div className="mb-16">
+                        <div className="mb-6">
                             <textarea
                                 id="message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
-                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 h-40 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                className="shadow appearance-none max-h-96 outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 h-48 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
                                 required
                                 placeholder="Type your message here..."
                             />
@@ -164,16 +175,6 @@ const contact = () => {
                             <SendButton type="submit" />
                         </div>
                     </form>
-                    {popupVisible && (
-                        <motion.div
-                            className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white p-4 rounded-lg shadow-lg"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 50 }}
-                        >
-                            {popupMessage}
-                        </motion.div>
-                    )}
                 </motion.div>
             </motion.div>
             <motion.div
