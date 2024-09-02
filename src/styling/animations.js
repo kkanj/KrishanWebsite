@@ -102,6 +102,7 @@ const slideVertical = {
         transition: {
             ease: cubicBezier(0.64, 0, 0.78, 0),
             duration: 0.45,
+            staggerChildren: 0.06,
         },
     },
     visible: {
@@ -110,6 +111,7 @@ const slideVertical = {
         transition: {
             ease: cubicBezier(0.22, 1, 0.36, 1),
             duration: 0.45,
+            staggerChildren: 0.06,
         },
     },
 };

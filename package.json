@@ -20,6 +20,7 @@
     "react-router-dom": "^6.23.1",
     "react-type-animation": "^3.2.0",
     "sort-by": "^0.0.2",
+    "styled-components": "^6.1.13",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

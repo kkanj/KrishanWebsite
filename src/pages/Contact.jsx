@@ -20,37 +20,60 @@ import {
 import { NavMenu } from "../components/NavMenu.jsx";
 import emailjs from "@emailjs/browser";
 import { Send } from "../assets/index.js";
+import SendButton from "../components/SendButton.jsx";
 
 const MotionLink = motion(Link);
 const MotionA = motion.a;
 
 const contact = () => {
     const [isHovered, setIsHovered] = useState(false);
-    const form = useRef();
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [popupVisible, setPopupVisible] = useState(false); // Step 2: Popup visibility state
     const [popupMessage, setPopupMessage] = useState(""); // Step 2: Popup message state
-    const sendEmail = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        emailjs
-            .sendForm("service_1l65g4u", "template_918c0oj", form.current, {
-                publicKey: "rmqyu3aX4pa1ywH_5",
-            })
-            .then(
-                () => {
-                    console.log("SUCCESS!");
-                    setPopupMessage("Thank you, I'll get back to you soon");
-                    setPopupVisible(true);
-                    form.current.reset();
-                    setTimeout(() => setPopupVisible(false), 3000);
+        const requestBody = JSON.stringify({
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            subject: subject,
+            message: message, // Use message directly
+        });
+
+        console.log("Request Body:", requestBody); // Log the JSON string
+
+        const response = await fetch(
+            "https://u5e1gszaa1.execute-api.us-east-2.amazonaws.com/default", // Replace with your API Gateway endpoint
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                (error) => {
-                    console.log("FAILED...", error.text);
-                    setPopupMessage("Error: Please try again");
-                    setPopupVisible(true);
-                    setTimeout(() => setPopupVisible(false), 3000);
-                }
-            );
+                body: requestBody, // Use the pre-stringified requestBody
+            }
+        );
+
+        if (response.ok) {
+            const result = await response.json();
+            setPopupMessage("Thank you, I'll get back to you soon");
+            setPopupVisible(true);
+            setTimeout(() => setPopupVisible(false), 3000);
+            setEmail("");
+            setSubject("");
+            setMessage("");
+            setFirstName("");
+            setLastName("");
+        } else {
+            const errorText = await response.text();
+            setPopupMessage(`Failed to send message. Error: ${errorText}`);
+            setPopupVisible(true);
+            setTimeout(() => setPopupVisible(false), 3000);
+        }
     };
 
     return (
@@ -63,74 +86,103 @@ const contact = () => {
                 staggerChildren: 0.06,
             }}
         >
-            {popupVisible && ( // Step 4: Conditional rendering based on popupVisible state
-                <div className="absolute top-0 left-0 right-1/2 bottom-0 flex justify-center items-center z-30 text-white">
-                    <div className="bg-[#545454] px-8 py-4 rounded-2xl">
-                        <p>{popupMessage}</p>
-                    </div>
-                </div>
-            )}
             <motion.div className="h-screen w-screen absolute overflow-hidden z-0">
                 <NavMenu />
             </motion.div>
 
-            <motion.div
-                className="bg-gradient-to-r from-[#272727] to-[#555555] h-screen w-1/2"
-                variants={animations.slideVertical}
-            >
+            <motion.div className="h-screen w-1/2" variants={animations.fade}>
                 <motion.div
-                    className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-16 space-y-4 z-10"
-                    variants={animations.fade}
+                    className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-16 space-y-4 px-20"
+                    variants={animations.slideHorizontal}
                 >
+                    <h1 className="text-4xl font-bold -mb-5 px-1">
+                        I’d Love to hear from you.{" "}
+                    </h1>
+                    <h1 className="text-size2 font-bold pb-3 px-1">
+                        Leave a message below, and I’ll get back to you as soon
+                        as possible.{" "}
+                    </h1>
                     <form
-                        ref={form}
-                        onSubmit={sendEmail}
-                        className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-20 space-y-4 py-10 z-10 font-medium tracking-wide text-size2"
+                        onSubmit={handleSubmit}
+                        className="w-full py-16 bg-[#F9F9F9] p-8 rounded-2xl outline outline-3 outline-[#D9D9D9] shadow-md z-20"
                     >
-                        <div className="pl-1 py-1 font-sfpro font-semibold tracking-wider text-size9 bg-clip-text text-transparent bg-gradient-to-r from-[#727986] to-[#B6CDD7]">
-                            Contact Me
+                        <div className="mb-5">
+                            <input
+                                type="text"
+                                id="subject"
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                required
+                                placeholder="First Name"
+                            />
                         </div>
-                        <div className="text-white text-size4 pl-1 font-sfpro font-semibold tracking-wider py-1">
-                            Let's Connect!
+                        <div className="mb-5">
+                            <input
+                                type="text"
+                                id="subject"
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                required
+                                placeholder="Last Name"
+                            />
                         </div>
-                        <input
-                            type="text"
-                            name="user_first_name"
-                            placeholder="First Name"
-                            className={`${styles.ContactInputBox} h-11 rounded-2xl `}
-                        />
-                        <input
-                            type="text"
-                            name="user_last_name"
-                            placeholder="Last Name"
-                            className={`${styles.ContactInputBox} h-11 rounded-2xl`}
-                        />{" "}
-                        {/* Note: Changed name attribute to user_last_name for clarity */}
-                        <input
-                            type="email"
-                            name="user_email"
-                            placeholder="Email"
-                            className={`${styles.ContactInputBox} h-11 rounded-2xl`}
-                        />
-                        <textarea
-                            name="message"
-                            placeholder="Write something..."
-                            className={`${styles.ContactInputBox} rounded-2xl h-72 py-3`}
-                        ></textarea>
-                        <button
-                            type="submit"
-                            className={`bg-[#727986] rounded-2xl focus:outline-none h-11 text-white hover:bg-[#8d96a6] transition-colors flex items-center justify-center`}
-                        >
-                            <Send
-                                className="w-6 h-auto mr-2 tracking-wider"
-                                style={{ stroke: "#ffffff" }}
-                            />{" "}
-                            Send Message
-                        </button>
+                        <div className="mb-5">
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                required
+                                placeholder="Email"
+                            />
+                        </div>
+                        <div className="mb-5">
+                            <input
+                                type="text"
+                                id="subject"
+                                value={subject}
+                                onChange={(e) => setSubject(e.target.value)}
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                placeholder="Subject"
+                                required
+                            />
+                        </div>
+                        <div className="mb-16">
+                            <textarea
+                                id="message"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                className="shadow appearance-none outline outline-2 outline-[#727986] rounded-xl w-full py-2 px-3 h-40 text-gray-700 leading-tight focus:outline focus:outline-[#4169e1] "
+                                required
+                                placeholder="Type your message here..."
+                            />
+                        </div>
+                        <div className="flex items-center justify-center w-full">
+                            <SendButton type="submit" />
+                        </div>
                     </form>
+                    {popupVisible && (
+                        <motion.div
+                            className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white p-4 rounded-lg shadow-lg"
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 50 }}
+                        >
+                            {popupMessage}
+                        </motion.div>
+                    )}
                 </motion.div>
             </motion.div>
-            <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
+            <motion.div
+                variants={animations.slideVertical}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40 bg-gradient-to-r to-[#272727] from-[#555555]"
+            >
                 <MotionA
                     href="mailto:krishankanji@berkeley.edu?cc=krishankanji2003@gmail.com"
                     target="_blank"
