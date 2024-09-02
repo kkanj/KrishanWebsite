@@ -215,7 +215,7 @@ Error generating stack: `+s.message+`
             transform: translateY(-0.1em);
         }
     }
-`,_w=()=>w.jsx(Vw,{children:w.jsxs("div",{className:"form-control",children:[w.jsx("input",{type:"email",required:!0}),w.jsxs("label",{children:[w.jsx("span",{style:{transitionDelay:"0ms"},children:"E"}),w.jsx("span",{style:{transitionDelay:"50ms"},children:"m"}),w.jsx("span",{style:{transitionDelay:"100ms"},children:"a"}),w.jsx("span",{style:{transitionDelay:"150ms"},children:"i"}),w.jsx("span",{style:{transitionDelay:"200ms"},children:"l"})]})]})}),Vw=qn.div`
+`,_w=({value:e,onChange:t})=>w.jsx(Vw,{children:w.jsxs("div",{className:"form-control",children:[w.jsx("input",{type:"text",value:e,onChange:t,required:!0}),w.jsxs("label",{children:[w.jsx("span",{style:{transitionDelay:"0ms"},children:"E"}),w.jsx("span",{style:{transitionDelay:"50ms"},children:"m"}),w.jsx("span",{style:{transitionDelay:"100ms"},children:"a"}),w.jsx("span",{style:{transitionDelay:"150ms"},children:"i"}),w.jsx("span",{style:{transitionDelay:"200ms"},children:"l"})]})]})}),Vw=qn.div`
     .form-control {
         position: relative;
         margin: 20px 0 40px;
