@@ -64,12 +64,12 @@ const about = () => {
                     </div>
                 </motion.div>
             </motion.div>
-            <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-3 md:gap-5 2xl:gap-10 p-4 md:p-10 xl:p-20 2xl:p-40">
+            <motion.div className="flex-grow w-1/2 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 2xl:gap-10 p-4 md:p-10 xl:p-20 2xl:p-40">
                 <MotionLink
                     to="https://cdss.berkeley.edu/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`col-span-2 ${styles.Card} `}
+                    className={`md:col-span-2 ${styles.Card} `}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.04,

@@ -115,7 +115,7 @@ const contact = () => {
                     className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center px-3 md:px-6 lg:px-9 xl:px-14"
                     variants={animations.slideHorizontal}
                 >
-                    <h1 className="text-size1 lg:text-size2 xl:text-size3 2xl:text-size5 font-bold -mb-1 xl:-mb-3 2xl:-mb-5">
+                    <h1 className="text-size1 lg:text-size3 xl:text-size3 2xl:text-size5 font-bold -mb-1 xl:-mb-3 2xl:-mb-5">
                         I’d love to hear from you.{" "}
                     </h1>
                     <h1 className="text-size0 lg:text-size1 xl:text-size2 2xl:text-size3 font-bold pb-1 xl:pb-3">
@@ -189,7 +189,7 @@ const contact = () => {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                className="flex-grow w-1/2 grid grid-cols-2 gap-3 md:gap-5 2xl:gap-10 p-4 md:p-10 xl:p-20 2xl:p-40 bg-gradient-to-r to-[#272727] from-[#555555]"
+                className="flex-grow w-1/2 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 2xl:gap-10 p-4 md:p-10 xl:p-20 2xl:p-40 bg-gradient-to-r to-[#272727] from-[#555555]"
             >
                 <MotionA
                     href="mailto:krishankanji@berkeley.edu?cc=krishankanji2003@gmail.com"
