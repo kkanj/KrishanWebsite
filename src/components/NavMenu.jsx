@@ -22,11 +22,11 @@ export const NavMenu = () => {
                     initial={false}
                     animate={active ? "open" : "closed"}
                     onClick={() => setActive((pv) => !pv)}
-                    className="relative h-16 w-16 rounded-full bg-[#727986] transition-colors hover:bg-[#626D73] focus:outline-none cursor-pointer"
+                    className="relative h-10 w-10 lg:h-14 lg:w-14 rounded-full bg-[#727986] transition-colors hover:bg-[#626D73] focus:outline-none cursor-pointer"
                 >
                     <motion.span
                         variants={VARIANTS.top}
-                        className="absolute h-1 w-8 bg-white "
+                        className="absolute h-1 w-5 lg:h-1 lg:w-7 bg-white "
                         style={{
                             y: "-50%",
                             left: "50%",
@@ -36,7 +36,7 @@ export const NavMenu = () => {
                     />
                     <motion.span
                         variants={VARIANTS.middle}
-                        className="absolute h-1 w-8 bg-white"
+                        className="absolute h-1 w-5 lg:h-1 lg:w-7 bg-white"
                         style={{
                             left: "50%",
                             x: "-50%",
@@ -46,7 +46,7 @@ export const NavMenu = () => {
                     />
                     <motion.span
                         variants={VARIANTS.bottom}
-                        className="absolute h-1 w-8 bg-white"
+                        className="absolute h-1 w-5 lg:h-1 lg:w-7 bg-white"
                         style={{
                             x: "-50%",
                             y: "50%",
