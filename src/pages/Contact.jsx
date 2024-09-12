@@ -112,31 +112,31 @@ const contact = () => {
                     </div>
                 )}
                 <motion.div
-                    className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center mx-16 space-y-4 px-20"
+                    className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center px-3 md:px-6 lg:px-9 xl:px-14"
                     variants={animations.slideHorizontal}
                 >
-                    <h1 className="text-4xl font-bold -mb-5 px-1">
+                    <h1 className="text-size1 lg:text-size2 xl:text-size3 2xl:text-size5 font-bold -mb-1 xl:-mb-3 2xl:-mb-5">
                         I’d love to hear from you.{" "}
                     </h1>
-                    <h1 className="text-size2 font-bold pb-3 px-1">
+                    <h1 className="text-size0 lg:text-size1 xl:text-size2 2xl:text-size3 font-bold pb-1 xl:pb-3">
                         Leave a message below, and I’ll get back to you as soon
                         as possible.{" "}
                     </h1>
                     <form
                         onSubmit={handleSubmit}
-                        className="w-full bg-[#F9F9F9] p-8 rounded-2xl outline outline-3 outline-[#D9D9D9] shadow-md z-20"
+                        className="w-full bg-[#F9F9F9] px-3 rounded-2xl outline outline-3 outline-[#D9D9D9] shadow-md z-20"
                     >
-                        <div className="mb-5">
+                        <div className="-mb-6">
                             <InputFirstName
                                 type="text"
                                 placeholder="First Name"
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
-                                className=""
+                                className="text-size0"
                                 required
                             />
                         </div>
-                        <div className="mb-5">
+                        <div className="-mb-6">
                             <InputLastName
                                 type="text"
                                 placeholder="Last Name"
@@ -146,7 +146,7 @@ const contact = () => {
                                 required
                             />
                         </div>
-                        <div className="mb-5">
+                        <div className="-mb-6">
                             <InputEmail
                                 type="email"
                                 id="email"
@@ -157,7 +157,7 @@ const contact = () => {
                                 placeholder="Email"
                             />
                         </div>
-                        <div className="mb-5">
+                        <div className="-mb-6">
                             <InputSubject
                                 type="text"
                                 id="subject"
@@ -168,7 +168,7 @@ const contact = () => {
                                 required
                             />
                         </div>
-                        <div className="mb-5">
+                        <div className="-mb-6">
                             <InputMessage
                                 type="text"
                                 placeholder="Message"
@@ -178,7 +178,7 @@ const contact = () => {
                                 required
                             />
                         </div>
-                        <div className="flex items-center justify-center w-full">
+                        <div className="flex items-center justify-center w-full py-2">
                             <SendButton type="submit" />
                         </div>
                     </form>
@@ -189,7 +189,7 @@ const contact = () => {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40 bg-gradient-to-r to-[#272727] from-[#555555]"
+                className="flex-grow w-1/2 grid grid-cols-2 gap-3 md:gap-5 2xl:gap-10 p-4 md:p-10 xl:p-20 2xl:p-40 bg-gradient-to-r to-[#272727] from-[#555555]"
             >
                 <MotionA
                     href="mailto:krishankanji@berkeley.edu?cc=krishankanji2003@gmail.com"

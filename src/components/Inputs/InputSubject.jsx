@@ -64,6 +64,17 @@ const StyledWrapper = styled.div`
         color: #4169e1;
         transform: translateY(-30px);
     }
+        /* Media query for smaller screens */
+    @media (max-width: 1279px) {
+        .form-control input {
+            font-size: 14px; /* Smaller font size */
+            padding: 9px 0; /* Adjusted padding */
+        }
+
+        .form-control label span {
+            font-size: 14px; /* Smaller font size */
+        }
+    }
 `;
 
 export default InputSubject;

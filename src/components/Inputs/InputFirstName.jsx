@@ -39,6 +39,7 @@ const StyledWrapper = styled.div`
         padding: 15px 0;
         font-size: 18px;
         color: #2d2d2d;
+        transition: font-size 0.3s ease, padding 0.3s ease; /* Add transition for smooth resizing */
     }
 
     .form-control input:focus,
@@ -66,6 +67,18 @@ const StyledWrapper = styled.div`
     .form-control input:valid + label span {
         color: #4169e1;
         transform: translateY(-30px);
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 1279px) {
+        .form-control input {
+            font-size: 14px; /* Smaller font size */
+            padding: 9px 0; /* Adjusted padding */
+        }
+
+        .form-control label span {
+            font-size: 14px; /* Smaller font size */
+        }
     }
 `;
 

@@ -68,13 +68,40 @@ const StyledWrapper = styled.div`
 
     .form-control textarea:focus + label,
     .form-control textarea:valid + label {
-        bottom: 190px; /* Move to the top */
+        bottom: 180px; /* Move to the top */
     }
 
     .form-control textarea:focus + label span,
     .form-control textarea:valid + label span {
         color: #4169e1;
         transform: translateY(-30px);
+    }
+    /* Media query for smaller screens */
+    @media (max-width: 1279px) {
+        .form-control input {
+            font-size: 14px; /* Smaller font size */
+            padding: 9px 0; /* Adjusted padding */
+        }
+
+        .form-control label span {
+            font-size: 14px; /* Smaller font size */
+        }
+
+        .form-control textarea {
+            font-size: 14px; /* Smaller font size */
+            padding: 9px 0; /* Adjusted padding */
+            height: 100px; /* Adjusted height */
+        }
+
+        .form-control textarea:focus + label,
+        .form-control textarea:valid + label {
+            bottom: 65px; /* Adjusted for smaller screens */
+        }
+
+        .form-control textarea:focus + label span,
+        .form-control textarea:valid + label span {
+            transform: translateY(-20px); /* Adjusted for smaller screens */
+        }
     }
 `;
 
