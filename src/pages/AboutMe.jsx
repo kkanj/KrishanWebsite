@@ -39,18 +39,18 @@ const about = () => {
                 variants={animations.slideHorizontal}
             >
                 <motion.div
-                    className="text-white font-sfpro h-screen flex flex-col justify-center mx-16 space-y-2"
+                    className="text-white font-sfpro h-screen flex flex-col justify-center mx-2 md:mx-4 lg:mx-10 xl:mx-16 space-y-1 2xl:space-y-2"
                     variants={animations.fade}
                 >
-                    <div className="font-light text-size2 tracking-widest">
+                    <div className="font-light tracking-widest text-size0 md:text-size0 lg:text-size1 xl:text-size2">
                         Krishan Kanji
                     </div>
-                    <div className="font-bold text-size4 uppercase tracking-widest -space-y-4">
+                    <div className="font-bold uppercase tracking-widest -space-y-1 md:-space-y-2 xl:-space-y-4 text-size0 md:text-size1 lg:text-size2 xl:text-size3 2xl:text-size4">
                         <div>Student</div>
                         <div>Software Engineer</div>
                         <div>Full Stack Developer</div>
                     </div>
-                    <div className="text-size3 font-normal mr-[145px]">
+                    <div className="font-normal text-size0 md:text-size1 lg:text-size1 xl:text-size2 2xl:text-size3">
                         Hi, I'm Krishan Kanji, a Computer Science and Data
                         Science student at UC Berkeley with a passion for
                         learning about the latest technologies, and building
@@ -64,7 +64,7 @@ const about = () => {
                     </div>
                 </motion.div>
             </motion.div>
-            <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-10 p-40">
+            <motion.div className="flex-grow w-1/2 grid grid-cols-2 gap-3 md:gap-5 2xl:gap-10 p-4 md:p-10 xl:p-20 2xl:p-40">
                 <MotionLink
                     to="https://cdss.berkeley.edu/"
                     target="_blank"

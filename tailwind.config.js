@@ -13,6 +13,7 @@ export default {
             widest2: ".25em",
         },
         fontSize: {
+            size0: ["10px", "18px"],
             size1: ["16px", "28px"],
             size2: ["20px", "34px"],
             size3: ["32px", "51px"],
