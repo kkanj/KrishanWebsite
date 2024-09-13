@@ -15,7 +15,7 @@ const styles = {
         "bg-clip-text text-transparent bg-gradient-to-r from-gradient-1 via-gradient-2 to-gradient-3",
     TechStackMarquee: "w-[25px] h-[25px]",
     Name: "text-size1 md:text-size2 lg:text-size3 xl:text-size4 2xl:text-size5 3xl:text-size6 text-name-text font-sfpro font-bold tracking-widest2 select-none",
-    FSD: "text-size0 md:text-size0 lg:text-size1 xl:text-size2 2xl:text-size3 text-dark-gray font-sfpro font-light tracking-widest2 select-none",
+    FSD: "text-size0 md:text-size0 lg:text-size1 xl:text-size1 2xl:text-size2 text-dark-gray font-sfpro font-light tracking-widest2 select-none",
     CardText:
         "text-size1 md:text-size1 lg:text-size2 xl:text-size2 2xl:text-size3 text-name-text font-sfpro font-light tracking-tight select-none",
     Card: "rounded-[21px] bg-card-bg w-full h-full drop-shadow-lg flex items-center justify-center hover:shadow-lg",
