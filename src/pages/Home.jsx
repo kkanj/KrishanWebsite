@@ -124,7 +124,7 @@ const Home = () => {
                         </div>
                     </MotionLink>
                     <MotionLink
-                        to="/placeholder"
+                        to="/experience"
                         className={`md:col-span-2 ${styles.Card} hover:outline-none`}
                         variants={animations.scale}
                         whileHover={{ scale: 1.025 }}

@@ -18,7 +18,7 @@ export const NavMenuNew = (props) => {
                     tooltip="Home"
                     className="bg-[#727986] hover:bg-[#97a6c0] text-white"
                 >
-                    <Link to="/" className="no-underline text-inherit">
+                    <Link to="/" className="no-underline text-inherit hover:text-white">
                         <Home className="w-8 h-8" />
                     </Link>
                 </CircleMenuItem>
@@ -27,7 +27,7 @@ export const NavMenuNew = (props) => {
                     tooltip="Contact"
                     className="bg-[#727986] hover:bg-[#97a6c0] text-white"
                 >
-                    <Link to="/contact" className="no-underline text-inherit">
+                    <Link to="/contact" className="no-underline text-inherit hover:text-white">
                         <Mail className="w-8 h-8" />
                     </Link>
                 </CircleMenuItem>
@@ -38,7 +38,7 @@ export const NavMenuNew = (props) => {
                 >
                     <Link
                         to="/experience"
-                        className="no-underline text-inherit"
+                        className="no-underline text-inherit hover:text-white"
                     >
                         <Resume className="w-8 h-8" />
                     </Link>
@@ -48,7 +48,7 @@ export const NavMenuNew = (props) => {
                     tooltip="Projects"
                     className="bg-[#727986] hover:bg-[#97a6c0] text-white"
                 >
-                    <Link to="/projects" className="no-underline text-inherit">
+                    <Link to="/projects" className="no-underline text-inherit hover:text-white">
                         <Lightbulb className="w-9 h-9" />
                     </Link>
                 </CircleMenuItem>
@@ -57,7 +57,7 @@ export const NavMenuNew = (props) => {
                     tooltip="About"
                     className="bg-[#727986] hover:bg-[#97a6c0] text-white"
                 >
-                    <Link to="/about" className="no-underline text-inherit">
+                    <Link to="/about" className="no-underline text-inherit hover:text-white">
                         <Person className="w-8 h-8" />
                     </Link>
                 </CircleMenuItem>

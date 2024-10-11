@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Placeholder = () => {
+const Experience = () => {
   return (
     <div>This page is currently being updated to my new design!</div>
   )
   
 }
 
-export default Placeholder;
+export default Experience;

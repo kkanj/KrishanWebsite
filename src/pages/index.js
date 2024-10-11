@@ -4,7 +4,7 @@ import Splash from "./Splash";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import Project0 from "./Project0";
-import Placeholder from "./Placeholder";
+import Experience from "./Experience";
 import Marquee from "../components/Marquee";
 
 export {
@@ -14,5 +14,5 @@ export {
     Projects,
     Contact,
     Project0,
-    Placeholder,
+    Experience,
 };

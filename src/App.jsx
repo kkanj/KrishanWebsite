@@ -8,7 +8,7 @@ import {
     Projects,
     Contact,
     Project0,
-    Placeholder,
+    Experience,
 } from "./pages";
 import {
     BrowserRouter as Router,
@@ -32,7 +32,7 @@ function App() {
                         <Route path="/about" element={<AboutMe />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/project0" element={<Project0 />} />
-                        <Route path="/placeholder" element={<Placeholder />} />
+                        <Route path="/experience" element={<Experience />} />
                     </Routes>
                 
             </AnimatePresence>

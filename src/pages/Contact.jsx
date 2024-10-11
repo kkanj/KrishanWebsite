@@ -17,7 +17,7 @@ import {
     Person,
     googlemeet,
 } from "../assets/index.js";
-import { NavMenu } from "../components/NavMenu.jsx";
+import NavMenuNew from "../components/NavMenuNew.jsx";
 import emailjs from "@emailjs/browser";
 import { Send } from "../assets/index.js";
 import SendButton from "../components/SendButton.jsx";
@@ -91,8 +91,14 @@ const contact = () => {
                 staggerChildren: 0.06,
             }}
         >
-            <motion.div className="h-screen w-screen absolute overflow-hidden z-0">
-                <NavMenu />
+            <motion.div
+                className="absolute z-50 transform-gpu flex justify-center items-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] pointer-events-none"
+                initial={{ opacity: 0 }} // Start with opacity 0
+                animate={{ opacity: 1 }} // Animate to opacity 1
+                exit={{ opacity: 0 }} 
+                transition={{ duration: 0.3, delay: 0.1 }} // Set duration and delay
+            >
+                <NavMenuNew className="pointer-events-auto" />
             </motion.div>
 
             <motion.div
