@@ -2,7 +2,7 @@ import { Home, Resume, Mail, Person, Lightbulb } from "../assets/index.js";
 import { Link } from "react-router-dom";
 // Import the circular menu
 import { CircleMenu, CircleMenuItem } from "react-circular-menu";
-import "react-circular-menu/styles.css";
+import "../styling/menuStyles.css";
 export const NavMenuNew = (props) => {
     return (
         <div className="absolute flex items-center inset-0 place-content-center pointer-events-auto">
