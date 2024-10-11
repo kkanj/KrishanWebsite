@@ -1,52 +1,68 @@
 import { Home, Resume, Mail, Person, Lightbulb } from "../assets/index.js";
-
+import { Link } from "react-router-dom";
 // Import the circular menu
 import { CircleMenu, CircleMenuItem } from "react-circular-menu";
 import "react-circular-menu/styles.css";
-
 export const NavMenuNew = (props) => {
     return (
-        <CircleMenu
-            startAngle={-450}
-            rotationAngle={360}
-            itemSize={4}
-            radius={5}
-            rotationAngleInclusive={false}
-            className="transform-gpu"
-        >
-            <CircleMenuItem
-                tooltip="Home"
-                className="bg-[#727986] hover:bg-[#97a6c0] text-white"
+        <div className="absolute flex items-center inset-0 place-content-center pointer-events-auto">
+            <CircleMenu
+                startAngle={-450}
+                rotationAngle={360}
+                itemSize={4}
+                radius={4.35}
+                rotationAngleInclusive={false}
+                className="transform-gpu flex justify-center items-center"
             >
-                <Home className="w-8 h-8"/>
-            </CircleMenuItem>
-            <CircleMenuItem
-                tooltip="Contact"
-                className="bg-[#727986] hover:bg-[#97a6c0] text-white"
-            >
-                <Mail className="w-8 h-8"/>
-            </CircleMenuItem>
-            <CircleMenuItem
-                tooltip="Experience"
-                className="bg-[#727986] hover:bg-[#97a6c0] text-white"
-            >
-                <Resume className="w-8 h-8" />
-            </CircleMenuItem >
+                <CircleMenuItem
+                    tooltip="Home"
+                    className="bg-[#727986] hover:bg-[#97a6c0] text-white"
+                >
+                    <Link to="/" className="no-underline text-inherit">
+                        <Home className="w-8 h-8" />
+                    </Link>
+                </CircleMenuItem>
 
-            <CircleMenuItem
-                tooltip="Projects"
-                className="bg-[#727986] hover:bg-[#97a6c0] text-white"
-            >
-                <Lightbulb className="w-9 h-9"/>
-            </CircleMenuItem>
+                <CircleMenuItem
+                    tooltip="Contact"
+                    className="bg-[#727986] hover:bg-[#97a6c0] text-white"
+                >
+                    <Link to="/contact" className="no-underline text-inherit">
+                        <Mail className="w-8 h-8" />
+                    </Link>
+                </CircleMenuItem>
 
-            <CircleMenuItem
-                tooltip="About"
-                className="bg-[#727986] hover:bg-[#97a6c0] text-white"
-            >
-                <Person className="w-8 h-8"/>
-            </CircleMenuItem>
-        </CircleMenu>
+                <CircleMenuItem
+                    tooltip="Experience"
+                    className="bg-[#727986] hover:bg-[#97a6c0] text-white"
+                >
+                    <Link
+                        to="/experience"
+                        className="no-underline text-inherit"
+                    >
+                        <Resume className="w-8 h-8" />
+                    </Link>
+                </CircleMenuItem>
+
+                <CircleMenuItem
+                    tooltip="Projects"
+                    className="bg-[#727986] hover:bg-[#97a6c0] text-white"
+                >
+                    <Link to="/projects" className="no-underline text-inherit">
+                        <Lightbulb className="w-9 h-9" />
+                    </Link>
+                </CircleMenuItem>
+
+                <CircleMenuItem
+                    tooltip="About"
+                    className="bg-[#727986] hover:bg-[#97a6c0] text-white"
+                >
+                    <Link to="/about" className="no-underline text-inherit">
+                        <Person className="w-8 h-8" />
+                    </Link>
+                </CircleMenuItem>
+            </CircleMenu>
+        </div>
     );
 };
 
