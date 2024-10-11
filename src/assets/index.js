@@ -24,6 +24,7 @@ import GoogleMeetGray from "./images/googleMeetGray.svg"
 import Map from "./images/map.svg?react"
 import Person from "./images/person.svg?react"
 import Home from "./images/home.svg?react"
+import Lightbulb from "./images/lightbulb.svg?react"
 
 export {
     logo,
@@ -52,4 +53,6 @@ export {
     Map,
     Person,
     Home,
+    Lightbulb,
+    
 };

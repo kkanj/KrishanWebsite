@@ -1,4 +1,4 @@
-import { Home, Resume, Mail, Person } from "../assets/index.js";
+import { Home, Resume, Mail, Person, Lightbulb } from "../assets/index.js";
 
 // Import the circular menu
 import { CircleMenu, CircleMenuItem } from "react-circular-menu";
@@ -9,8 +9,8 @@ export const NavMenuNew = (props) => {
         <CircleMenu
             startAngle={-450}
             rotationAngle={360}
-            itemSize={4.5}
-            radius={5.4}
+            itemSize={4}
+            radius={5}
             rotationAngleInclusive={false}
             className="transform-gpu"
         >
@@ -30,14 +30,14 @@ export const NavMenuNew = (props) => {
                 tooltip="Experience"
                 className="bg-[#727986] hover:bg-[#97a6c0] text-white"
             >
-                <Resume className="w-8 h-8"/>
+                <Resume className="w-8 h-8" />
             </CircleMenuItem >
 
             <CircleMenuItem
                 tooltip="Projects"
                 className="bg-[#727986] hover:bg-[#97a6c0] text-white"
             >
-                <div>Projects</div>
+                <Lightbulb className="w-9 h-9"/>
             </CircleMenuItem>
 
             <CircleMenuItem
