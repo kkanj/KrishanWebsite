@@ -80,7 +80,7 @@ const about = () => {
                     whileHover={{
                         scale: 1.04,
                         backgroundColor: "#003262", // Target background color on hover
-                        color: "#FFD100", // Target text color on hover
+                        color: "#FDB515", // Target text color on hover
                         outline: "4px solid",
                     }}
                     transition={{
@@ -172,8 +172,8 @@ const about = () => {
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#FFDAB9", // Target background color on hover
-                        color: "#BA5E0B",
+                        backgroundColor: "#F6E6D8", // Target background color on hover
+                        color: "#C46828",
                         outline: "4px solid",
                     }}
                     transition={{
