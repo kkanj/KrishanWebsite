@@ -238,7 +238,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     button {
         font-family: inherit;
         font-size: 20px;
-        background: royalblue;
+        background: steelblue;
         color: white;
         padding: 0.7em 1em;
         padding-left: 0.9em;
@@ -309,7 +309,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     .form-control input:focus,
     .form-control input:valid {
         outline: 0;
-        border-bottom-color: #4169e1;
+        border-bottom-color: steelblue;
     }
 
     .form-control label {
@@ -329,7 +329,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     .form-control input:focus + label span,
     .form-control input:valid + label span {
-        color: #4169e1;
+        color: steelblue;
         transform: translateY(-30px);
     }
         /* Media query for smaller screens */
@@ -364,7 +364,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     .form-control input:focus,
     .form-control input:valid {
         outline: 0;
-        border-bottom-color: #4169e1;
+        border-bottom-color: steelblue;
     }
 
     .form-control label {
@@ -384,7 +384,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     .form-control input:focus + label span,
     .form-control input:valid + label span {
-        color: #4169e1;
+        color: steelblue;
         transform: translateY(-30px);
     }
         /* Media query for smaller screens */
@@ -421,7 +421,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     .form-control textarea:focus,
     .form-control textarea:valid {
         outline: 0;
-        border-bottom-color: #4169e1;
+        border-bottom-color: steelblue;
     }
 
     .form-control label {
@@ -447,7 +447,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     .form-control textarea:focus + label span,
     .form-control textarea:valid + label span {
-        color: #4169e1;
+        color: steelblue;
         transform: translateY(-30px);
     }
     /* Media query for smaller screens */
@@ -498,7 +498,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     .form-control input:focus,
     .form-control input:valid {
         outline: 0;
-        border-bottom-color: #4169e1;
+        border-bottom-color: steelblue;
     }
 
     .form-control label {
@@ -518,7 +518,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     .form-control input:focus + label span,
     .form-control input:valid + label span {
-        color: #4169e1;
+        color: steelblue;
         transform: translateY(-30px);
     }
         /* Media query for smaller screens */
@@ -554,7 +554,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     .form-control input:focus,
     .form-control input:valid {
         outline: 0;
-        border-bottom-color: #4169e1;
+        border-bottom-color: steelblue;
     }
 
     .form-control label {
@@ -574,7 +574,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     .form-control input:focus + label span,
     .form-control input:valid + label span {
-        color: #4169e1;
+        color: steelblue;
         transform: translateY(-30px);
     }
 
