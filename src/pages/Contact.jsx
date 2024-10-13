@@ -23,7 +23,7 @@ import { Send } from "../assets/index.js";
 import SendButton from "../components/SendButton.jsx";
 import InputEmail from "../components/Inputs/InputEmail.jsx";
 import InputSubject from "../components/Inputs/InputSubject.jsx";
-import InputMessage from "../components/Inputs/ImputMessage.jsx";
+import InputMessage from "../components/Inputs/inputMessage.jsx";
 import InputLastName from "../components/Inputs/InputLastName.jsx";
 import InputFirstName from "../components/Inputs/InputFirstName.jsx";
 
