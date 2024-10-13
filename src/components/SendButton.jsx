@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
     button {
         font-family: inherit;
         font-size: 20px;
-        background: royalblue;
+        background: steelblue;
         color: white;
         padding: 0.7em 1em;
         padding-left: 0.9em;

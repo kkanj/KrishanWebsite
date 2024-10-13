@@ -43,7 +43,7 @@ const StyledWrapper = styled.div`
     .form-control input:focus,
     .form-control input:valid {
         outline: 0;
-        border-bottom-color: #4169e1;
+        border-bottom-color: steelblue;
     }
 
     .form-control label {
@@ -63,7 +63,7 @@ const StyledWrapper = styled.div`
 
     .form-control input:focus + label span,
     .form-control input:valid + label span {
-        color: #4169e1;
+        color: steelblue;
         transform: translateY(-30px);
     }
         /* Media query for smaller screens */
