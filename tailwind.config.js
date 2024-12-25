@@ -25,8 +25,34 @@ export default {
             size9: ["112px", "160px"],
         },
         extend: {
+            height: {
+                100: "25rem", // Custom height value
+                104: "26rem",
+                108: "27rem",
+                112: "28rem",
+                116: "29rem",
+                120: "30rem",
+                124: "31rem",
+                128: "32rem",
+                // Add more as needed
+            },
+            width: {
+                100: "25rem", // Custom width value
+                104: "26rem",
+                108: "27rem",
+                112: "28rem",
+                116: "29rem",
+                120: "30rem",
+                124: "31rem",
+                128: "32rem",
+                // Add more as needed
+            },
+            screens: {
+                "2xl": "1536px", // Default 2xl breakpoint
+                "3xl": "2000px", // Custom breakpoint for 2000px
+            },
             colors: {
-                "background": "#ffffff",
+                background: "#ffffff",
                 "menu-text": "#000000",
                 "category-text": "#b0b0b0",
                 "menu-sub-text": "#b8b8b8",
@@ -42,7 +68,7 @@ export default {
                 "gradient-2": "#b39cff",
                 "gradient-3": "#ff7fe1",
                 "card-bg": "#fafafa",
-                "header": "#4f4f4f",
+                header: "#4f4f4f",
             },
             fontFamily: {
                 sfpro: ["SFPRO", "fallback"],

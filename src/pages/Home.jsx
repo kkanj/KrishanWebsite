@@ -17,6 +17,7 @@ const Home = () => {
 
         return () => clearTimeout(timer); // Cleanup the timer
     }, []);
+    
 
     return (
         <div>
