@@ -32,19 +32,19 @@ export const NavMenu = () => {
 
     return (
         <Menu width={menuWidth}>
-            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#home">
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="/">
                 Home
             </a>
-            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#about">
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="/about">
                 About
             </a>
-            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#contact">
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="/contact">
                 Contact
             </a>
-            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#projects">
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="/projects">
                 Projects
             </a>
-            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#experience">
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="/experience">
                 Experience
             </a>
         </Menu>

@@ -1,8 +1,8 @@
 import React from "react";
-import { NavMenuNew } from "../components/NavMenuNew";
+import { NavMenu } from "../components/NavMenu";
 import { motion, cubicBezier } from "framer-motion";
 import styles from "../styling/Home.module.js";
-import projects from "../components/projectData"; // Import the projects array
+import projects from "../components/projectData";
 
 const containerVariants = {
     hidden: {
@@ -14,7 +14,7 @@ const containerVariants = {
             type: "tween",
             staggerChildren: 0.1,
             duration: 0.1,
-            ease: cubicBezier(0.34, 0.05, 0.54, 1.19), // Time delay between children animations
+            ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
         },
     },
 };
@@ -24,10 +24,23 @@ const cardVariants = {
     visible: { opacity: 1, scale: 1 },
 };
 
+const TitleCard = ({ title }) => {
+    return (
+        <motion.div
+            className="col-span-2 rounded-[21px] drop-shadow-lg relative w-full bg-card-bg overflow-hidden shadow-lg hover:shadow-xl flex items-center justify-center text-center p-8 "
+            whileHover={{ scale: 1.03 }}
+        >
+            <h1 className="font-sfpro font-bold text-size3 lg:text-size6 text-name-text tracking-wide">
+                {title}
+            </h1>
+        </motion.div>
+    );
+};
+
 const ProjectCard = ({ image, title, language, description, link }) => {
     return (
         <motion.div
-            className="rounded-[21px] drop-shadow-lg relative w-64 h-64 bg-card-bg overflow-hidden shadow-lg hover:shadow-xl cursor-pointer md:w-80 md:h-80 2xl:w-96 2xl:h-96 3xl:w-112 3xl:h-112"
+            className="rounded-[21px] drop-shadow-lg relative bg-card-bg overflow-hidden shadow-lg hover:shadow-xl cursor-pointer aspect-[1/1]"
             whileHover={{ scale: 1.05 }}
             onClick={() => window.open(link, "_blank")}
         >
@@ -47,8 +60,12 @@ const ProjectCard = ({ image, title, language, description, link }) => {
 };
 
 const Projects = () => {
+    // Destructure the first project and the rest
+    const [firstProject, ...otherProjects] = projects;
+
     return (
         <div className="h-screen flex flex-col">
+            <NavMenu />
             {/* Ensure scrolling is enabled */}
             <main className="flex-1 w-screen overflow-y-auto mx-auto p-4">
                 <motion.div
@@ -57,7 +74,16 @@ const Projects = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {projects.map((project, index) => (
+                    {/* Render the TitleCard first */}
+                    <motion.div
+                        className="flex justify-center sm:col-span-1 md:col-span-2"
+                        variants={cardVariants}
+                    >
+                        <TitleCard title="My Projects" />
+                    </motion.div>
+
+                    {/* Render the other project cards */}
+                    {otherProjects.map((project, index) => (
                         <motion.div
                             key={index}
                             className="flex justify-center"
