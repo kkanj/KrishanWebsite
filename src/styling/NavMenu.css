@@ -1,0 +1,75 @@
+/* Burger button (menu icon) */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px; /* Adjust to position the button where needed */
+    top: 36px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* The clickable area for the button */
+.bm-burger-bars {
+    background: #91949b; /* Customize button color */
+}
+
+/* Cross button (close icon) */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+    right: 15px;
+    top: 15px;
+}
+@media (max-width: 640px) {
+    .bm-cross-button {
+        right: 5px; /* Align closer for narrower menus */
+        top: 10px; /* Adjust if needed */
+    }
+}
+.bm-cross-button {
+    right: 15px; /* Adjusted position relative to menu */
+    top: 15px; /* Adjusted position relative to menu */
+}
+
+.bm-menu {
+    background: #232427;
+    height: 100vh; /* Make the menu height consistent */
+    overflow-y: auto; /* Smoothly handle content overflow */
+    padding: 1em; /* Adjust padding for smaller screens */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.bm-menu::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit-based browsers */
+}
+
+.bm-cross {
+    background: #727986;
+}
+
+/* Overlay when menu is open */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Menu container styles */
+.bm-menu {
+    background: #232427;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+/* Default menu width */
+
+
+/* Menu item styles */
+.menu-item {
+    display: block;
+    margin: 0.5em 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-item:hover {
+    color: #91949b;
+}

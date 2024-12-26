@@ -1,94 +1,52 @@
-import React, { useState } from "react";
-import { MotionConfig, motion } from "framer-motion";
-import animations from "../styling/animations.js";
+import React, { useState, useEffect } from "react";
+import { stack as Menu } from "react-burger-menu"; // Import the desired menu type
+import "../styling/NavMenu.css";
 
 export const NavMenu = () => {
-    const [active, setActive] = useState(false);
-    return (
-        <motion.div
-            className="absolute flex items-center inset-0 place-content-center pointer-events-auto "
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={animations.scaleMenu}
-        >
-            <MotionConfig
-                transition={{
-                    duration: 0.25,
-                    ease: "easeInOut",
-                }}
-            >
-                <motion.button
-                    initial={false}
-                    animate={active ? "open" : "closed"}
-                    onClick={() => setActive((pv) => !pv)}
-                    className="relative h-10 w-10 lg:h-14 lg:w-14 rounded-full bg-[#727986] transition-colors hover:bg-[#626D73] focus:outline-none cursor-pointer"
-                >
-                    <motion.span
-                        variants={VARIANTS.top}
-                        className="absolute h-1 w-5 lg:h-1 lg:w-7 bg-white "
-                        style={{
-                            y: "-50%",
-                            left: "50%",
-                            x: "-50%",
-                            top: "35%",
-                        }}
-                    />
-                    <motion.span
-                        variants={VARIANTS.middle}
-                        className="absolute h-1 w-5 lg:h-1 lg:w-7 bg-white"
-                        style={{
-                            left: "50%",
-                            x: "-50%",
-                            top: "50%",
-                            y: "-50%",
-                        }}
-                    />
-                    <motion.span
-                        variants={VARIANTS.bottom}
-                        className="absolute h-1 w-5 lg:h-1 lg:w-7 bg-white"
-                        style={{
-                            x: "-50%",
-                            y: "50%",
-                            bottom: "35%",
-                            left: "calc(50%)",
-                        }}
-                    />
-                </motion.button>
-            </MotionConfig>
-        </motion.div>
-    );
-};
+    const [menuWidth, setMenuWidth] = useState("300px"); // Default width
 
-const VARIANTS = {
-    top: {
-        open: {
-            rotate: ["0deg", "0deg", "45deg"],
-            top: ["35%", "50%", "50%"],
-        },
-        closed: {
-            rotate: ["45deg", "0deg", "0deg"],
-            top: ["50%", "50%", "35%"],
-        },
-    },
-    middle: {
-        open: {
-            rotate: ["0deg", "0deg", "-45deg"],
-        },
-        closed: {
-            rotate: ["-45deg", "0deg", "0deg"],
-        },
-    },
-    bottom: {
-        open: {
-            rotate: ["0deg", "0deg", "45deg"],
-            bottom: ["35%", "50%", "50%"],
-            left: "50%",
-        },
-        closed: {
-            rotate: ["45deg", "0deg", "0deg"],
-            bottom: ["50%", "50%", "35%"],
-            left: "calc(50%)",
-        },
-    },
+    // Adjust the width based on screen size
+    useEffect(() => {
+        const updateMenuWidth = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 640) {
+                setMenuWidth("150px");
+            } else if (screenWidth <= 768) {
+                setMenuWidth("200px");
+            } else if (screenWidth <= 1024) {
+                setMenuWidth("225px");
+            } else if (screenWidth <= 1536) {
+                setMenuWidth("250px");
+            } else {
+                setMenuWidth("300px");
+            }
+        };
+
+        // Initial check and add resize listener
+        updateMenuWidth();
+        window.addEventListener("resize", updateMenuWidth);
+
+        // Cleanup listener
+        return () => window.removeEventListener("resize", updateMenuWidth);
+    }, []);
+
+    return (
+        <Menu width={menuWidth}>
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#home">
+                Home
+            </a>
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#about">
+                About
+            </a>
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#contact">
+                Contact
+            </a>
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#projects">
+                Projects
+            </a>
+            <a className="menu-item inline-block text-size1  md:text-size2 xl:text-size2 2xl:text-size3 text-white font-sfpro font-light tracking-tight select-none px-0 md:px-2 text-white" href="#experience">
+                Experience
+            </a>
+        </Menu>
+    );
 };
