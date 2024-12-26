@@ -66,7 +66,7 @@ const Projects = () => {
     return (
         <div className="h-screen flex flex-col">
             <NavMenu />
-            {/* Ensure scrolling is enabled */}
+
             <main className="flex-1 w-screen overflow-y-auto mx-auto p-4">
                 <motion.div
                     className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 gap-6"
@@ -74,7 +74,6 @@ const Projects = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {/* Render the TitleCard first */}
                     <motion.div
                         className="flex justify-center sm:col-span-1 md:col-span-2"
                         variants={cardVariants}
@@ -82,12 +81,11 @@ const Projects = () => {
                         <TitleCard title="My Projects" />
                     </motion.div>
 
-                    {/* Render the other project cards */}
                     {otherProjects.map((project, index) => (
                         <motion.div
                             key={index}
                             className="flex justify-center"
-                            variants={cardVariants} // Animation for each card
+                            variants={cardVariants}
                         >
                             <ProjectCard {...project} />
                         </motion.div>
