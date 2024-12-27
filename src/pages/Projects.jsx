@@ -21,8 +21,7 @@ const Block = ({ className, children, link, ...rest }) => {
             }}
             onClick={() => window.open(link, "_blank")}
             className={twMerge(
-                // Removed p-4 so the image can fill the card
-                "relative rounded-[21px] bg-card-bg w-full drop-shadow-lg hover:shadow-xl cursor-pointer",
+                "relative flex flex-col rounded-[21px] bg-card-bg w-full drop-shadow-lg hover:shadow-xl cursor-pointer",
                 className
             )}
             {...rest}
@@ -38,31 +37,59 @@ const containerVariants = {
         opacity: 1,
         transition: {
             type: "tween",
-            staggerChildren: 0.05,
+            staggerChildren: 0.1, // Stagger the children animations
+            duration: 0.2,
+            ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
+        },
+    },
+    exit: {
+        opacity: 0,
+        transition: {
+            type: "tween",
+            staggerChildren: 0.1, // Stagger the children animations
             duration: 0.2,
             ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
         },
     },
 };
 
+const childVariants = {
+    initial: { scale: 0, opacity: 0 },
+    animate: { scale: 1, opacity: 1, transition: { duration: 0.25 } },
+    exit: { scale: 0, opacity: 0, transition: { duration: 0.25 } },
+};
+
 const Projects = () => {
     return (
         <div className="bg-white text-zinc-900 h-screen overflow-y-auto">
             <NavMenu />
-            <div className="px-8 ">
-                <motion.div className="pt-16 md:pt-0 bg-white rounded-[21px] pl-1 md:pl-16 ">
-                    <h1 className="mb-2 text-size4 md:text-size7 font-sfpro font-bold text-[#232427]">
+            <div className="px-8">
+                <motion.div
+                    className="pt-16 md:pt-0 bg-white rounded-[21px] pl-1 md:pl-16"
+                    variants={containerVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit" // Apply exit animation
+                >
+                    <motion.h1
+                        className="mb-2 text-size4 md:text-size7 font-sfpro font-bold text-[#232427]"
+                        variants={childVariants}
+                    >
                         My Projects
-                    </h1>
-                    <p className="text-dark-gray font-sfpro font-light text-size2 md:text-size3 -mt-5 lg:-mt-7 tracking-tight">
+                    </motion.h1>
+                    <motion.p
+                        className="text-dark-gray font-sfpro font-light text-size2 md:text-size3 -mt-5 lg:-mt-7 tracking-tight"
+                        variants={childVariants}
+                    >
                         Showcasing some of the things I’ve worked on.
-                    </p>
+                    </motion.p>
                 </motion.div>
                 <motion.div
                     className="grid w-full grid-cols-12 gap-7 py-4 mb-24 md:mb-10 px-0 md:px-16"
                     variants={containerVariants}
                     initial="initial"
                     animate="animate"
+                    exit="exit" // Apply exit animation
                 >
                     {/* First block with white background, no card styling */}
 
@@ -72,7 +99,7 @@ const Projects = () => {
                             key={index}
                             link={project.link}
                             className={twMerge(
-                                "col-span-12",
+                                "col-span-12 md:col-span-6",
                                 project.className
                             )}
                         >
@@ -80,10 +107,10 @@ const Projects = () => {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="rounded-t-[21px]"
+                                className="w-full object-cover rounded-t-[21px] flex-grow h-96"
                             />
-                            {/* Container for text, with padding if desired */}
-                            <div className="p-4">
+                            {/* Container for text, with fixed height */}
+                            <div className="p-4 h-24">
                                 <h2 className="font-sfpro text-size2 font-bold tracking-tight text-name-text">
                                     {project.title}
                                 </h2>
@@ -91,6 +118,12 @@ const Projects = () => {
                                     {project.language}
                                 </p>
                             </div>
+                            <motion.div
+                                className="absolute inset-0 rounded-[21px] bg-black bg-opacity-85 text-white font-sfpro font-size2 font-light tracking-wider p-4 opacity-0 flex items-center justify-center text-center transition-opacity duration-300 backdrop-blur-sm"
+                                whileHover={{ opacity: 1 }}
+                            >
+                                <p>{project.description}</p>
+                            </motion.div>
                         </Block>
                     ))}
                 </motion.div>
