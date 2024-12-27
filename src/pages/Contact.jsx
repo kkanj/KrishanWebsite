@@ -234,7 +234,7 @@ const contact = () => {
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#DFF5EF", // Target background color on hover
+                        backgroundColor: "#b1f0df", // Target background color on hover
                         color: "#669488",
                         outline: "4px solid ",
                     }}

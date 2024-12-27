@@ -7,24 +7,14 @@ import projects from "../components/projectData";
 const Block = ({ className, children, link, ...rest }) => {
     return (
         <motion.div
-            initial={{ scale: 0.5, y: 50, opacity: 0 }}
-            animate={{ scale: 1, y: 0, opacity: 1 }}
-            transition={{
-                type: "spring",
-                mass: 3,
-                stiffness: 400,
-                damping: 50,
-            }}
-            whileHover={{
-                scale: 1.03,
-                transition: { duration: 0.1 },
-            }}
+            variants={childVariants}
             onClick={() => window.open(link, "_blank")}
             className={twMerge(
                 "relative flex flex-col rounded-[21px] bg-card-bg w-full drop-shadow-lg hover:shadow-xl cursor-pointer",
                 className
             )}
             {...rest}
+            whileHover={{ scale: 1.03, duration: 0.1 }}
         >
             {children}
         </motion.div>
@@ -36,8 +26,8 @@ const containerVariants = {
     animate: {
         opacity: 1,
         transition: {
-            type: "tween",
-            staggerChildren: 0.1, // Stagger the children animations
+            type: "spring",
+            staggerChildren: 0.06, // Stagger the children animations
             duration: 0.2,
             ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
         },
@@ -46,8 +36,7 @@ const containerVariants = {
         opacity: 0,
         transition: {
             type: "tween",
-            staggerChildren: 0.1, // Stagger the children animations
-            duration: 0.2,
+            duration: 0.1,
             ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
         },
     },
@@ -119,10 +108,10 @@ const Projects = () => {
                                 </p>
                             </div>
                             <motion.div
-                                className="absolute inset-0 rounded-[21px] bg-black bg-opacity-85 text-white font-sfpro font-size2 font-light tracking-wider p-4 opacity-0 flex items-center justify-center text-center transition-opacity duration-300 backdrop-blur-sm"
+                                className="absolute inset-0 rounded-[21px] bg-black bg-opacity-85 text-white font-sfpro text-size2 font-light tracking-wider p-4 opacity-0 flex items-center justify-center text-center transition-opacity duration-300 backdrop-blur-sm"
                                 whileHover={{ opacity: 1 }}
                             >
-                                <p>{project.description}</p>
+                                <p className="">{project.description}</p>
                             </motion.div>
                         </Block>
                     ))}
