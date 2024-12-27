@@ -1,97 +1,100 @@
 import React from "react";
-import { NavMenu } from "../components/NavMenu";
 import { motion, cubicBezier } from "framer-motion";
-import styles from "../styling/Home.module.js";
+import { twMerge } from "tailwind-merge";
+import { NavMenu } from "../components/NavMenu";
 import projects from "../components/projectData";
 
+const Block = ({ className, children, link, ...rest }) => {
+    return (
+        <motion.div
+            initial={{ scale: 0.5, y: 50, opacity: 0 }}
+            animate={{ scale: 1, y: 0, opacity: 1 }}
+            transition={{
+                type: "spring",
+                mass: 3,
+                stiffness: 400,
+                damping: 50,
+            }}
+            whileHover={{
+                scale: 1.03,
+                transition: { duration: 0.1 },
+            }}
+            onClick={() => window.open(link, "_blank")}
+            className={twMerge(
+                // Removed p-4 so the image can fill the card
+                "relative rounded-[21px] bg-card-bg w-full drop-shadow-lg hover:shadow-xl cursor-pointer",
+                className
+            )}
+            {...rest}
+        >
+            {children}
+        </motion.div>
+    );
+};
+
 const containerVariants = {
-    hidden: {
-        opacity: 0,
-    },
-    visible: {
+    initial: { opacity: 0 },
+    animate: {
         opacity: 1,
         transition: {
             type: "tween",
-            staggerChildren: 0.1,
-            duration: 0.1,
+            staggerChildren: 0.05,
+            duration: 0.2,
             ease: cubicBezier(0.34, 0.05, 0.54, 1.19),
         },
     },
 };
 
-const cardVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1 },
-};
-
-const TitleCard = ({ title }) => {
-    return (
-        <motion.div
-            className="col-span-2 rounded-[21px] drop-shadow-lg relative w-full bg-card-bg overflow-hidden shadow-lg hover:shadow-xl flex items-center justify-center text-center p-8 "
-            whileHover={{ scale: 1.03 }}
-        >
-            <h1 className="font-sfpro font-bold text-size3 lg:text-size6 text-name-text tracking-wide">
-                {title}
-            </h1>
-        </motion.div>
-    );
-};
-
-const ProjectCard = ({ image, title, language, description, link }) => {
-    return (
-        <motion.div
-            className="rounded-[21px] drop-shadow-lg relative bg-card-bg overflow-hidden shadow-lg hover:shadow-xl cursor-pointer aspect-[1/1]"
-            whileHover={{ scale: 1.05 }}
-            onClick={() => window.open(link, "_blank")}
-        >
-            <img src={image} alt={title} className="w-full h-58 object-cover" />
-            <div className="p-4">
-                <h3 className="text-lg font-semibold">{title}</h3>
-                <p className="text-sm text-gray-600">{language}</p>
-            </div>
-            <motion.div
-                className="absolute inset-0 bg-[#151517] bg-opacity-80 text-white p-4 opacity-0 flex items-center justify-center text-center transition-opacity duration-300 backdrop-blur-sm"
-                whileHover={{ opacity: 1 }}
-            >
-                <p>{description}</p>
-            </motion.div>
-        </motion.div>
-    );
-};
-
 const Projects = () => {
-    // Destructure the first project and the rest
-    const [firstProject, ...otherProjects] = projects;
-
     return (
-        <div className="h-screen flex flex-col">
+        <div className="bg-white text-zinc-900 h-screen overflow-y-auto">
             <NavMenu />
-
-            <main className="flex-1 w-screen overflow-y-auto mx-auto p-4">
+            <div className="px-8 ">
+                <motion.div className="pt-16 md:pt-0 bg-white rounded-[21px] pl-1 md:pl-16 ">
+                    <h1 className="mb-2 text-size4 md:text-size7 font-sfpro font-bold text-[#232427]">
+                        My Projects
+                    </h1>
+                    <p className="text-dark-gray font-sfpro font-light text-size2 md:text-size3 -mt-5 lg:-mt-7 tracking-tight">
+                        Showcasing some of the things I’ve worked on.
+                    </p>
+                </motion.div>
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 gap-6"
+                    className="grid w-full grid-cols-12 gap-7 py-4 mb-24 md:mb-10 px-0 md:px-16"
                     variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
+                    initial="initial"
+                    animate="animate"
                 >
-                    <motion.div
-                        className="flex justify-center sm:col-span-1 md:col-span-2"
-                        variants={cardVariants}
-                    >
-                        <TitleCard title="My Projects" />
-                    </motion.div>
+                    {/* First block with white background, no card styling */}
 
-                    {otherProjects.map((project, index) => (
-                        <motion.div
+                    {/* Other project blocks */}
+                    {projects.map((project, index) => (
+                        <Block
                             key={index}
-                            className="flex justify-center"
-                            variants={cardVariants}
+                            link={project.link}
+                            className={twMerge(
+                                "col-span-12",
+                                project.className
+                            )}
                         >
-                            <ProjectCard {...project} />
-                        </motion.div>
+                            {/* Image with no padding to fill the card */}
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="rounded-t-[21px]"
+                            />
+                            {/* Container for text, with padding if desired */}
+                            <div className="p-4">
+                                <h2 className="font-sfpro text-size2 font-bold tracking-tight text-name-text">
+                                    {project.title}
+                                </h2>
+                                <p className="font-sfpro text-size1 font-light tracking-wider text-dark-gray">
+                                    {project.language}
+                                </p>
+                            </div>
+                        </Block>
                     ))}
                 </motion.div>
-            </main>
+            </div>
         </div>
     );
 };

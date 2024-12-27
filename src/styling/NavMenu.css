@@ -1,6 +1,6 @@
 /* Burger button (menu icon) */
 .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 36px;
     height: 30px;
     left: 36px; /* Adjust to position the button where needed */
@@ -10,7 +10,7 @@
 
 /* The clickable area for the button */
 .bm-burger-bars {
-    background: #91949b; /* Customize button color */
+    background: #232427; /* Customize button color */
 }
 
 /* Cross button (close icon) */
