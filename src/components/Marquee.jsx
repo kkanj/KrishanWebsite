@@ -19,7 +19,7 @@ const MarqueeText = () => (
             speed={40}
             gradient
             gradientColor="white"
-            gradientWidth={90}
+            gradientWidth={60}
             autoFill
         >
             <div className={`flex flex-row space-x-[60px]`}>

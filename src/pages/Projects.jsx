@@ -3,6 +3,7 @@ import { motion, cubicBezier } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { NavMenu } from "../components/NavMenu";
 import projects from "../components/projectData";
+import MarqueeText from "../components/Marquee";
 
 const Block = ({ className, children, link, ...rest }) => {
     return (
@@ -14,7 +15,10 @@ const Block = ({ className, children, link, ...rest }) => {
                 className
             )}
             {...rest}
-            whileHover={{ scale: 1.03, duration: 0.1 }}
+            whileHover={{
+                y: -13,
+                transition: { type: "tween", duration: 0.2 },
+            }}
         >
             {children}
         </motion.div>
@@ -72,6 +76,7 @@ const Projects = () => {
                     >
                         Showcasing some of the things I’ve worked on.
                     </motion.p>
+                    
                 </motion.div>
                 <motion.div
                     className="grid w-full grid-cols-12 gap-7 py-4 mb-24 md:mb-10 px-0 md:px-16"
@@ -115,6 +120,9 @@ const Projects = () => {
                             </motion.div>
                         </Block>
                     ))}
+                    <div className=" pl-8 md:pl-8 col-span-12">
+                        <MarqueeText />
+                    </div>
                 </motion.div>
             </div>
         </div>
