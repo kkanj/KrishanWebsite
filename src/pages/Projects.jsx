@@ -76,7 +76,6 @@ const Projects = () => {
                     >
                         Showcasing some of the things I’ve worked on.
                     </motion.p>
-                    
                 </motion.div>
                 <motion.div
                     className="grid w-full grid-cols-12 gap-7 py-4 mb-24 md:mb-10 px-0 md:px-16"
@@ -105,12 +104,21 @@ const Projects = () => {
                             />
                             {/* Container for text, with fixed height */}
                             <div className="p-4 h-24">
-                                <h2 className="font-sfpro text-size2 font-bold tracking-tight text-name-text">
+                                <h2 className="font-sfpro text-size2 font-bold tracking-tight text-dark-gray">
                                     {project.title}
                                 </h2>
-                                <p className="font-sfpro text-size1 font-light tracking-wider text-dark-gray">
-                                    {project.language}
-                                </p>
+                                <div className="flex flex-wrap gap-2 py-1">
+                                    {project.language
+                                        .split(",")
+                                        .map((lang, i) => (
+                                            <span
+                                                key={i}
+                                                className="bg-light-gray text-dark-gray font-sfpro font-light tracking-wide px-3 rounded-full text-size1"
+                                            >
+                                                {lang.trim()}
+                                            </span>
+                                        ))}
+                                </div>
                             </div>
                             <motion.div
                                 className="absolute inset-0 rounded-[21px] bg-black bg-opacity-85 text-white font-sfpro text-size2 font-light tracking-wider p-4 opacity-0 flex items-center justify-center text-center transition-opacity duration-300 backdrop-blur-sm"
@@ -120,7 +128,7 @@ const Projects = () => {
                             </motion.div>
                         </Block>
                     ))}
-                    <div className=" pl-8 md:pl-8 col-span-12">
+                    <div className=" pl-8 pt-3 md:pl-8 col-span-12">
                         <MarqueeText />
                     </div>
                 </motion.div>

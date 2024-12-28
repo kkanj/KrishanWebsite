@@ -1,5 +1,6 @@
 import portalGif from "../assets/images/portal.gif";
-
+import gif2048 from "../assets/images/2048Mac.png";
+import iphone  from "../assets/images/iphone.svg";
 const projects = [
     {
         image: portalGif,
@@ -21,7 +22,7 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ", // Example custom span
     },
     {
-        image: "https://placehold.co/600x400",
+        image: iphone,
         title: "Project 3",
         language: "JavaScript, Node.js",
         description: "A short description of Project 3.",
@@ -39,10 +40,10 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ", // Example custom span
     },
     {
-        image: "https://placehold.co/600x400",
-        title: "Project 2",
-        language: "JavaScript, Node.js",
-        description: "A short description of Project 2.",
+        image: gif2048,
+        title: "2048",
+        language: "Java",
+        description: "A simple clone of the popular game, 2048, built in Java.",
         link: "https://example.com/project2",
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", // Example custom span
