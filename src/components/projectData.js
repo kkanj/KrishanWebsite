@@ -1,6 +1,7 @@
 import portalGif from "../assets/images/portal.gif";
-import gif2048 from "../assets/images/2048Mac.svg";
-import iphone  from "../assets/images/iphone.svg";
+import gif2048 from "../assets/images/2048Mac.png";
+import joopi  from "../assets/images/joopiphone.png";
+
 const projects = [
     {
         image: portalGif,
@@ -22,10 +23,10 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ", // Example custom span
     },
     {
-        image: iphone,
-        title: "Project 3",
-        language: "JavaScript, Node.js",
-        description: "A short description of Project 3.",
+        image: joopi,
+        title: "Joopi",
+        language: "React, Express, Firebase",
+        description: "A social and dating app for the Asian American community, focused on creating genuine connections through cultural bonds. \n(Internship)",
         link: "https://example.com/project3",
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 2xl:col-span-3 2xl:row-span-2  ", // Default span
