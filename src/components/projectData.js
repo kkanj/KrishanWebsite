@@ -1,5 +1,5 @@
 import portalGif from "../assets/images/portal.gif";
-import gif2048 from "../assets/images/2048Mac.png";
+import gif2048 from "../assets/images/2048Mac.svg";
 import iphone  from "../assets/images/iphone.svg";
 const projects = [
     {
