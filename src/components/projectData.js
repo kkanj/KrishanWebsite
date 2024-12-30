@@ -95,7 +95,7 @@ const projects = [
         description: "This project involves developing a browser-based tool that allows users to explore the history of word usage in English texts. Using a front-end interface, the tool will connect to a back-end Java service to process user input and generate relevant word data. The project emphasizes efficient design to handle complex cases in natural language processing and wordnet functionalities.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", 
+            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ", 
     },
 ];
 
