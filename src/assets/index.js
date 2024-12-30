@@ -9,6 +9,7 @@ import css from "./images/css.svg";
 import html from "./images/html.svg";
 import java from "./images/java.svg";
 import javascript from "./images/javascript.svg";
+import ros from "./images/ros.svg"
 import python from "./images/python.svg";
 import reactImg from "./images/react.svg";
 import sql from "./images/sql.svg";
@@ -26,6 +27,7 @@ import Person from "./images/person.svg?react"
 import Home from "./images/home.svg?react"
 import Lightbulb from "./images/lightbulb.svg?react"
 import portal  from "./images/portal.gif"
+
 
 export {
     logo,
@@ -55,5 +57,6 @@ export {
     Person,
     Home,
     Lightbulb,
+    ros
     
 };
