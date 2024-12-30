@@ -23,7 +23,7 @@ const Home = () => {
         const imageUrls = projects.map((project) => project.image);
         preloadImages(imageUrls);
     }, []);
-    
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowTypewriter(true);

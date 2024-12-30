@@ -104,7 +104,7 @@ const Projects = () => {
                                 className="w-full object-cover rounded-t-[21px] flex-grow h-96"
                             />
                             {/* Container for text, with fixed height */}
-                            <div className="p-4 h-24">
+                            <div className="flex flex-col p-4">
                                 <h2 className="font-sfpro text-size2 font-bold tracking-tight text-dark-gray">
                                     {project.title}
                                 </h2>
