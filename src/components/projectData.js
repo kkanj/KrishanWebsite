@@ -1,6 +1,9 @@
 import portalGif from "../assets/images/portal.gif";
 import gif2048 from "../assets/images/2048Mac.png";
 import joopi  from "../assets/images/joopiphone.png";
+import jobjam from "../assets/images/JobJamMockup.png";
+import cnn from "../assets/images/cnn.png";
+import rnn from "../assets/images/rnn.png";
 
 const projects = [
     {
@@ -14,10 +17,10 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-3 2xl:row-span-1 ", // Example custom span
     },
     {
-        image: "https://placehold.co/600x400",
-        title: "Project 2",
-        language: "JavaScript, Node.js",
-        description: "A short description of Project 2.",
+        image: cnn,
+        title: "Image Classification Neural Network (CIFAR-10)",
+        language: "PyTorch, TensorFlow",
+        description: "Developed a deep understanding of neural network architecture by implementing key components such as vectorized backpropagation, batch normalization, and dropout. Designed and optimized convolutional neural networks (CNNs) and trained models on the CIFAR-10 dataset using PyTorch, achieving hands-on experience with modern deep learning workflows.",
         link: "https://example.com/project2",
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ", // Example custom span
@@ -25,17 +28,17 @@ const projects = [
     {
         image: joopi,
         title: "Joopi",
-        language: "React, Express, Firebase",
+        language: "Expo Go, Express, Firebase",
         description: "A social and dating app for the Asian American community, focused on creating genuine connections through cultural bonds. \n(Internship)",
         link: "https://example.com/project3",
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 2xl:col-span-3 2xl:row-span-2  ", // Default span
     },
     {
-        image: "https://placehold.co/600x400",
-        title: "Project 1",
-        language: "React, Tailwind",
-        description: "A short description of Project 1.",
+        image: jobjam,
+        title: "JobJam",
+        language: "React, Express, Firebase",
+        description: "A platform designed to connect job seekers with part-time employment opportunities. Features include an employer dashboard, job listings, application tracking, and personalized job recommendations. \n(Internship)",
         link: "https://example.com/project1",
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ", // Example custom span
@@ -50,31 +53,31 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", // Example custom span
     },
     {
-        image: "https://placehold.co/600x400",
-        title: "Project 3",
-        language: "JavaScript, Node.js",
-        description: "A short description of Project 3.",
+        image: rnn,
+        title: "AI Headlines Generator and Summarizer (LSTM)",
+        language: "PyTorch, TensorFlow",
+        description: "Designed and trained an LSTM-based neural network to generate realistic news headlines and a Transformer model to summarize lengthy news articles effectively.",
         link: "https://example.com/project3",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", // Default span
+            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ", // Default span
     },
     {
-        image: "https://placehold.co/600x400",
-        title: "Project 1",
-        language: "React, Tailwind",
-        description: "A short description of Project 1.",
+        image: cnn,
+        title: "Advanced PyTorch Model Design",
+        language: "PyTorch, TensorFlow",
+        description: "Explored PyTorch through three levels of abstraction, starting with low-level tensor operations, advancing to modular neural network design with nn.Module, and culminating in high-level architecture construction with nn.Sequential. Concluded with an open-ended challenge to achieve maximum accuracy on the CIFAR-10 dataset by experimenting with custom architectures, optimizers, and hyperparameters.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ", // Example custom span
+            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", // Example custom span
     },
     {
-        image: "https://placehold.co/600x400",
-        title: "Project 2",
-        language: "JavaScript, Node.js",
-        description: "A short description of Project 2.",
+        image: rnn,
+        title: "Detecting Faulty Commits in Open-Source Software using Machine Learning",
+        language: "PyTorch, TensorFlow",
+        description: "An end-to-end machine learning pipeline to identify faulty commits in GitHub repositories. By analyzing features like commit changes and author info, we’ll train a model to classify commits as faulty or non-faulty.",
         link: "https://example.com/project2",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", // Example custom span
+            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ", // Example custom span
     },
 ];
 
