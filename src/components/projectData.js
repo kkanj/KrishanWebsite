@@ -4,7 +4,11 @@ import joopi  from "../assets/images/joopiphone.png";
 import jobjam from "../assets/images/JobJamMockup.png";
 import cnn from "../assets/images/cnn.png";
 import rnn from "../assets/images/rnn.png";
-
+import tetris from "../assets/images/tetris.png";
+import NGordNet from "../assets/images/NGordNet.png";
+import spamham from "../assets/images/spamham.png";
+import housing from "../assets/images/housing.png";
+import spotsaver from "../assets/images/spotsaver.png";
 const projects = [
     {
         image: portalGif,
@@ -80,19 +84,55 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ", 
     },
     {
-        image: jobjam,
+        image: tetris,
         title: "Tetris",
         language: "Java",
         description: "A simple clone of the popular game, Tetris, built in Java.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", 
+            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-3 2xl:row-span-2  ", 
     },
     {
-        image: jobjam,
+        image: NGordNet,
         title: "NGordNet",
         language: "Java",
-        description: "This project involves developing a browser-based tool that allows users to explore the history of word usage in English texts. Using a front-end interface, the tool will connect to a back-end Java service to process user input and generate relevant word data. The project emphasizes efficient design to handle complex cases in natural language processing and wordnet functionalities.",
+        description: "NGordNet is a browser-based tool that allows users to explore the history of word usage in English texts. Using a frontend interface, the tool will connect to a back-end Java service to process a user inputted word and generate relevant word data. The project emphasizes efficient design to handle complex cases in natural language processing and wordnet functionalities.",
+        link: "https://example.com/project1",
+        className:
+            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ", 
+    },
+    {
+        image: housing,
+        title: "Housing Data Analysis",
+        language: "NumPy, Pandas, Matplotlib, Scikit-learn",
+        description: "In this project, we dive into an extensive housing dataset from Cook County, Illinois, exploring the relationship between housing features and social context. I performing basic Exploratory Data Analysis (EDA) to uncover the structure of the data, adding new features, and cleaning the dataset. Once this was complete, I used machine learning techniques to predict housing prices and identify key factors that influence housing prices.",
+        link: "https://example.com/project1",
+        className:
+            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ", 
+    },
+    {
+        image: spamham,
+        title: "Spam vs Ham Email Classifier",
+        language: "NumPy, Pandas, Matplotlib, Scikit-learn",
+        description: "In this project, I created a binary classifier to distinguish between spam (junk, commercial) and ham (regular) emails. First, I focused on performing exploratory analysis, feature engineering from text data, and applying logistic regression to build the classifier. I then evaluated its performance while exploring methods to improve accuracy and reduce overfitting.",
+        link: "https://example.com/project1",
+        className:
+            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ", 
+    },
+    {
+        image: rnn,
+        title: "RNNs for Surname Classification",
+        language: "PyTorch, TensorFlow",
+        description: "A RNN-based model to classify the language of origin for a given last name. The neural network learns to predict the language based on the structure of the name, leveraging the sequential nature of characters in a name. The project includes training a neural network, evaluating its performance, and discussing the ethical implications of using such a model in real-world applications.",
+        link: "https://example.com/project1",
+        className:
+            "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ", 
+    },
+    {
+        image: spotsaver,
+        title: "Spot Saver",
+        language: "Python, Flask, OpenCV, Express, Node.js",
+        description: " Spot Saver is a multilingual robotic assistant built on Boston Dynamics' Spot robot to aid first responders. It features high-resolution cameras for victim detection, real-time translation in 15+ languages, and a remote-control UI. Using the Bosdyn API, Groq’s AI accelerators, and Google Cloud Platform, it navigates hazards, bridges language barriers, and enhances rescue efforts with a flame-retardant design for durability.",
         link: "https://example.com/project1",
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ", 
