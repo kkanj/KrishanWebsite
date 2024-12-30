@@ -5,6 +5,7 @@ import { NavMenu } from "../components/NavMenu";
 import projects from "../components/projectData";
 import MarqueeText from "../components/Marquee";
 
+
 const Block = ({ className, children, link, ...rest }) => {
     return (
         <motion.div

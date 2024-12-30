@@ -4,12 +4,26 @@ import styles from "../styling/Home.module.js";
 import animations from "../styling/animations.js";
 import { motion, cubicBezier } from "framer-motion";
 import Typewriter from "../components/Typewriter.jsx";
+import projects from "../components/projectData";
+
+// Function to preload images
+const preloadImages = (imageUrls) => {
+    imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+    });
+};
 
 const MotionLink = motion(Link);
 
 const Home = () => {
     const [showTypewriter, setShowTypewriter] = useState(false);
-
+    useEffect(() => {
+        // Preload images when the component mounts
+        const imageUrls = projects.map((project) => project.image);
+        preloadImages(imageUrls);
+    }, []);
+    
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowTypewriter(true);
