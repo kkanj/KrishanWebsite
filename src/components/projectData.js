@@ -9,6 +9,9 @@ import NGordNet from "../assets/images/NGordNet.png";
 import spamham from "../assets/images/spamham.png";
 import housing from "../assets/images/housing.png";
 import spotsaver from "../assets/images/spotsaver.png";
+import lstm from "../assets/images/lstm.png";
+import pytorch from "../assets/images/pytorch.png";
+import faultyCommits from "../assets/images/faultyCommits.svg";
 const projects = [
     {
         image: portalGif,
@@ -57,7 +60,7 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", 
     },
     {
-        image: rnn,
+        image: lstm,
         title: "AI Headlines Generator and Summarizer (LSTM)",
         language: "PyTorch, TensorFlow",
         description: "Designed and trained an LSTM-based neural network to generate realistic news headlines and a Transformer model to summarize lengthy news articles effectively.",
@@ -66,7 +69,7 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ", // Default span
     },
     {
-        image: cnn,
+        image: pytorch,
         title: "Advanced PyTorch Model Design",
         language: "PyTorch, TensorFlow",
         description: "Explored PyTorch through three levels of abstraction, starting with low-level tensor operations, advancing to modular neural network design with nn.Module, and culminating in high-level architecture construction with nn.Sequential. Concluded with an open-ended challenge to achieve maximum accuracy on the CIFAR-10 dataset by experimenting with custom architectures, optimizers, and hyperparameters.",
@@ -75,7 +78,7 @@ const projects = [
             "md:col-span-6 md:row-span-1 lg:col-span-8 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ", 
     },
     {
-        image: rnn,
+        image: faultyCommits,
         title: "Detecting Faulty Commits on GitHub using Machine Learning",
         language: "PyTorch, TensorFlow",
         description: "An end-to-end machine learning pipeline to identify faulty commits in GitHub repositories. Used features such as commit changes and author info, to train a model to classify commits as faulty or non-faulty. This project could improve code quality and reduce the time spent on code reviews.",
