@@ -34,7 +34,7 @@ const about = () => {
                 className="absolute z-50 transform-gpu flex justify-center items-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] pointer-events-none"
                 initial={{ opacity: 0 }} // Start with opacity 0
                 animate={{ opacity: 1 }} // Animate to opacity 1
-                exit={{ opacity: 0 }} 
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }} // Set duration and delay
             >
                 <NavMenuNew className="pointer-events-auto" />
@@ -59,13 +59,15 @@ const about = () => {
                         Hi, I'm Krishan Kanji, a Computer Science and Data
                         Science student at UC Berkeley with a passion for
                         learning about the latest technologies, and building
-                        projects that make a difference. Recently, I've been
-                        diving into the world of artifical intelligence and
-                        neural networks, fascinated by their potential to
-                        transform data into meaningful insights. In my free
-                        time, you'll find me coding, working on side projects,
-                        or just exploring something new and exciting in the
-                        world of tech.{" "}
+                        projects that make a difference. Lately, I've immersed
+                        myself in the world of artificial intelligence, learning
+                        TensorFlow and PyTorch to develop custom neural
+                        networks. I have also been exploring the intersection of
+                        AI and robotics, which I believe will be imperative for
+                        the progression of autonomy in tech. In my free time,
+                        you'll find me coding, working on side projects, or just
+                        exploring something new and exciting in the world of
+                        tech.{" "}
                     </div>
                 </motion.div>
             </motion.div>
