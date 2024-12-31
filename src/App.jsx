@@ -7,7 +7,6 @@ import {
     Home,
     Projects,
     Contact,
-    Project0,
     Experience,
 } from "./pages";
 import {
@@ -31,7 +30,6 @@ function App() {
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/about" element={<AboutMe />} />
                         <Route path="/contact" element={<Contact />} />
-                        <Route path="/project0" element={<Project0 />} />
                         <Route path="/experience" element={<Experience />} />
                     </Routes>
                 

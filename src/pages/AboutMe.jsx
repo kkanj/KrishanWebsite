@@ -54,7 +54,6 @@ const about = () => {
                     <div className="font-bold uppercase tracking-widest -space-y-1 md:-space-y-2 xl:-space-y-4 text-size0 md:text-size1 lg:text-size2 xl:text-size3 2xl:text-size4">
                         <div>Student</div>
                         <div>Software Engineer</div>
-                        <div>Full Stack Developer</div>
                     </div>
                     <div className="font-normal text-size0 md:text-size1 lg:text-size1 xl:text-size2 2xl:text-size3">
                         Hi, I'm Krishan Kanji, a Computer Science and Data
