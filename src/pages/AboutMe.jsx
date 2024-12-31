@@ -55,7 +55,7 @@ const about = () => {
                         <div>Student</div>
                         <div>Software Engineer</div>
                     </div>
-                    <div className="font-normal text-size0 md:text-size1 lg:text-size1 xl:text-size2 2xl:text-size3">
+                    <div className="font-normal text-size0 md:text-size1 lg:text-size1 xl:text-size2">
                         Hi, I'm Krishan Kanji, a Computer Science and Data
                         Science student at UC Berkeley with a passion for
                         learning about the latest technologies, and building
