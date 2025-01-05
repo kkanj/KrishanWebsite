@@ -79,7 +79,7 @@ const Projects = () => {
                     </motion.p>
                 </motion.div>
                 <motion.div
-                    className="grid w-full grid-cols-12 gap-7 py-4 mb-24 md:mb-10 px-0 md:px-16"
+                    className="grid w-full grid-cols-12 gap-7 pt-4 mb-24 md:mb-6 px-0 md:px-16"
                     variants={containerVariants}
                     initial="initial"
                     animate="animate"
@@ -129,7 +129,7 @@ const Projects = () => {
                             </motion.div>
                         </Block>
                     ))}
-                    <div className=" pl-8 pt-3 md:pl-8 md:pb-1 col-span-12">
+                    <div className=" pl-8 pt-3 md:pl-8 col-span-12">
                         <MarqueeText />
                     </div>
                 </motion.div>
