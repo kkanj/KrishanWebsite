@@ -129,7 +129,7 @@ const Projects = () => {
                             </motion.div>
                         </Block>
                     ))}
-                    <div className=" pl-8 pt-3 md:pl-8 col-span-12">
+                    <div className=" pl-8 pt-3 md:pl-8 md:pb-3 col-span-12">
                         <MarqueeText />
                     </div>
                 </motion.div>
