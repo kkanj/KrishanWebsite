@@ -52,3 +52,4 @@ Below are screenshots of the mobile version:
 - [LinkedIn](https://linkedin.com/in/krishankanji)
 
 ## 🌟 Thank You!
+### <a href="https://krishankanji.com/" target="_blank">Visit my site here!</a>
