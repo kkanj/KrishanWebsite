@@ -1,12 +1,54 @@
-<<<<<<< HEAD
-# React + Vite
+# 🌟 My Portfolio Website  
+Welcome to my personal site! Built with **React** and **Vite**, this website is designed to showcase my projects, experience, and more. 🚀  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Installation  
+Follow these steps to get started:  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Install dependencies
+npm install
 
-# KrishanWebsite
-My portfolio website!
+# Start the development server
+npm run dev
+```
+## 📂 Check package.json for additional scripts and build options.
+Here's how the project is organized:
+```bash
+index.html        # Base HTML template
+vite.config.js    # Vite config for bundling
+main.jsx          # App’s entry script
+components/       # Reusable React components
+pages/            # Portfolio sections and routing
+public/           # Static assets
+```
+## 📸 Screenshots
+### Desktop Screenshots
+1. ![Screenshot 1](src/assets/images/readMe1.jpeg)
+2. ![Screenshot 2](src/assets/images/readMe2.jpeg)
+3. ![Screenshot 3](src/assets/images/readMe3.jpeg)
+4. ![Screenshot 4](src/assets/images/readMe4.jpeg)
+
+---
+
+### Mobile Screenshots
+Below are screenshots of the mobile version:
+
+<p align="center">
+  <img src="src/assets/images/readMeMobile1.jpeg" alt="Mobile Screenshot 1" width="200">
+  <img src="src/assets/images/readMeMobile2.jpeg" alt="Mobile Screenshot 2" width="200">
+  <img src="src/assets/images/readMeMobile3.jpeg" alt="Mobile Screenshot 3" width="200">
+</p>
+
+## 🛠️ Built With
+- React
+- Vite
+- Tailwind CSS 
+
+## ✨ Contact
+📧 Feel free to reach out!
+Email: krishankanji [AT] berkeley.edu
+LinkedIn: linkedin.com/in/krishankanji
+
+## 🌟 Thank You!
