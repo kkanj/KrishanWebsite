@@ -1,4 +1,4 @@
-# 🌟 My Portfolio Website  
+# 🌟 My Portfolio Website <a href="https://krishankanji.com/" target="_blank">(visit)</a>
 Welcome to my personal site! Built with **React** and **Vite**, this website is designed to showcase my projects, experience, and more. 🚀  
 
 ---
@@ -25,10 +25,10 @@ public/           # Static assets
 ```
 ## 📸 Screenshots
 ### Desktop Screenshots
-1. ![Screenshot 1](src/assets/images/readMe1.jpeg)
-2. ![Screenshot 2](src/assets/images/readMe2.jpeg)
-3. ![Screenshot 3](src/assets/images/readMe3.jpeg)
-4. ![Screenshot 4](src/assets/images/readMe4.jpeg)
+ ![Screenshot 1](src/assets/images/readMe1.jpeg)
+ ![Screenshot 2](src/assets/images/readMe2.jpeg)
+ ![Screenshot 3](src/assets/images/readMe3.jpeg)
+ ![Screenshot 4](src/assets/images/readMe4.jpeg)
 
 ---
 
@@ -48,7 +48,8 @@ Below are screenshots of the mobile version:
 
 ## ✨ Contact
 📧 Feel free to reach out!
-Email: krishankanji [AT] berkeley.edu
-LinkedIn: linkedin.com/in/krishankanji
+- Email: krishankanji [AT] berkeley.edu
+- [LinkedIn](https://linkedin.com/in/krishankanji)
 
 ## 🌟 Thank You!
+### <a href="https://krishankanji.com/" target="_blank">Visit my site here!</a>
