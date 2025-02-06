@@ -9,7 +9,7 @@ const experience = [
         language: "Software & Data Systems Engineer",
         description:
             "Developing a web-based sample submission and data retrieval portal for DNA sequencing customers. Leveraging the Berkeley Savio Supercomputer to process large-scale DNA sequencing data, enabling high-speed sequence analysis and automated customer data delivery. Working with Python, SQL, cloud computing, and bioinformatics tools to optimize sequencing workflows and improve accessibility for researchers.",
-        link: "https://dnaseq.berkeley.edu/",
+        link: "https://ucberkeleydnasequencing.com/home",
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-6 lg:row-span-1 2xl:col-span-6 2xl:row-span-1 ",
     },
