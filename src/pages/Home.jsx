@@ -25,11 +25,7 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowTypewriter(true);
-        }, 200); // 1 second delay
-
-        return () => clearTimeout(timer); // Cleanup the timer
+        setShowTypewriter(true);
     }, []);
     
 

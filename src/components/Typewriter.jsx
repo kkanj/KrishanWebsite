@@ -1,4 +1,4 @@
-import { react } from "react";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import styles from "../styling/Home.module";
 
@@ -7,14 +7,18 @@ function Typewriter() {
         <span>
             <TypeAnimation
                 sequence={[
-                    400,
-                    "software engineer",
-                    
+                    650, "software engineer", 1501, "", 180,
+                    "student", 1501, "", 180,
+                    "robotics engineer", 1501, "", 180,
+                    "space enthusiast", 1501, "", 180,
+                    "computer scientist", 1501, "", 180,
+                    "data scientist", 1501, "", 180,
+                    ""
                 ]}
                 wrapper="span"
                 speed={40}
                 style={{ display: "inline-block" }}
-                repeat={1}
+                repeat={Infinity}
             />
         </span>
     );
