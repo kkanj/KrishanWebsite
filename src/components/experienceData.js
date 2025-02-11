@@ -6,7 +6,7 @@ const experience = [
     {
         image: dna,
         title: "UC Berkeley DNA Sequencing Facility",
-        language: "Software & Data Systems Engineer",
+        language: "Software & Data Engineer",
         description:
             "Developing a web-based sample submission and data retrieval portal for DNA sequencing customers. Leveraging the Berkeley Savio Supercomputer to process large-scale DNA sequencing data, enabling high-speed sequence analysis and automated customer data delivery. Working with Python, SQL, cloud computing, and bioinformatics tools to optimize sequencing workflows and improve accessibility for researchers.",
         link: "https://ucberkeleydnasequencing.com/home",
@@ -31,7 +31,7 @@ const experience = [
             "Backend Team Lead - Built a scalable job-searching app backend (Node.js, Express, Firebase), boosting data retrieval efficiency by 30% and supporting 500K+ users. Created a complete database, implemented REST APIs with AES encryption, and reduced response times. Led intern teams, managed project plans, and resolved technical issues.",
         link: "https://www.aroundentgroup.com/",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-5 lg:row-span-1 2xl:col-span-5 2xl:row-span-1 ",
+            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-4 2xl:row-span-1 ",
     },
 ];
 

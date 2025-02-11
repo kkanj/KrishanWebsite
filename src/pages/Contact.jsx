@@ -95,7 +95,7 @@ const contact = () => {
                 className="absolute z-50 transform-gpu flex justify-center items-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] pointer-events-none"
                 initial={{ opacity: 0 }} // Start with opacity 0
                 animate={{ opacity: 1 }} // Animate to opacity 1
-                exit={{ opacity: 0 }} 
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }} // Set duration and delay
             >
                 <NavMenuNew className="pointer-events-auto" />
@@ -106,9 +106,9 @@ const contact = () => {
                 variants={animations.slideHorizontal}
             >
                 {popupVisible && (
-                    <div className="fixed inset-y-0 left-0 flex items-center justify-center w-1/2 z-50">
+                    <div className="fixed inset-0 flex items-center justify-center z-50">
                         <motion.div
-                            className="flex items-center justify-center bg-green-500 text-white p-4 rounded-xl shadow-lg"
+                            className="bg-green-500 text-white p-4 rounded-xl shadow-lg"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
