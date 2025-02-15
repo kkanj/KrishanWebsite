@@ -26,7 +26,7 @@ const experience = [
     {
         image: around,
         title: "A Round Entertainment",
-        language: "Lead Backend Software Engineering Intern",
+        language: "Lead Backend Software Engineer",
         description:
             "Backend Team Lead - Built a scalable job-searching app backend (Node.js, Express, Firebase), boosting data retrieval efficiency by 30% and supporting 500K+ users. Created a complete database, implemented REST APIs with AES encryption, and reduced response times. Led intern teams, managed project plans, and resolved technical issues.",
         link: "https://www.aroundentgroup.com/",
