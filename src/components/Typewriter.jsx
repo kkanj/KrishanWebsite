@@ -7,11 +7,11 @@ function Typewriter() {
         <span>
             <TypeAnimation
                 sequence={[
-                    650, "I build software", 
-                    1501, "I build ", 
-                    180, "I build space robots",
+                    650, "i build software", 
+                    1501, "i build ", 
+                    180, "i build space robots",
                     1501, "",
-                    180, "I'm building the future", 
+                    180, "i'm building the future", 
                     1501, ""
                 ]}
                 
