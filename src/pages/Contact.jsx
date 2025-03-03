@@ -224,17 +224,24 @@ const contact = () => {
                 </MotionA>
 
                 <MotionA
-                    onClick={() => {
-                        Calendly.initPopupWidget({
-                            url: "https://calendly.com/krishankanji2003",
-                        });
-                        return false;
-                    }}
+                    data-cal-link="krishankanji"
+                    data-cal-config='{
+                        "theme":"light",
+                        "hideEventTypeDetails":false,
+                        "layout":"week_view",
+                        "styles":{
+                          "branding":{"brandColor":"#b1f0df"},
+                          "font":"Inter",
+                          "hideEventTypeDetails":false,
+                          "buttonColor":"#669488",
+                          "buttonTextColor":"#ffffff"
+                        }
+                      }'
                     className={`${styles.Card} cursor-pointer`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#b1f0df", // Target background color on hover
+                        backgroundColor: "#b1f0df",
                         color: "#669488",
                         outline: "4px solid ",
                     }}
@@ -244,9 +251,9 @@ const contact = () => {
                             bounce: 0.65,
                         },
                         backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
+                            duration: 0.2,
+                            ease: "easeInOut",
+                            type: "tween",
                         },
                     }}
                     onMouseEnter={() => setIsHovered(true)}
@@ -274,7 +281,7 @@ const contact = () => {
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#BCB1D5", // Target background color on hover
+                        backgroundColor: "#BCB1D5",
                         color: "#331662",
                         outline: "4px solid",
                     }}
