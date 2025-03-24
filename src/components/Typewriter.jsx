@@ -8,7 +8,9 @@ function Typewriter() {
             <TypeAnimation
                 sequence={[
                     650, "i build software", 
-                    1501, " ",
+                    1501, "",
+                    180, "autonomous vehicle software",
+                    1501, "",
                     180, "space exploration software",
                     1501, "",
                     
