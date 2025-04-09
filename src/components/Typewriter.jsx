@@ -13,6 +13,8 @@ function Typewriter() {
                     1501, "",
                     180, "space exploration software",
                     1501, "",
+                    180, "robot software",
+                    1501, "",
                     
                 ]}
                 
