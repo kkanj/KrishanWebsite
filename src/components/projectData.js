@@ -11,9 +11,10 @@ import housing from "../assets/images/housing.png";
 import spotsaver from "../assets/images/spotsaver.png";
 import lstm from "../assets/images/lstm.png";
 import pytorch from "../assets/images/pytorch.png";
-import faultyCommits from "../assets/images/faultyCommits.svg";
+import faultyCommits from "../assets/images/faultyCommits.png";
 import rover from "../assets/images/rover.png";
 import calsol from "../assets/images/calsol.png";
+import niryo from "../assets/images/niryo.png";
 const projects = [
     {
         image: rover,
@@ -43,7 +44,16 @@ const projects = [
             "Developed a deep understanding of neural network architecture by implementing key components such as vectorized backpropagation, batch normalization, and dropout. Designed and optimized convolutional neural networks (CNNs) and trained models on the CIFAR-10 dataset using PyTorch, achieving hands-on experience with modern deep learning workflows.",
         link: "https://example.com/project2",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-5 lg:row-span-1 2xl:col-span-9 2xl:row-span-1  ",
+            "md:col-span-6 md:row-span-1 lg:col-span-6 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ",
+    },
+    {
+        image: niryo,
+        title: "Robotic Arm Teleoperation",
+        language: "ROS, Python",
+        description: "Developed a teleoperation system for a 6-DOF robotic arm using ROS and Python, enabling real time control and manipulation with keyboard/mouse controls.",
+        link: "https://example.com/project2",
+        className:
+            "md:col-span-6 md:row-span-1 lg:col-span-6 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ",
     },
 
     {
@@ -64,7 +74,7 @@ const projects = [
             "An end-to-end machine learning pipeline to identify faulty commits in GitHub repositories. Used features such as commit changes and author info, to train a model to classify commits as faulty or non-faulty. This project could improve code quality and reduce the time spent on code reviews.",
         link: "https://example.com/project2",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ",
+            "md:col-span-12 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ",
     },
     {
         image: spotsaver,
@@ -74,7 +84,7 @@ const projects = [
             " Spot Saver is a multilingual robotic assistant built on Boston Dynamics' Spot robot to aid first responders. It features high-resolution cameras for victim detection, real-time translation in 15+ languages, and a remote-control UI. Using the Bosdyn API, Groq’s AI accelerators, and Google Cloud Platform, it navigates hazards, bridges language barriers, and enhances rescue efforts with a flame-retardant design for durability.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-3 2xl:row-span-1  ",
+            "md:col-span-7 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ",
     },
     {
         image: portalGif,
@@ -84,7 +94,7 @@ const projects = [
             "A game engine built entirely from scratch in Java, featuring efficient custom data structures and dynamic world generation. The game includes engaging mechanics like stamina management, item upgrades, and escalating challenges, ensuring optimized gameplay across all devices.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-3 lg:row-span-1 2xl:col-span-3 2xl:row-span-1 ",
+            "md:col-span-5 md:row-span-1 lg:col-span-3 lg:row-span-1 2xl:col-span-3 2xl:row-span-1 ",
     },
 
     {
@@ -125,7 +135,7 @@ const projects = [
             "NGordNet is a browser-based tool that allows users to explore the history of word usage in English texts. Using a frontend interface, the tool will connect to a back-end Java service to process a user inputted word and generate relevant word data. The project emphasizes efficient design to handle complex cases in natural language processing and wordnet functionalities.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ",
+            "md:col-span-6 md:row-span-1 lg:col-span-7 lg:row-span-1 2xl:col-span-6 2xl:row-span-1  ",
     },
 
     {
@@ -136,7 +146,7 @@ const projects = [
             "A simple clone of the popular game, Tetris, built in Java.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-2 2xl:col-span-3 2xl:row-span-2  ",
+            "md:col-span-6 md:row-span-1 lg:col-span-5 lg:row-span-2 2xl:col-span-3 2xl:row-span-2  ",
     },
 
     {
@@ -147,7 +157,7 @@ const projects = [
             "In this project, we dive into an extensive housing dataset from Cook County, Illinois, exploring the relationship between housing features and social context. I performing basic Exploratory Data Analysis (EDA) to uncover the structure of the data, adding new features, and cleaning the dataset. Once this was complete, I used machine learning techniques to predict housing prices and identify key factors that influence housing prices.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ",
+            "md:col-span-6 md:row-span-1 lg:col-span-7 lg:row-span-1 2xl:col-span-4 2xl:row-span-1  ",
     },
     {
         image: jobjam,
@@ -167,7 +177,7 @@ const projects = [
             "In this project, I created a binary classifier to distinguish between spam (junk, commercial) and ham (regular) emails. First, I focused on performing exploratory analysis, feature engineering from text data, and applying logistic regression to build the classifier. I then evaluated its performance while exploring methods to improve accuracy and reduce overfitting.",
         link: "https://example.com/project1",
         className:
-            "md:col-span-6 md:row-span-1 lg:col-span-5 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ",
+            "md:col-span-6 md:row-span-1 lg:col-span-4 lg:row-span-1 2xl:col-span-5 2xl:row-span-1  ",
     },
     {
         image: gif2048,

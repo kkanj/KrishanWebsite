@@ -23,6 +23,7 @@ const experience = [
         className:
             "md:col-span-6 md:row-span-1 lg:col-span-6 lg:row-span-1 2xl:col-span-6 2xl:row-span-1 ",
     },
+    
     {
         image: around,
         title: "A Round Entertainment",
