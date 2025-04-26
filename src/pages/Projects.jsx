@@ -113,7 +113,7 @@ const Projects = () => {
                                         .map((lang, i) => (
                                             <span
                                                 key={i}
-                                                className="bg-light-gray text-dark-gray font-creato font-light tracking-wide px-3 rounded-full text-size1"
+                                                className="bg-light-gray text-dark-gray font-creato font-regular tracking-wide px-3 rounded-full text-size1"
                                             >
                                                 {lang.trim()}
                                             </span>

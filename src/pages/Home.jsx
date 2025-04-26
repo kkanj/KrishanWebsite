@@ -33,7 +33,7 @@ const Home = () => {
         <div>
             <div>
                 <motion.div
-                    className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 2xl:gap-10 p-2 md:p-4 xl:p-8 2xl:p-10 h-screen pb-24 md:pb-0"
+                    className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 2xl:gap-5 p-2 md:p-4 xl:p-8 2xl:p-10 h-screen pb-24 md:pb-0"
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
