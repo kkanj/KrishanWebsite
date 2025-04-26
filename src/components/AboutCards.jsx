@@ -11,11 +11,11 @@ export const AboutCards = () => {
     const cardVariants = {
         expanded: {
             width: "81vw",
-            height: "97vh"
+            height: "97vh",
         },
         collapsed: {
             width: "7vw",
-            height: "97vh"
+            height: "97vh",
         },
     };
 
@@ -26,7 +26,7 @@ export const AboutCards = () => {
     return (
         <section className="px-[20px]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-3xl font-black font-sfpro text-black"></h1>
+                <h1 className="text-3xl font-black font-creato text-black"></h1>
                 <p className=" text-xl text-blue"></p>
             </div>
             <div className="h-screen flex flex-col md:flex-row justify-center items-center gap-5">
@@ -45,7 +45,7 @@ export const AboutCards = () => {
                         onClick={() => handleCardClick(index)}
                         style={{
                             backgroundColor: "black",
-                             // Subtract the extra height
+                            // Subtract the extra height
                         }}
                     >
                         <div className="card-content flex-grow flex flex-col justify-end">

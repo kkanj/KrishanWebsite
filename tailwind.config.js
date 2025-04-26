@@ -71,7 +71,7 @@ export default {
                 header: "#4f4f4f",
             },
             fontFamily: {
-                sfpro: ["SFPRO", "fallback"],
+                creato: ["Creato Display", "sans-serif"],
             },
             fontWeight: {
                 normal: 400,

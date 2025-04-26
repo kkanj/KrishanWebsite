@@ -5,7 +5,6 @@ import { NavMenu } from "../components/NavMenu";
 import experiencedata from "../components/experienceData";
 import MarqueeText from "../components/Marquee";
 
-
 const Block = ({ className, children, link, ...rest }) => {
     return (
         <motion.div
@@ -66,13 +65,13 @@ const experience = () => {
                     exit="exit" // Apply exit animation
                 >
                     <motion.h1
-                        className="mb-2 text-size4 md:text-size7 font-sfpro font-bold text-[#232427]"
+                        className="mb-2 text-size4 md:text-size7 font-creato font-bold text-[#232427]"
                         variants={childVariants}
                     >
                         My experience
                     </motion.h1>
                     <motion.p
-                        className="text-dark-gray font-sfpro font-light text-size2 md:text-size3 -mt-5 lg:-mt-7 tracking-tight"
+                        className="text-dark-gray font-creato font-light text-size2 md:text-size3 -mt-5 lg:-mt-7 tracking-tight"
                         variants={childVariants}
                     >
                         Some of the roles I've worked in.
@@ -105,7 +104,7 @@ const experience = () => {
                             />
                             {/* Container for text, with fixed height */}
                             <div className="flex flex-col p-4">
-                                <h2 className="font-sfpro text-size2 font-bold tracking-tight text-dark-gray">
+                                <h2 className="font-creato text-size2 font-bold tracking-tight text-dark-gray">
                                     {project.title}
                                 </h2>
                                 <div className="flex flex-wrap gap-2 py-1">
@@ -114,7 +113,7 @@ const experience = () => {
                                         .map((lang, i) => (
                                             <span
                                                 key={i}
-                                                className="bg-light-gray text-dark-gray font-sfpro font-light tracking-wide px-3 rounded-full text-size1"
+                                                className="bg-light-gray text-dark-gray font-creato font-light tracking-wide px-3 rounded-full text-size1"
                                             >
                                                 {lang.trim()}
                                             </span>
@@ -122,7 +121,7 @@ const experience = () => {
                                 </div>
                             </div>
                             <motion.div
-                                className="absolute inset-0 rounded-[21px] bg-black bg-opacity-85 text-white font-sfpro text-size2 font-light tracking-wider p-4 opacity-0 flex items-center justify-center text-center transition-opacity duration-300 backdrop-blur-sm"
+                                className="absolute inset-0 rounded-[21px] bg-black bg-opacity-85 text-white font-creato text-size2 font-light tracking-wider p-4 opacity-0 flex items-center justify-center text-center transition-opacity duration-300 backdrop-blur-sm"
                                 whileHover={{ opacity: 1 }}
                             >
                                 <p className="">{project.description}</p>

@@ -45,7 +45,7 @@ const about = () => {
                 variants={animations.slideHorizontal}
             >
                 <motion.div
-                    className="text-white font-sfpro h-screen flex flex-col justify-center mx-2 md:mx-4 lg:mx-10 xl:mx-16 space-y-1 2xl:space-y-2"
+                    className="text-white font-creato h-screen flex flex-col justify-center mx-2 md:mx-4 lg:mx-10 xl:mx-16 space-y-1 2xl:space-y-2"
                     variants={animations.fade}
                 >
                     <div className="font-light tracking-widest text-size0 md:text-size0 lg:text-size1 xl:text-size2">
@@ -53,21 +53,21 @@ const about = () => {
                     </div>
                     <div className="font-bold uppercase tracking-widest -space-y-1 md:-space-y-2 xl:-space-y-4 text-size0 md:text-size1 lg:text-size2 xl:text-size3 2xl:text-size4">
                         <div>Student</div>
+                        <div>roboticist</div>
                         <div>Software Engineer</div>
                     </div>
                     <div className="font-normal text-size0 md:text-size1 lg:text-size1 xl:text-size2">
-                        Hi, I'm Krishan Kanji, a Computer Science and Data
-                        Science student at UC Berkeley with a passion for
-                        learning about the latest technologies, and building
-                        projects that make a difference. Lately, I've immersed
-                        myself in the world of artificial intelligence, learning
-                        TensorFlow and PyTorch to develop custom neural
-                        networks. I have also been exploring the intersection of
-                        AI and robotics, which I believe will be imperative for
-                        the progression of autonomy in tech. In my free time,
-                        you'll find me coding, working on side projects, or just
-                        exploring something new and exciting in the world of
-                        tech.{" "}
+                        Hi! I'm a Computer Science and Data Science student at
+                        UC Berkeley, passionate about developing software for
+                        robotics, especially in the area of space exploration. I
+                        specialize in creating autonomous systems and algorithms
+                        that enable robots, like Mars rovers, and lunar landers,
+                        to navigate complex environments and perform tasks
+                        independently. I'm fascinated by how robotic technology
+                        can advance interplanetary missions, habitat
+                        construction, and extraterrestrial exploration. When I'm
+                        not coding, you can find me trying new foods, traveling
+                        to explore new places, or playing video games.
                     </div>
                 </motion.div>
             </motion.div>

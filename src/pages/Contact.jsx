@@ -118,7 +118,7 @@ const contact = () => {
                     </div>
                 )}
                 <motion.div
-                    className="text-[#2D2D2D] font-sfpro h-screen flex flex-col justify-center px-3 md:px-6 lg:px-9 xl:px-14"
+                    className="text-[#2D2D2D] font-creato h-screen flex flex-col justify-center px-3 md:px-6 lg:px-9 xl:px-14"
                     variants={animations.slideHorizontal}
                 >
                     <h1 className="text-size1 lg:text-size3 xl:text-size3 2xl:text-size5 font-bold -mb-1 xl:-mb-3 2xl:-mb-5">
@@ -195,12 +195,12 @@ const contact = () => {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                className="flex-grow w-1/2 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 2xl:gap-10 p-4 md:p-10 xl:p-12 2xl:p-18 bg-gradient-to-r to-[#272727] from-[#555555]"
+                className="flex-grow w-1/2 grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-5 2xl:gap-10 p-4 md:p-10 xl:p-12 2xl:p-18 bg-gradient-to-r to-[#272727] from-[#555555]"
             >
                 <MotionA
                     href="mailto:krishankanji@berkeley.edu?cc=krishankanji2003@gmail.com"
                     target="_blank"
-                    className={`${styles.Card}`}
+                    className={`${styles.Card} col-span-2`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
@@ -220,7 +220,7 @@ const contact = () => {
                         },
                     }}
                 >
-                    <Mail className="w-[45%] h-auto" />
+                    <Mail className="w-[34%] h-auto" />
                 </MotionA>
 
                 <MotionA
@@ -237,12 +237,12 @@ const contact = () => {
                           "buttonTextColor":"#ffffff"
                         }
                       }'
-                    className={`${styles.Card} cursor-pointer`}
+                    className={`${styles.Card} cursor-pointer col-span-2`}
                     variants={animations.scale}
                     whileHover={{
                         scale: 1.05,
-                        backgroundColor: "#b1f0df",
-                        color: "#669488",
+                        backgroundColor: "#B0CCAC",
+                        color: "#3B6E55",
                         outline: "4px solid ",
                     }}
                     transition={{
@@ -262,68 +262,19 @@ const contact = () => {
                     {isHovered ? (
                         <img
                             src={googlemeet}
-                            className="w-[45%] h-auto"
+                            className="w-[34%] h-auto"
                             alt="Google Meet"
                         />
                     ) : (
                         <img
                             src={GoogleMeetGray}
-                            className="w-[45%] h-auto"
+                            className="w-[34%] h-auto"
                             alt="Google Meet Gray"
                         />
                     )}
                 </MotionA>
 
-                <MotionLink
-                    to="/about"
-                    rel="noopener noreferrer"
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#BCB1D5",
-                        color: "#331662",
-                        outline: "4px solid",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Person className="w-[45%] h-auto" />
-                </MotionLink>
-                <MotionLink
-                    to="/contact"
-                    rel="noopener noreferrer"
-                    className={`${styles.Card}`}
-                    variants={animations.scale}
-                    whileHover={{
-                        scale: 1.05,
-                        backgroundColor: "#B0CCAC", // Target background color on hover
-                        color: "#3B6E55",
-                        outline: "4px solid",
-                    }}
-                    transition={{
-                        scale: {
-                            type: "spring",
-                            bounce: 0.65,
-                        },
-                        backgroundColor: {
-                            duration: 0.2, // Duration of the color transition
-                            ease: "easeInOut", // This can be adjusted to other easing options
-                            type: "tween", // Specify tween for the color transition
-                        },
-                    }}
-                >
-                    <Map className="w-[45%] h-auto" />
-                </MotionLink>
+                
             </motion.div>
         </motion.div>
     );

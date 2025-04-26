@@ -45,53 +45,113 @@ button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
+
+
 @font-face {
-    font-family: "SFPRO";
-    src: url("assets/SFPRO/SF-Pro-Display-Regular.otf") format("opentype");
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-Regular.otf")
+        format("opentype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "SFPRO";
-    src: url("assets/SFPRO/SF-Pro-Display-Bold.otf") format("opentype");
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "SFPRO";
-    src: url("assets/SFPRO/SF-Pro-Display-Black.otf") format("opentype");
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SFPRO";
-    src: url("assets/SFPRO/SF-Pro-Display-Heavy.otf") format("opentype");
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SFPRO";
-    src: url("assets/SFPRO/SF-Pro-Display-Light.otf") format("opentype");
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-Light.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "SFPRO";
-    src: url("assets/SFPRO/SF-Pro-Display-Medium.otf") format("opentype");
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-Medium.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "SFPRO";
-    src: url("assets/SFPRO/SF-Pro-Display-Semibold.otf") format("opentype");
-    font-weight: 600;
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-Black.otf") format("opentype");
+    font-weight: 900;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-BlackItalic.otf")
+        format("opentype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-BoldItalic.otf")
+        format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-ExtraBold.otf")
+        format("opentype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-ExtraBoldItalic.otf")
+        format("opentype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-LightItalic.otf")
+        format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-MediumItalic.otf")
+        format("opentype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-RegularItalic.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Creato Display";
+    src: url("assets/CreatoDisplay/CreatoDisplay-ThinItalic.otf")
+        format("opentype");
+    font-weight: 100;
+    font-style: italic;
 }
 
 @media (prefers-color-scheme: light) {
