@@ -121,12 +121,12 @@ const contact = () => {
                     className="text-[#2D2D2D] font-creato h-screen flex flex-col justify-center px-3 md:px-6 lg:px-9 xl:px-14"
                     variants={animations.slideHorizontal}
                 >
-                    <h1 className="text-size1 lg:text-size3 xl:text-size3 2xl:text-size5 font-bold -mb-1 xl:-mb-3 2xl:-mb-5">
-                        I’d love to hear from you.{" "}
+                    <h1 className="text-size1 lg:text-size3 xl:text-size4 2xl:text-size4 font-bold -mb-1 xl:-mb-3 2xl:-mb-5">
+                        I’d love to hear from you {" "}
                     </h1>
-                    <h1 className="text-size0 lg:text-size1 xl:text-size2 2xl:text-size3 font-bold pb-1 xl:pb-3">
+                    <h1 className="text-size0 lg:text-size1 xl:text-size2 2xl:text-size2 font-bold pb-1 xl:pb-3">
                         Leave a message below, and I’ll get back to you as soon
-                        as possible.{" "}
+                        as possible{" "}
                     </h1>
                     <form
                         onSubmit={handleSubmit}

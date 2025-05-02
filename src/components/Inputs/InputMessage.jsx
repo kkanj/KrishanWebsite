@@ -77,7 +77,7 @@ const StyledWrapper = styled.div`
         transform: translateY(-30px);
     }
     /* Media query for smaller screens */
-    @media (max-width: 1279px) {
+    @media (max-width: 1500px) {
         .form-control input {
             font-size: 14px; /* Smaller font size */
             padding: 9px 0; /* Adjusted padding */
